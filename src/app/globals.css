@@ -2,15 +2,16 @@
 
 @theme {
   --color-brand-cream: #FAF8F5;
-  --color-brand-cream-soft: #F4F0E8;
+  --color-brand-cream-soft: #F5EFE6;
+  --color-brand-section: #F5EFE6;
   --color-brand-white: #FFFFFF;
   --color-brand-black: #141414;
   --color-brand-charcoal: #1E1E1E;
   --color-brand-bronze: #B88746;
   --color-brand-bronze-light: #C59A58;
   --color-brand-bronze-dark: #9E7234;
-  --color-brand-border: #E8E3DA;
-  --color-brand-muted: #5C5852;
+  --color-brand-border: #E8DED0;
+  --color-brand-muted: #77716A;
 
   --font-heading: var(--font-montserrat), sans-serif;
   --font-body: var(--font-plus-jakarta), sans-serif;

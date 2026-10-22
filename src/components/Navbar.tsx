@@ -99,7 +99,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
         }}
         className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${
           isScrolled
-            ? "bg-[#FAF8F5]/95 backdrop-blur-md py-3 border-b border-[#E8E3DA] shadow-sm"
+            ? "bg-[#FAF8F5]/95 backdrop-blur-md py-3 border-b border-[#E8DED0] shadow-sm"
             : "bg-transparent py-4 md:py-5"
         }`}
       >
@@ -120,7 +120,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
           {/* Right Controls: ONLY the 3-Lines Hamburger Menu Button */}
           <button
             onClick={() => setMenuOpen(true)}
-            className="group flex items-center gap-2.5 py-2 px-3.5 rounded-full bg-white/90 hover:bg-white border border-[#E8E3DA] hover:border-[#B88746]/50 transition-all duration-300 shadow-sm hover:shadow focus:outline-none cursor-pointer"
+            className="group flex items-center gap-2.5 py-2 px-3.5 rounded-full bg-white/90 hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 transition-all duration-300 shadow-sm hover:shadow focus:outline-none cursor-pointer"
             aria-label="Open Navigation Menu"
           >
             <span className="text-xs font-black uppercase tracking-widest text-[#141414] group-hover:text-[#B88746] transition-colors font-heading">
@@ -160,7 +160,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
             className="fixed inset-0 z-[60] h-screen h-[100dvh] w-screen w-full bg-[#FAF8F5] text-[#141414] flex flex-col justify-between px-6 py-4 md:px-12 md:py-6 overflow-hidden select-none"
           >
             {/* Top Bar inside Menu (Compact, No Overflow) */}
-            <div className="flex items-center justify-between pb-3 md:pb-4 border-b border-[#E8E3DA] w-full max-w-7xl mx-auto shrink-0">
+            <div className="flex items-center justify-between pb-3 md:pb-4 border-b border-[#E8DED0] w-full max-w-7xl mx-auto shrink-0">
               <a
                 href="#"
                 onClick={() => setMenuOpen(false)}
@@ -179,7 +179,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                 className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-widest text-[#141414] hover:text-[#B88746] transition-colors cursor-pointer py-1.5 px-3 rounded-full hover:bg-black/5"
               >
                 <span>Close</span>
-                <span className="w-8 h-8 rounded-full bg-white border border-[#E8E3DA] shadow-sm flex items-center justify-center group-hover:bg-[#B88746] group-hover:border-[#B88746] transition-all duration-300">
+                <span className="w-8 h-8 rounded-full bg-white border border-[#E8DED0] shadow-sm flex items-center justify-center group-hover:bg-[#B88746] group-hover:border-[#B88746] transition-all duration-300">
                   <X className="w-4 h-4 text-[#141414] group-hover:text-white transition-colors" />
                 </span>
               </button>
@@ -260,7 +260,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                     />
                   </svg>
                 </motion.div>
-                <div className="absolute text-center bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-[#E8E3DA] shadow-sm">
+                <div className="absolute text-center bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-[#E8DED0] shadow-sm">
                   <p className="text-[10px] font-mono font-bold tracking-widest uppercase text-[#B88746]">
                     WHITE INK STUDIO
                   </p>
@@ -269,7 +269,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
             </div>
 
             {/* Bottom Bar: Quick Contact Info (Compact, Clean, Fits Inside 100% Height) */}
-            <div className="pt-3 md:pt-4 border-t border-[#E8E3DA] w-full max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs tracking-wider uppercase text-[#5C5852] font-bold shrink-0">
+            <div className="pt-3 md:pt-4 border-t border-[#E8DED0] w-full max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs tracking-wider uppercase text-[#77716A] font-bold shrink-0">
               <a
                 href="#about"
                 onClick={() => setMenuOpen(false)}

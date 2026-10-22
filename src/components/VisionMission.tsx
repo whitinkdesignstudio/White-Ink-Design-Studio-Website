@@ -20,7 +20,7 @@ export default function VisionMission() {
       ref={containerRef}
       id="vision-mission"
       onMouseMove={handleMouseMove}
-      className="relative w-full min-h-screen lg:h-screen lg:max-h-screen bg-[#FAF8F5] text-[#141414] px-6 md:px-12 py-10 lg:py-0 flex flex-col justify-center overflow-hidden select-none border-t border-[#E8E3DA]"
+      className="relative w-full min-h-screen lg:h-screen lg:max-h-screen bg-[#FAF8F5] text-[#141414] px-6 md:px-12 py-10 lg:py-0 flex flex-col justify-center overflow-hidden select-none border-t border-[#E8DED0]"
     >
       {/* Background Dot Matrix Pattern */}
       <div
@@ -103,7 +103,7 @@ export default function VisionMission() {
 
             <div className="relative z-10 space-y-3 sm:space-y-4">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest uppercase text-[#B88746] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E8E3DA] shadow-sm">
+              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest uppercase text-[#B88746] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E8DED0] shadow-sm">
                 <span>[ THE NORTH STAR ]</span>
               </div>
 
@@ -120,7 +120,7 @@ export default function VisionMission() {
               </p>
 
               {/* Philosophy Narrative */}
-              <p className="text-xs sm:text-sm text-[#5C5852] font-normal leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed">
                 White ink cannot be seen until it meets the right surface. We find that surface for
                 healthcare institutions and D2C pioneers—translating clinical depth and product craft
                 into cultural distinction and lasting enterprise value.
@@ -128,8 +128,8 @@ export default function VisionMission() {
             </div>
 
             {/* Interactive Bottom Anchor */}
-            <div className="relative z-10 pt-4 mt-4 border-t border-[#E8E3DA]/80 flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#8C8275] font-semibold">
+            <div className="relative z-10 pt-4 mt-4 border-t border-[#E8DED0]/80 flex items-center justify-between">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#77716A] font-semibold">
                 Category // Distinction & Legacy
               </span>
               <span className="w-2 h-2 rounded-full bg-[#B88746] transition-transform duration-300 group-hover:scale-125" />
@@ -158,7 +158,7 @@ export default function VisionMission() {
 
             <div className="relative z-10 space-y-3 sm:space-y-4">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest uppercase text-[#9E7234] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E8E3DA] shadow-sm">
+              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest uppercase text-[#9E7234] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E8DED0] shadow-sm">
                 <span>[ THE EXECUTION ENGINE ]</span>
               </div>
 
@@ -175,7 +175,7 @@ export default function VisionMission() {
               </p>
 
               {/* Philosophy Narrative */}
-              <p className="text-xs sm:text-sm text-[#5C5852] font-normal leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed">
                 We eliminate the traditional friction between creative studios and performance marketers.
                 One senior founder-led team guiding your brand from identity tokens and custom Next.js/Shopify
                 builds to compliant Meta ad funnels and automated AI lead routing.
@@ -183,8 +183,8 @@ export default function VisionMission() {
             </div>
 
             {/* Interactive Bottom Anchor */}
-            <div className="relative z-10 pt-4 mt-4 border-t border-[#E8E3DA]/80 flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#8C8275] font-semibold">
+            <div className="relative z-10 pt-4 mt-4 border-t border-[#E8DED0]/80 flex items-center justify-between">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#77716A] font-semibold">
                 Execution // Sub-Second & Revenue-Tied
               </span>
               <span className="w-2 h-2 rounded-full bg-[#9E7234] transition-transform duration-300 group-hover:scale-125" />

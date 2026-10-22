@@ -8,9 +8,9 @@ interface IntroOverlayProps {
 }
 
 export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
-  // Step 0: Cosmic Space Zoom-In with Centered White Ink Logo Loader (0s - 1.8s)
-  // Step 1: 25 Flowing Silk Ribbons sweeping across (1.8s - 3.2s)
-  // Step 2: "WHITE INK" zooms out smoothly from massive scale (3.2s - 4.4s)
+  // Step 0: Cosmic Space Zoom-In with Centered White Ink Logo Loader (0s - 3.0s)
+  // Step 1: 25 Flowing Silk Ribbons sweeping across (3.0s - 6.0s)
+  // Step 2: "WHITE INK" zooms out smoothly from massive scale (6.0s - 7.2s)
   // Step 3: Finished, unmounts cleanly
   const [step, setStep] = useState<number>(0);
 
@@ -25,8 +25,8 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
       const targetY = Math.sin(angle) * (distance * 0.75); // aspect ratio compensation
       const size = 3 + (i % 4) * 2.5; // size in px
       const maxScale = 2.8 + (i % 3) * 1.2;
-      const delay = (i % 12) * 0.12;
-      const duration = 1.4 + (i % 5) * 0.15;
+      const delay = (i % 12) * 0.16;
+      const duration = 2.0 + (i % 5) * 0.2;
       const color = starColors[i % starColors.length];
       const isDiamond = i % 3 === 0;
 
@@ -56,7 +56,7 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
       "#FAF8F5", // Warm Cream
       "#D8CCA3", // Pale Gold Silk
       "#9E7234", // Subtle Amber Gold Accent
-      "#E8E3DA", // Soft Warm Stone
+      "#E8DED0", // Soft Warm Stone
     ];
 
     return Array.from({ length: 25 }, (_, i) => {
@@ -65,8 +65,8 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
       const waveHeight2 = (i % 3 === 0 ? -1 : 1) * (50 + (i % 3) * 20);
       const thickness = 26 + (i % 5) * 8; // Mota silk ribbons (26px to 58px thick)
       const color = colors[i % colors.length];
-      const delay = i * 0.04;
-      const duration = 1.6 + (i % 4) * 0.15;
+      const delay = i * 0.045;
+      const duration = 2.2 + (i % 4) * 0.2;
 
       const pathData = `M -250 ${y} C 250 ${y + waveHeight} 650 ${y + waveHeight2} 1100 ${y - waveHeight} C 1350 ${y + waveHeight2} 1500 ${y} 1750 ${y} L 1750 ${y + thickness} C 1500 ${y + thickness} 1350 ${y + waveHeight2 + thickness} 1100 ${y - waveHeight + thickness} C 650 ${y + waveHeight2 + thickness} 250 ${y + waveHeight + thickness} -250 ${y + thickness} Z`;
 
@@ -82,21 +82,21 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
       return;
     }
 
-    // Step 0: Cosmic Space Zoom-in Loader (0s - 1.8s)
+    // Step 0: Cosmic Space Zoom-in Loader (0s - 3.0s: 3 sec duration)
     const t1 = setTimeout(() => {
       setStep(1); // 25 flowing ribbons begin
-    }, 1800);
+    }, 3000);
 
-    // Step 1: Ribbons sweep across screen (1.8s - 3.2s)
+    // Step 1: Ribbons sweep across screen (3.0s - 6.0s: 3 sec duration)
     const t2 = setTimeout(() => {
       setStep(2); // "WHITE INK" zooms out smoothly from massive scale
-    }, 3200);
+    }, 6000);
 
-    // Step 2: "WHITE INK" zoom-out completes (3.2s - 4.4s)
+    // Step 2: "WHITE INK" zoom-out completes (6.0s - 7.2s)
     const t3 = setTimeout(() => {
       setStep(3); // Finished! Calls onComplete()
       onComplete();
-    }, 4400);
+    }, 7200);
 
     return () => {
       clearTimeout(t1);
@@ -260,7 +260,7 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25, duration: 0.5 }}
-                className="mt-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#E8E3DA] shadow-sm backdrop-blur-sm"
+                className="mt-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#E8DED0] shadow-sm backdrop-blur-sm"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88746] animate-ping" />
                 <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.25em] text-[#141414] font-heading">

@@ -176,7 +176,7 @@ export default function ProcessSection() {
       ref={containerRef}
       id="process"
       onMouseMove={handleMouseMove}
-      className="relative w-full bg-[#FAF8F5] text-[#141414] min-h-[420vh] select-none border-t border-[#E8E3DA]"
+      className="relative w-full bg-[#FAF8F5] text-[#141414] min-h-[420vh] select-none border-t border-[#E8DED0]"
     >
       {/* Sticky Viewport Stage: Completely Open, No Card Box */}
       <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center px-6 md:px-12 overflow-hidden bg-[#FAF8F5]">
@@ -340,7 +340,7 @@ export default function ProcessSection() {
                 </h3>
 
                 {/* Step Description Paragraph */}
-                <p className="text-sm sm:text-base md:text-lg text-[#5C5852] leading-relaxed font-normal max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-[#77716A] leading-relaxed font-normal max-w-2xl mx-auto">
                   {step.description}
                 </p>
               </motion.div>

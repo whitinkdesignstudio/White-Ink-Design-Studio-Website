@@ -26,10 +26,10 @@ const clientListRow2 = [
 
 export default function MarqueeClients() {
   return (
-    <div className="w-full py-10 bg-[#F4F0E8] border-y border-[#E8E3DA] overflow-hidden relative select-none">
+    <div className="w-full py-10 bg-[#F5EFE6] border-y border-[#E8DED0] overflow-hidden relative select-none">
       {/* Subtle fade edges matching the light cream color */}
-      <div className="absolute top-0 left-0 w-24 md:w-48 h-full bg-gradient-to-r from-[#F4F0E8] to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-24 md:w-48 h-full bg-gradient-to-l from-[#F4F0E8] to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-24 md:w-48 h-full bg-gradient-to-r from-[#F5EFE6] to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-24 md:w-48 h-full bg-gradient-to-l from-[#F5EFE6] to-transparent z-20 pointer-events-none" />
 
       {/* Row 1 - Marquee Forward */}
       <div className="flex overflow-hidden py-2">
@@ -52,7 +52,7 @@ export default function MarqueeClients() {
           {[...clientListRow2, ...clientListRow2].map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-8 text-[#5C5852] hover:text-[#141414] transition-colors duration-300 font-heading text-sm md:text-base font-bold tracking-wider uppercase cursor-default"
+              className="flex items-center gap-8 text-[#77716A] hover:text-[#141414] transition-colors duration-300 font-heading text-sm md:text-base font-bold tracking-wider uppercase cursor-default"
             >
               <span>{item}</span>
               <span className="text-[#B88746] font-black">/</span>

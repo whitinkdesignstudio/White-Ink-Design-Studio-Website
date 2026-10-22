@@ -155,50 +155,50 @@ export default function FeaturedWork() {
           preserveAspectRatio="xMidYMid slice"
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         >
-          {/* Deep Obsidian Luxury Background */}
-          <rect width="800" height="420" fill="#141414" />
+          {/* Rich Golden Bronze Luxury Background */}
+          <rect width="800" height="420" fill="#9E7234" />
           {/* Gold particle glow */}
           <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#141414" stopOpacity="0" />
+            <stop offset="0%" stopColor="#C59A58" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#875D27" stopOpacity="0.85" />
           </radialGradient>
           <rect width="800" height="420" fill="url(#goldGlow)" />
 
           {/* Left Wing (Revealed on Hover) */}
           <g>
-            <rect x="50" y="70" width="180" height="280" rx="16" fill="#1E1E1E" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.4" />
-            <text x="70" y="115" fill="#D4AF37" fontSize="12" fontWeight="800" letterSpacing="1.5" fontFamily="sans-serif">LOCAL DISPATCH</text>
+            <rect x="50" y="70" width="180" height="280" rx="16" fill="#875D27" stroke="#C59A58" strokeWidth="1" strokeOpacity="0.5" />
+            <text x="70" y="115" fill="#FAF8F5" fontSize="12" fontWeight="800" letterSpacing="1.5" fontFamily="sans-serif">LOCAL DISPATCH</text>
             <text x="70" y="170" fill="#FFFFFF" fontSize="48" fontWeight="900" fontFamily="sans-serif">3-HR</text>
-            <text x="70" y="200" fill="#D4AF37" fontSize="12" fontWeight="700" fontFamily="sans-serif">Express Delivery</text>
-            <text x="70" y="220" fill="#FAF8F5" opacity="0.6" fontSize="10" fontFamily="sans-serif">Hyperlocal routing engine</text>
-            <rect x="70" y="265" width="140" height="42" rx="8" fill="#D4AF37" />
+            <text x="70" y="200" fill="#F5EFE6" fontSize="12" fontWeight="700" fontFamily="sans-serif">Express Delivery</text>
+            <text x="70" y="220" fill="#FAF8F5" opacity="0.75" fontSize="10" fontFamily="sans-serif">Hyperlocal routing engine</text>
+            <rect x="70" y="265" width="140" height="42" rx="8" fill="#FAF8F5" />
             <text x="140" y="291" textAnchor="middle" fill="#141414" fontSize="11" fontWeight="900" letterSpacing="1" fontFamily="sans-serif">SHOPIFY LIQUID</text>
           </g>
 
           {/* Center Main Stage (Visible Square & Wide) */}
           <g>
-            <rect x="260" y="50" width="280" height="320" rx="20" fill="#1E1E1E" stroke="#D4AF37" strokeWidth="2" />
-            <text x="400" y="95" textAnchor="middle" fill="#D4AF37" fontSize="11" fontWeight="800" letterSpacing="3" fontFamily="sans-serif">LUXURY PERFUMERY</text>
+            <rect x="260" y="50" width="280" height="320" rx="20" fill="#875D27" stroke="#C59A58" strokeWidth="2" />
+            <text x="400" y="95" textAnchor="middle" fill="#FAF8F5" fontSize="11" fontWeight="800" letterSpacing="3" fontFamily="sans-serif">LUXURY PERFUMERY</text>
             <text x="400" y="140" textAnchor="middle" fill="#FFFFFF" fontSize="28" fontWeight="900" fontFamily="serif" letterSpacing="2">WAND</text>
-            <text x="400" y="165" textAnchor="middle" fill="#D4AF37" fontSize="14" fontWeight="600" letterSpacing="4" fontFamily="sans-serif">FRAGRANCE</text>
+            <text x="400" y="165" textAnchor="middle" fill="#FAF8F5" fontSize="14" fontWeight="600" letterSpacing="4" fontFamily="sans-serif">FRAGRANCE</text>
             {/* Perfume Bottle Silhouette */}
-            <rect x="382" y="195" width="36" height="20" rx="4" fill="#D4AF37" />
-            <rect x="365" y="215" width="70" height="65" rx="8" fill="none" stroke="#D4AF37" strokeWidth="2.5" />
-            <circle cx="400" cy="245" r="14" fill="#D4AF37" opacity="0.3" />
+            <rect x="382" y="195" width="36" height="20" rx="4" fill="#FAF8F5" />
+            <rect x="365" y="215" width="70" height="65" rx="8" fill="none" stroke="#FAF8F5" strokeWidth="2.5" />
+            <circle cx="400" cy="245" r="14" fill="#FAF8F5" opacity="0.3" />
             {/* Outcome Badge */}
-            <rect x="300" y="300" width="200" height="42" rx="21" fill="#D4AF37" />
+            <rect x="300" y="300" width="200" height="42" rx="21" fill="#FFFFFF" />
             <text x="400" y="326" textAnchor="middle" fill="#141414" fontSize="13" fontWeight="900" letterSpacing="1.5" fontFamily="sans-serif">+310% D2C GMV</text>
           </g>
 
           {/* Right Wing (Revealed on Hover) */}
           <g>
-            <rect x="570" y="70" width="180" height="280" rx="16" fill="#1E1E1E" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.4" />
-            <text x="590" y="115" fill="#D4AF37" fontSize="12" fontWeight="800" letterSpacing="1.5" fontFamily="sans-serif">CONVERSION ARCH</text>
+            <rect x="570" y="70" width="180" height="280" rx="16" fill="#875D27" stroke="#C59A58" strokeWidth="1" strokeOpacity="0.5" />
+            <text x="590" y="115" fill="#FAF8F5" fontSize="12" fontWeight="800" letterSpacing="1.5" fontFamily="sans-serif">CONVERSION ARCH</text>
             <text x="590" y="150" fill="#FFFFFF" fontSize="13" fontWeight="800" fontFamily="sans-serif">1-Click Fast Pay</text>
-            <text x="590" y="170" fill="#FAF8F5" opacity="0.6" fontSize="10" fontFamily="sans-serif">RTO reduction setup</text>
-            <line x1="590" y1="200" x2="730" y2="200" stroke="#333333" strokeWidth="1" />
+            <text x="590" y="170" fill="#FAF8F5" opacity="0.75" fontSize="10" fontFamily="sans-serif">RTO reduction setup</text>
+            <line x1="590" y1="200" x2="730" y2="200" stroke="#C59A58" strokeWidth="1" opacity="0.4" />
             <text x="590" y="235" fill="#FFFFFF" fontSize="13" fontWeight="800" fontFamily="sans-serif">META ROAS 4.8X</text>
-            <text x="590" y="255" fill="#FAF8F5" opacity="0.6" fontSize="10" fontFamily="sans-serif">Scroll-stopping visuals</text>
+            <text x="590" y="255" fill="#FAF8F5" opacity="0.75" fontSize="10" fontFamily="sans-serif">Scroll-stopping visuals</text>
           </g>
         </svg>
       ),
@@ -326,7 +326,7 @@ export default function FeaturedWork() {
   return (
     <section
       id="work"
-      className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between bg-[#FAF8F5] text-[#141414] select-none overflow-hidden border-t border-[#D8D2C7]"
+      className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between bg-[#FAF8F5] text-[#141414] select-none overflow-hidden border-t border-[#E8DED0]"
     >
       {/* ========================================================================= */}
       {/* SECTION HEADER: MATCHING "IN THE NEWS" HIGH-FASHION EDITORIAL TYPOGRAPHY   */}
@@ -350,7 +350,7 @@ export default function FeaturedWork() {
       </div>
 
       {/* Horizontal Divider Line under Header */}
-      <div className="w-full h-[1px] bg-[#D8D2C7]" />
+      <div className="w-full h-[1px] bg-[#E8DED0]" />
 
       {/* ========================================================================= */}
       {/* 5-COLUMN ACCORDION STAGE                                                  */}
@@ -366,9 +366,9 @@ export default function FeaturedWork() {
               key={item.id}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
-              className={`group relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#D8D2C7] last:border-r-0 cursor-pointer overflow-hidden transition-[flex] duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] ${
+              className={`group relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#E8DED0] last:border-r-0 cursor-pointer overflow-hidden transition-[flex] duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] ${
                 isHovered
-                  ? "lg:flex-[2.4] bg-[#F2EDE4]"
+                  ? "lg:flex-[2.4] bg-[#F5EFE6]"
                   : isAnyHovered
                   ? "lg:flex-[0.65] bg-[#FAF8F5]"
                   : "lg:flex-1 bg-[#FAF8F5]"
@@ -381,7 +381,7 @@ export default function FeaturedWork() {
               </div>
 
               {/* Horizontal Divider between Photo and Description */}
-              <div className="w-full h-[1px] bg-[#D8D2C7]" />
+              <div className="w-full h-[1px] bg-[#E8DED0]" />
 
               {/* BOTTOM PART: NUMBER + DESCRIPTION ONLY (CLEAN MINIMAL MATCH WITH REFERENCE) */}
               <div className="p-4 sm:p-5 lg:p-6 flex items-start gap-3.5 sm:gap-4 flex-1 bg-inherit transition-colors duration-300">
@@ -395,7 +395,7 @@ export default function FeaturedWork() {
 
                 {/* Right: Description Text (Wraps naturally as the column expands horizontally) */}
                 <div className="flex-1 min-w-0">
-                  <p className="text-xs sm:text-[13px] text-[#4A4742] font-normal leading-relaxed line-clamp-3 lg:line-clamp-4">
+                  <p className="text-xs sm:text-[13px] text-[#77716A] font-normal leading-relaxed line-clamp-3 lg:line-clamp-4">
                     {item.description}
                   </p>
                 </div>

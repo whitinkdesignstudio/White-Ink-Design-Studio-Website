@@ -147,7 +147,7 @@ const col3Brands: BrandCard[] = [
 
 function BrandCardItem({ brand }: { brand: BrandCard }) {
   return (
-    <div className="w-full bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-md border border-[#E8E3DA] hover:border-[#B88746] transition-all duration-300 flex flex-col items-center justify-center text-center aspect-square sm:aspect-[4/3] group select-none">
+    <div className="w-full bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-sm border border-[#E8DED0] hover:border-[#B88746] transition-all duration-300 flex flex-col items-center justify-center text-center aspect-square sm:aspect-[4/3] group select-none">
       <div
         className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm font-heading mb-2 sm:mb-2.5 shadow-sm transition-transform duration-300 group-hover:scale-110"
         style={{
@@ -163,11 +163,11 @@ function BrandCardItem({ brand }: { brand: BrandCard }) {
         {brand.name}
       </h4>
 
-      <p className="text-[10px] sm:text-[11px] font-semibold text-[#8C8275] mt-0.5 line-clamp-1">
+      <p className="text-[10px] sm:text-[11px] font-semibold text-[#77716A] mt-0.5 line-clamp-1">
         {brand.tagline}
       </p>
 
-      <span className="mt-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#FAF8F5] border border-[#E8E3DA] text-[#141414]/70">
+      <span className="mt-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#FAF8F5] border border-[#E8DED0] text-[#77716A]">
         {brand.category}
       </span>
     </div>
@@ -178,17 +178,17 @@ export default function BrandsThrived() {
   return (
     <section id="clients" className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-center items-center py-8 lg:py-0 px-4 sm:px-6 md:px-12 bg-[#FAF8F5] overflow-hidden">
       <div className="max-w-7xl w-full mx-auto my-auto">
-        {/* Outer Frame with Thick Studio Gold Border (Exact Style from Attached Reference Image) */}
-        <div className="relative w-full rounded-[24px] sm:rounded-[32px] bg-[#141414] text-white border-4 sm:border-[5px] border-[#B88746] shadow-2xl overflow-hidden p-5 sm:p-7 md:p-8 lg:p-10">
+        {/* Outer Frame with Light Beige/Cream Panel Matching Reference Image */}
+        <div className="relative w-full rounded-[24px] sm:rounded-[32px] bg-[#F5EFE6] text-[#141414] border border-[#E8DED0] shadow-xl overflow-hidden p-5 sm:p-7 md:p-8 lg:p-10">
           {/* Subtle Warm Background Glow */}
-          <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#B88746]/10 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#B88746]/08 rounded-full blur-[140px] pointer-events-none" />
 
           {/* Dot Grid Texture on Left */}
           <div
             className="absolute left-0 top-0 bottom-0 w-1/2 pointer-events-none opacity-20"
             style={{
               backgroundImage:
-                "radial-gradient(rgba(255, 255, 255, 0.25) 1.2px, transparent 1.2px)",
+                "radial-gradient(rgba(184, 135, 70, 0.2) 1.2px, transparent 1.2px)",
               backgroundSize: "22px 22px",
             }}
           />
@@ -204,49 +204,49 @@ export default function BrandsThrived() {
                 <span>Our Clientele Ecosystem</span>
               </div>
 
-              {/* Bold 3D Headline matching Reference Image */}
+              {/* Bold Headline matching Reference Image */}
               <div className="space-y-0.5 sm:space-y-1 select-none">
-                <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white font-heading drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+                <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#141414] font-heading">
                   BRANDS{" "}
-                  <span className="text-[#B88746] drop-shadow-[0_2px_10px_rgba(184,135,70,0.5)]">
+                  <span className="text-[#B88746]">
                     THAT
                   </span>
                 </h3>
 
-                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.6rem] font-black uppercase tracking-tighter font-heading text-white drop-shadow-[0_6px_20px_rgba(0,0,0,0.9)] leading-none">
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.6rem] font-black uppercase tracking-tighter font-heading text-[#141414] leading-none">
                   THRIVED
                 </div>
 
                 <div className="flex flex-wrap items-baseline gap-2 pt-1">
-                  <span className="text-xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white font-heading">
+                  <span className="text-xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#141414] font-heading">
                     WITH
                   </span>
-                  <span className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#B88746] font-heading drop-shadow-[0_4px_16px_rgba(184,135,70,0.6)]">
+                  <span className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#B88746] font-heading">
                     WHITE INK
                   </span>
                 </div>
 
-                <div className="text-base sm:text-xl lg:text-2xl font-black uppercase tracking-widest text-[#FAF8F5]/80 font-heading">
+                <div className="text-base sm:text-xl lg:text-2xl font-black uppercase tracking-widest text-[#77716A] font-heading">
                   DESIGN STUDIO
                 </div>
               </div>
 
               {/* Editorial Description Matching Image Tone */}
-              <p className="text-xs sm:text-sm text-[#D4AF37]/90 font-medium leading-relaxed max-w-md pt-1">
+              <p className="text-xs sm:text-sm text-[#77716A] font-medium leading-relaxed max-w-md pt-1">
                 For over 8 years now, we have infused India and the UK&apos;s top brands with
                 clarity, creativity, and confidence through effective branding, high-converting
                 websites, and performance growth solutions.
               </p>
 
               {/* Stats proof pill */}
-              <div className="pt-1 flex flex-wrap items-center gap-2.5 text-[11px] font-bold font-mono uppercase text-white/70">
-                <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+              <div className="pt-1 flex flex-wrap items-center gap-2.5 text-[11px] font-bold font-mono uppercase text-[#141414]">
+                <span className="px-3 py-1 rounded-full bg-white border border-[#E8DED0] shadow-sm">
                   400+ Total Brands
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                <span className="px-3 py-1 rounded-full bg-white border border-[#E8DED0] shadow-sm">
                   70+ Healthcare
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                <span className="px-3 py-1 rounded-full bg-white border border-[#E8DED0] shadow-sm">
                   50+ Websites
                 </span>
               </div>
@@ -257,8 +257,8 @@ export default function BrandsThrived() {
             {/* ========================================================================= */}
             <div className="lg:col-span-7 relative h-[380px] sm:h-[420px] md:h-[460px] lg:h-[470px] overflow-hidden rounded-2xl">
               {/* Top & Bottom Vignette Gradient Fades */}
-              <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#141414] to-transparent z-20 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#141414] to-transparent z-20 pointer-events-none" />
+              <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#F5EFE6] to-transparent z-20 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#F5EFE6] to-transparent z-20 pointer-events-none" />
 
               <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-5 h-full">
                 {/* ========================================================= */}

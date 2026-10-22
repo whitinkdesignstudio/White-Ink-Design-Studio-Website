@@ -171,7 +171,7 @@ export default function Hero({ isReady = true }: HeroProps) {
             pointerEvents: bubblePointerEvents,
             opacity: bubbleOpacity,
           }}
-          className="absolute inset-0 z-20 w-full h-full bg-[#9E7234] shadow-2xl flex items-center justify-center overflow-y-auto lg:overflow-hidden"
+          className="absolute inset-0 z-20 w-full h-full bg-[#F5EFE6] shadow-2xl flex items-center justify-center overflow-y-auto lg:overflow-hidden"
         >
           <WhyChooseUs scrollYProgress={scrollYProgress} trackRef={trackRef} />
         </motion.div>

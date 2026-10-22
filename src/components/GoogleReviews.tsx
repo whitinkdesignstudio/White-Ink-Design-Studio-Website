@@ -241,7 +241,7 @@ export default function GoogleReviews() {
   }, []);
 
   return (
-    <section id="reviews" className="relative w-full bg-[#FAF8F5] text-[#141414] py-24 md:py-32 overflow-hidden select-none border-t border-[#E8E3DA]">
+    <section id="reviews" className="relative w-full bg-[#FAF8F5] text-[#141414] py-24 md:py-32 overflow-hidden select-none border-t border-[#E8DED0]">
       {/* Subtle warm bronze dot matrix pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30"
@@ -263,7 +263,7 @@ export default function GoogleReviews() {
         {/* ========================================================================= */}
         {/* SECTION HEADER & GOOGLE RATING SUMMARY BADGE                             */}
         {/* ========================================================================= */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-6 border-b border-[#E8E3DA] pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-6 border-b border-[#E8DED0] pb-8">
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B88746] mb-3">
               <span className="w-2 h-2 rounded-full bg-[#B88746]" />
@@ -278,12 +278,12 @@ export default function GoogleReviews() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <p className="text-sm md:text-base text-[#5C5852] max-w-sm font-normal leading-relaxed">
+            <p className="text-sm md:text-base text-[#77716A] max-w-sm font-normal leading-relaxed">
               Real experiences. Genuine feedback. Trusted by ambitious brands, clinics, and founders globally.
             </p>
 
             {/* Google Verified Rating Summary Badge */}
-            <div className="flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-white border border-[#E8E3DA] shadow-sm shrink-0">
+            <div className="flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-white border border-[#E8DED0] shadow-sm shrink-0">
               <GoogleGIcon className="w-6 h-6 shrink-0" />
               <div>
                 <div className="flex items-center gap-1.5">
@@ -294,7 +294,7 @@ export default function GoogleReviews() {
                     ))}
                   </div>
                 </div>
-                <div className="text-[11px] font-semibold text-[#8C8275]">
+                <div className="text-[11px] font-semibold text-[#77716A]">
                   40+ Verified Reviews
                 </div>
               </div>
@@ -329,7 +329,7 @@ export default function GoogleReviews() {
           {displayReviews.map((rev, index) => (
             <div
               key={`${rev.id}-${index}`}
-              className="w-[300px] sm:w-[340px] md:w-[370px] min-h-[230px] sm:min-h-[250px] bg-white rounded-3xl p-6 sm:p-7 border border-[#E8E3DA] hover:border-[#B88746]/60 transition-colors duration-300 shadow-[0_10px_35px_rgba(20,20,20,0.06)] hover:shadow-[0_15px_45px_rgba(184,135,70,0.12)] flex flex-col justify-between shrink-0 group [transform-style:preserve-3d] select-none"
+              className="w-[300px] sm:w-[340px] md:w-[370px] min-h-[230px] sm:min-h-[250px] bg-white rounded-3xl p-6 sm:p-7 border border-[#E8DED0] hover:border-[#B88746]/60 transition-colors duration-300 shadow-[0_10px_35px_rgba(184,135,70,0.06)] hover:shadow-[0_15px_45px_rgba(184,135,70,0.12)] flex flex-col justify-between shrink-0 group [transform-style:preserve-3d] select-none"
             >
               <div>
                 {/* Review Card Top Bar */}
@@ -346,14 +346,14 @@ export default function GoogleReviews() {
                       <h4 className="text-sm font-bold text-[#141414] font-heading leading-snug group-hover:text-[#B88746] transition-colors">
                         {rev.name}
                       </h4>
-                      <div className="text-[11px] text-[#8C8275] leading-tight mt-0.5">
+                      <div className="text-[11px] text-[#77716A] leading-tight mt-0.5">
                         {rev.date}
                       </div>
                     </div>
                   </div>
 
-                  {/* Google Multicolor G Icon */}
-                  <div className="w-7 h-7 rounded-full bg-[#FAF8F5] border border-[#E8E3DA] flex items-center justify-center shrink-0">
+                    {/* Google Multicolor G Icon */}
+                  <div className="w-7 h-7 rounded-full bg-[#FAF8F5] border border-[#E8DED0] flex items-center justify-center shrink-0">
                     <GoogleGIcon className="w-4 h-4" />
                   </div>
                 </div>
@@ -369,18 +369,18 @@ export default function GoogleReviews() {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-xs sm:text-sm text-[#5C5852] font-normal leading-relaxed line-clamp-4">
+                <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed line-clamp-4">
                   &ldquo;{rev.text}&rdquo;
                 </p>
               </div>
 
               {/* Card Footer: Verified Label */}
-              <div className="pt-4 mt-3 border-t border-[#E8E3DA]/80 flex items-center justify-between text-[11px] text-[#8C8275]">
+              <div className="pt-4 mt-3 border-t border-[#E8DED0]/80 flex items-center justify-between text-[11px] text-[#77716A]">
                 <span className="inline-flex items-center gap-1 font-medium text-[#141414]">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Verified Client</span>
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-[#8C8275]">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#77716A]">
                   Google Review
                 </span>
               </div>
@@ -391,7 +391,7 @@ export default function GoogleReviews() {
 
       {/* Helpful preview notice (small subtle caption) */}
       <div className="max-w-7xl mx-auto px-6 text-center mt-6">
-        <p className="text-[11px] text-[#8C8275]/80 font-mono tracking-wide">
+        <p className="text-[11px] text-[#77716A]/80 font-mono tracking-wide">
           ★ Sample preview reviews · Configurable data array ready for live Google Business Profile sync
         </p>
       </div>
