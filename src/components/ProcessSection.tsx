@@ -304,7 +304,7 @@ export default function ProcessSection() {
               textShadow: `0 4px 24px ${activeColor}30`,
             }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.6rem] font-black uppercase tracking-tight text-[#141414] font-heading"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight"
           >
             How We Work
           </motion.h2>
@@ -326,15 +326,15 @@ export default function ProcessSection() {
                 }}
                 className="absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center px-4"
               >
-                {/* Step Number (Prominent Size) */}
+                {/* Step Number matching Raleway specification */}
                 <div
-                  className={`text-5xl sm:text-6xl md:text-7xl font-black font-heading tracking-tight mb-2 sm:mb-3 ${step.numColor} drop-shadow-sm`}
+                  className={`text-4xl sm:text-5xl md:text-6xl font-bold font-raleway tracking-normal mb-1.5 sm:mb-2 ${step.numColor} drop-shadow-sm`}
                 >
                   {step.number}
                 </div>
 
-                {/* Step Title (Two-tone style from reference image) */}
-                <h3 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight font-heading leading-tight mb-4 sm:mb-5">
+                {/* Step Title matching exact Raleway specification */}
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal font-raleway leading-tight mb-3 sm:mb-4">
                   <span className="text-[#141414]">{step.titlePrefix}</span>
                   <span className={step.suffixGradient}>{step.titleSuffix}</span>
                 </h3>

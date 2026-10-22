@@ -265,11 +265,7 @@ export default function GoogleReviews() {
         {/* ========================================================================= */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-6 border-b border-[#E8DED0] pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B88746] mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#B88746]" />
-              <span>Google Reviews</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase text-[#141414] tracking-tight leading-none font-heading">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
               Loved by <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                 Our Customers

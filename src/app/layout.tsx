@@ -8,6 +8,7 @@ import {
   Poppins,
 } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -70,6 +71,7 @@ export default function RootLayout({
       className={`${raleway.variable} ${oswald.variable} ${bitter.variable} ${poppins.variable} ${montserrat.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
     >
       <body className="min-h-screen bg-[#FAF8F5] text-[#141414] font-body selection:bg-[#B88746] selection:text-white">
+        <CustomCursor />
         {children}
       </body>
     </html>

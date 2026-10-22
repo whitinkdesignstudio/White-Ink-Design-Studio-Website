@@ -51,12 +51,7 @@ export default function VisionMission() {
         {/* SECTION HEADER: BESPOKE EDITORIAL TYPOGRAPHY                              */}
         {/* ========================================================================= */}
         <div className="mb-6 lg:mb-10 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.3em] text-[#B88746] mb-2.5">
-            <span className="w-2 h-2 rounded-full bg-[#B88746] animate-pulse" />
-            <span>Studio Philosophy // 01</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#141414] font-heading leading-tight">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
             The Purpose That <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
               Drives Our Ink
@@ -89,11 +84,6 @@ export default function VisionMission() {
             onMouseLeave={() => setActiveSide(null)}
             className="lg:col-span-6 relative flex flex-col justify-between py-2 lg:py-4 lg:pr-12 transition-all duration-500 group"
           >
-            {/* Giant Wireframe Watermark Number */}
-            <div className="absolute -top-8 -left-4 text-7xl sm:text-8xl lg:text-9xl font-black font-heading text-[#B88746]/[0.07] pointer-events-none select-none transition-transform duration-700 group-hover:scale-105 group-hover:text-[#B88746]/[0.12]">
-              01
-            </div>
-
             {/* Glowing Accent Aura on Hover */}
             <div
               className={`absolute inset-0 -m-4 rounded-3xl bg-gradient-to-br from-[#B88746]/[0.07] via-transparent to-transparent transition-opacity duration-500 pointer-events-none ${
@@ -102,13 +92,8 @@ export default function VisionMission() {
             />
 
             <div className="relative z-10 space-y-3 sm:space-y-4">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest uppercase text-[#B88746] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E8DED0] shadow-sm">
-                <span>[ THE NORTH STAR ]</span>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#141414] font-heading group-hover:text-[#9E7234] transition-colors duration-300">
+              {/* Title matching exact Raleway specification */}
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway group-hover:text-[#9E7234] transition-colors duration-300">
                 The Vision
               </h3>
 
@@ -126,14 +111,6 @@ export default function VisionMission() {
                 into cultural distinction and lasting enterprise value.
               </p>
             </div>
-
-            {/* Interactive Bottom Anchor */}
-            <div className="relative z-10 pt-4 mt-4 border-t border-[#E8DED0]/80 flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#77716A] font-semibold">
-                Category // Distinction & Legacy
-              </span>
-              <span className="w-2 h-2 rounded-full bg-[#B88746] transition-transform duration-300 group-hover:scale-125" />
-            </div>
           </div>
 
           {/* ========================================================================= */}
@@ -144,11 +121,6 @@ export default function VisionMission() {
             onMouseLeave={() => setActiveSide(null)}
             className="lg:col-span-6 relative flex flex-col justify-between py-2 lg:py-4 lg:pl-12 transition-all duration-500 group"
           >
-            {/* Giant Wireframe Watermark Number */}
-            <div className="absolute -top-8 -left-4 lg:left-6 text-7xl sm:text-8xl lg:text-9xl font-black font-heading text-[#9E7234]/[0.07] pointer-events-none select-none transition-transform duration-700 group-hover:scale-105 group-hover:text-[#9E7234]/[0.12]">
-              02
-            </div>
-
             {/* Glowing Accent Aura on Hover */}
             <div
               className={`absolute inset-0 -m-4 rounded-3xl bg-gradient-to-bl from-[#9E7234]/[0.07] via-transparent to-transparent transition-opacity duration-500 pointer-events-none ${
@@ -157,13 +129,8 @@ export default function VisionMission() {
             />
 
             <div className="relative z-10 space-y-3 sm:space-y-4">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-widest uppercase text-[#9E7234] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E8DED0] shadow-sm">
-                <span>[ THE EXECUTION ENGINE ]</span>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#141414] font-heading group-hover:text-[#B88746] transition-colors duration-300">
+              {/* Title matching exact Raleway specification */}
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway group-hover:text-[#B88746] transition-colors duration-300">
                 The Mission
               </h3>
 
@@ -180,14 +147,6 @@ export default function VisionMission() {
                 One senior founder-led team guiding your brand from identity tokens and custom Next.js/Shopify
                 builds to compliant Meta ad funnels and automated AI lead routing.
               </p>
-            </div>
-
-            {/* Interactive Bottom Anchor */}
-            <div className="relative z-10 pt-4 mt-4 border-t border-[#E8DED0]/80 flex items-center justify-between">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#77716A] font-semibold">
-                Execution // Sub-Second & Revenue-Tied
-              </span>
-              <span className="w-2 h-2 rounded-full bg-[#9E7234] transition-transform duration-300 group-hover:scale-125" />
             </div>
           </div>
         </div>

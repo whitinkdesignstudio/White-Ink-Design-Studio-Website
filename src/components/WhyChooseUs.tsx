@@ -494,15 +494,10 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
         {/* ========================================================================= */}
         {/* LEFT SIDE: EDITORIAL DISPLAY HEADLINE & BOTTOM INTERACTIVE TABS           */}
         {/* ========================================================================= */}
-        <div className="lg:col-span-5 flex flex-col justify-between h-full py-4 lg:py-6 space-y-10 lg:space-y-16">
+        <div className="lg:col-span-5 flex flex-col justify-center py-2 lg:py-4 space-y-5 lg:space-y-6">
           {/* Top Display Headline (Dual-Tone Ochre & Obsidian Contrast) */}
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] bg-[#FAF8F5] text-[#9E7234] border border-[#E8DED0] px-3.5 py-1.5 rounded-full mb-5 shadow-sm font-raleway">
-              <span className="w-2 h-2 rounded-full bg-[#B88746] animate-pulse" />
-              <span>Why Choose White Ink</span>
-            </div>
-
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] font-bold tracking-normal uppercase text-[#141414] leading-[0.95] drop-shadow-sm font-raleway">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight drop-shadow-sm">
               SERVICES<br />
               THAT MOVE<br />
               <span className="text-[#B88746]">
@@ -511,8 +506,8 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
             </h2>
           </div>
 
-          {/* Bottom-Left Interactive Tabs List (With Thick Left Indicator & Counter) */}
-          <div className="pt-8 border-t border-[#E8DED0] flex items-end justify-between">
+          {/* Bottom-Left Interactive Tabs List (With Reduced Gap to Headline) */}
+          <div className="pt-4 lg:pt-5 border-t border-[#E8DED0] flex items-end justify-between">
             {/* Tab options stacked vertically */}
             <div className="space-y-3.5">
               {serviceTabs.map((tab, idx) => {

@@ -158,3 +158,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #9E7234;
 }
+
+/* Custom Cursor: Hide default OS cursor on desktop pointer devices */
+@media (pointer: fine) and (hover: hover) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}

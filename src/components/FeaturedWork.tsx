@@ -333,8 +333,8 @@ export default function FeaturedWork() {
       {/* ========================================================================= */}
       <div className="w-full px-6 md:px-12 pt-7 pb-4 lg:pt-7 lg:pb-4">
         <div className="flex items-center justify-between gap-4">
-          {/* Main Giant Serif Headline */}
-          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] uppercase tracking-tight text-[#141414] leading-none font-normal">
+          {/* Main Giant Headline matching exact Raleway specification */}
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
             SELECTED PORTFOLIO
           </h2>
 

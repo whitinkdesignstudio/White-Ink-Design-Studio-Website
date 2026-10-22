@@ -198,12 +198,6 @@ export default function BrandsThrived() {
             {/* LEFT SIDE: BOLD STYLIZED 3D POSTER TYPOGRAPHY                              */}
             {/* ========================================================================= */}
             <div className="lg:col-span-5 flex flex-col justify-center space-y-4 lg:space-y-5">
-              {/* Eyebrow / Tag */}
-              <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#B88746]">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#B88746] animate-pulse" />
-                <span>Our Clientele Ecosystem</span>
-              </div>
-
               {/* Bold Headline matching Reference Image */}
               <div className="space-y-0.5 sm:space-y-1 select-none">
                 <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#141414] font-heading">
