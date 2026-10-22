@@ -40,7 +40,7 @@ export default function Hero({ isReady = true }: HeroProps) {
       <div id="why-choose-us" className="absolute top-[28%] pointer-events-none" />
 
       {/* Sticky Fullscreen Stage */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#FAF8F5]">
+      <div className="sticky top-0 h-screen h-[100dvh] w-full overflow-hidden flex items-center justify-center bg-[#FAF8F5]">
         {/* ========================================================================= */}
         {/* LAYER 1: HERO SECTION BASE CONTENT                                        */}
         {/* ========================================================================= */}
@@ -171,7 +171,7 @@ export default function Hero({ isReady = true }: HeroProps) {
             pointerEvents: bubblePointerEvents,
             opacity: bubbleOpacity,
           }}
-          className="absolute inset-0 z-20 w-full h-full bg-[#F5EFE6] shadow-2xl flex items-center justify-center overflow-y-auto lg:overflow-hidden"
+          className="absolute inset-0 z-20 w-full h-full bg-[#F5EFE6] shadow-2xl flex items-center justify-center overflow-hidden"
         >
           <WhyChooseUs scrollYProgress={scrollYProgress} trackRef={trackRef} />
         </motion.div>

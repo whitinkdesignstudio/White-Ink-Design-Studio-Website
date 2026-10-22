@@ -174,12 +174,41 @@ function BrandCardItem({ brand }: { brand: BrandCard }) {
   );
 }
 
+// Compact horizontal item for mobile marquee rows
+function MobileBrandCardItem({ brand }: { brand: BrandCard }) {
+  return (
+    <div className="shrink-0 flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 border border-[#E8DED0] shadow-sm select-none min-w-[165px] max-w-[200px]">
+      <div
+        className="w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-black text-xs font-heading shadow-xs"
+        style={{
+          backgroundColor: `${brand.accent}15`,
+          color: brand.accent,
+          border: `1.5px solid ${brand.accent}30`,
+        }}
+      >
+        {brand.initials}
+      </div>
+      <div className="flex flex-col min-w-0 text-left">
+        <h4 className="text-xs font-black text-[#141414] font-heading uppercase tracking-tight leading-tight truncate">
+          {brand.name}
+        </h4>
+        <p className="text-[10px] font-medium text-[#77716A] truncate">
+          {brand.tagline}
+        </p>
+        <span className="text-[8px] font-mono uppercase tracking-wider text-[#B88746] font-semibold truncate">
+          {brand.category}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function BrandsThrived() {
   return (
-    <section id="clients" className="relative w-full min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-center items-center py-8 lg:py-0 px-4 sm:px-6 md:px-12 bg-[#FAF8F5] overflow-hidden">
-      <div className="max-w-7xl w-full mx-auto my-auto">
+    <section id="clients" className="relative w-full h-screen h-[100dvh] lg:h-screen lg:max-h-screen flex flex-col justify-center items-center py-3 sm:py-6 lg:py-0 px-3 sm:px-6 md:px-12 bg-[#FAF8F5] overflow-hidden">
+      <div className="max-w-7xl w-full mx-auto my-auto h-full flex flex-col justify-center">
         {/* Outer Frame with Light Beige/Cream Panel Matching Reference Image */}
-        <div className="relative w-full rounded-[24px] sm:rounded-[32px] bg-[#F5EFE6] text-[#141414] border border-[#E8DED0] shadow-xl overflow-hidden p-5 sm:p-7 md:p-8 lg:p-10">
+        <div className="relative w-full h-full max-h-[100dvh] lg:h-auto rounded-[24px] sm:rounded-[32px] bg-[#F5EFE6] text-[#141414] border border-[#E8DED0] shadow-xl overflow-hidden p-4 sm:p-7 md:p-8 lg:p-10 flex flex-col justify-between lg:block">
           {/* Subtle Warm Background Glow */}
           <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#B88746]/08 rounded-full blur-[140px] pointer-events-none" />
 
@@ -193,12 +222,121 @@ export default function BrandsThrived() {
             }}
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-            {/* ========================================================================= */}
-            {/* LEFT SIDE: BOLD STYLIZED 3D POSTER TYPOGRAPHY                              */}
-            {/* ========================================================================= */}
+          {/* ========================================================================= */}
+          {/* MOBILE VIEW (< lg): 100% SCREEN COVERAGE WITH 3 HORIZONTAL MARQUEE ROWS   */}
+          {/* ========================================================================= */}
+          <div className="flex lg:hidden flex-col justify-between h-full relative z-10 py-1">
+            {/* Top Info Block */}
+            <div className="space-y-2 select-none">
+              <div className="space-y-0.5">
+                <h3 className="text-xl font-black uppercase tracking-tight text-[#141414] font-heading">
+                  BRANDS <span className="text-[#B88746]">THAT</span>
+                </h3>
+
+                <div className="text-3xl sm:text-4xl font-black uppercase tracking-tighter font-heading text-[#141414] leading-none">
+                  THRIVED
+                </div>
+
+                <div className="flex flex-wrap items-baseline gap-1.5 pt-0.5">
+                  <span className="text-lg font-black uppercase tracking-tight text-[#141414] font-heading">
+                    WITH
+                  </span>
+                  <span className="text-xl font-black uppercase tracking-tight text-[#B88746] font-heading">
+                    WHITE INK
+                  </span>
+                </div>
+
+                <div className="text-xs font-black uppercase tracking-widest text-[#77716A] font-heading">
+                  DESIGN STUDIO
+                </div>
+              </div>
+
+              <p className="text-[11px] text-[#77716A] font-medium leading-relaxed max-w-md line-clamp-2">
+                For over 8 years now, we have infused India and the UK&apos;s top brands with
+                clarity, creativity, and confidence through effective branding, high-converting
+                websites, and performance growth solutions.
+              </p>
+
+              {/* Stats proof pill */}
+              <div className="pt-0.5 flex flex-wrap items-center gap-1.5 text-[9px] font-bold font-mono uppercase text-[#141414]">
+                <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
+                  400+ Total Brands
+                </span>
+                <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
+                  70+ Healthcare
+                </span>
+                <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
+                  50+ Websites
+                </span>
+              </div>
+            </div>
+
+            {/* Bottom: 3 Horizontal Rows of Moving Logos (Left to Right & Right to Left) */}
+            <div className="flex flex-col gap-2 relative overflow-hidden py-1 w-full my-auto">
+              {/* Left & Right Vignette Gradient Fades */}
+              <div className="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-[#F5EFE6] to-transparent z-10 pointer-events-none" />
+              <div className="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-[#F5EFE6] to-transparent z-10 pointer-events-none" />
+
+              {/* ROW 1: LEFT TO RIGHT */}
+              <div className="overflow-hidden w-full">
+                <motion.div
+                  animate={{ x: ["-50%", "0%"] }}
+                  transition={{
+                    duration: 22,
+                    ease: "linear",
+                    repeat: Infinity,
+                  }}
+                  className="flex gap-2.5 w-max will-change-transform"
+                >
+                  {[...col1Brands, ...col1Brands, ...col1Brands].map((brand, bIdx) => (
+                    <MobileBrandCardItem key={`mob-r1-${bIdx}`} brand={brand} />
+                  ))}
+                </motion.div>
+              </div>
+
+              {/* ROW 2: RIGHT TO LEFT (OPPOSITE DIRECTION) */}
+              <div className="overflow-hidden w-full">
+                <motion.div
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{
+                    duration: 25,
+                    ease: "linear",
+                    repeat: Infinity,
+                  }}
+                  className="flex gap-2.5 w-max will-change-transform"
+                >
+                  {[...col2Brands, ...col2Brands, ...col2Brands].map((brand, bIdx) => (
+                    <MobileBrandCardItem key={`mob-r2-${bIdx}`} brand={brand} />
+                  ))}
+                </motion.div>
+              </div>
+
+              {/* ROW 3: LEFT TO RIGHT (OPPOSITE TO ROW 2) */}
+              <div className="overflow-hidden w-full">
+                <motion.div
+                  animate={{ x: ["-50%", "0%"] }}
+                  transition={{
+                    duration: 20,
+                    ease: "linear",
+                    repeat: Infinity,
+                  }}
+                  className="flex gap-2.5 w-max will-change-transform"
+                >
+                  {[...col3Brands, ...col3Brands, ...col3Brands].map((brand, bIdx) => (
+                    <MobileBrandCardItem key={`mob-r3-${bIdx}`} brand={brand} />
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+          </div>
+
+          {/* ========================================================================= */}
+          {/* DESKTOP VIEW (lg:): ORIGINAL 2-COLUMN + 3 VERTICAL UP/DOWN COLUMNS         */}
+          {/* PC VERSION: 100% UNCHANGED AND PRESERVED EXACTLY AS BEFORE                */}
+          {/* ========================================================================= */}
+          <div className="hidden lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+            {/* LEFT SIDE: BOLD STYLIZED 3D POSTER TYPOGRAPHY */}
             <div className="lg:col-span-5 flex flex-col justify-center space-y-4 lg:space-y-5">
-              {/* Bold Headline matching Reference Image */}
               <div className="space-y-0.5 sm:space-y-1 select-none">
                 <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#141414] font-heading">
                   BRANDS{" "}
@@ -225,14 +363,12 @@ export default function BrandsThrived() {
                 </div>
               </div>
 
-              {/* Editorial Description Matching Image Tone */}
               <p className="text-xs sm:text-sm text-[#77716A] font-medium leading-relaxed max-w-md pt-1">
                 For over 8 years now, we have infused India and the UK&apos;s top brands with
                 clarity, creativity, and confidence through effective branding, high-converting
                 websites, and performance growth solutions.
               </p>
 
-              {/* Stats proof pill */}
               <div className="pt-1 flex flex-wrap items-center gap-2.5 text-[11px] font-bold font-mono uppercase text-[#141414]">
                 <span className="px-3 py-1 rounded-full bg-white border border-[#E8DED0] shadow-sm">
                   400+ Total Brands
@@ -246,18 +382,13 @@ export default function BrandsThrived() {
               </div>
             </div>
 
-            {/* ========================================================================= */}
             {/* RIGHT SIDE: 3 COLUMNS OF VERTICALLY SCROLLING CLIENT CARDS (OPPOSITE WAYS) */}
-            {/* ========================================================================= */}
             <div className="lg:col-span-7 relative h-[380px] sm:h-[420px] md:h-[460px] lg:h-[470px] overflow-hidden rounded-2xl">
-              {/* Top & Bottom Vignette Gradient Fades */}
               <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#F5EFE6] to-transparent z-20 pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#F5EFE6] to-transparent z-20 pointer-events-none" />
 
               <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-5 h-full">
-                {/* ========================================================= */}
-                {/* COLUMN 1: MOVES BOTTOM TO UP (UPWARD MARQUEE)             */}
-                {/* ========================================================= */}
+                {/* COLUMN 1: MOVES BOTTOM TO UP */}
                 <div className="overflow-hidden h-full">
                   <motion.div
                     animate={{ y: ["0%", "-50%"] }}
@@ -274,9 +405,7 @@ export default function BrandsThrived() {
                   </motion.div>
                 </div>
 
-                {/* ========================================================= */}
-                {/* COLUMN 2: MOVES OPPOSITE (TOP TO BOTTOM DOWNWARD MARQUEE) */}
-                {/* ========================================================= */}
+                {/* COLUMN 2: MOVES TOP TO BOTTOM */}
                 <div className="overflow-hidden h-full">
                   <motion.div
                     animate={{ y: ["-50%", "0%"] }}
@@ -293,9 +422,7 @@ export default function BrandsThrived() {
                   </motion.div>
                 </div>
 
-                {/* ========================================================= */}
-                {/* COLUMN 3: MOVES OPPOSITE (BOTTOM TO UP UPWARD MARQUEE)   */}
-                {/* ========================================================= */}
+                {/* COLUMN 3: MOVES BOTTOM TO UP */}
                 <div className="overflow-hidden h-full">
                   <motion.div
                     animate={{ y: ["0%", "-50%"] }}
