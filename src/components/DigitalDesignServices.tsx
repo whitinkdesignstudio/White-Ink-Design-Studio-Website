@@ -158,7 +158,7 @@ function AnimatedCounter({
   return (
     <div className="flex flex-col items-center justify-center my-1 sm:my-2">
       <div
-        className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-heading tracking-tight tabular-nums select-none ${gradientClass}`}
+        className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-raleway tracking-normal tabular-nums select-none ${gradientClass}`}
       >
         {displayValue}
         {suffix}
@@ -234,13 +234,13 @@ export default function DigitalDesignServices() {
         <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col justify-center">
           {/* Section Heading: Warm Light Theme matching Hero */}
           <div className="mb-5 md:mb-7 text-left">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] font-black tracking-tight text-[#141414] font-heading whitespace-normal lg:whitespace-nowrap leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] font-bold tracking-normal uppercase text-[#141414] font-raleway whitespace-normal lg:whitespace-nowrap leading-tight">
               A design-led growth studio for{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                 Healthcare & D2C Brands
               </span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm md:text-sm lg:text-[0.92rem] text-[#77716A] leading-relaxed font-normal whitespace-normal lg:whitespace-nowrap overflow-hidden text-ellipsis">
+            <p className="mt-2 text-xs sm:text-sm md:text-sm lg:text-[0.92rem] text-[#77716A] leading-relaxed font-normal font-raleway whitespace-normal lg:whitespace-nowrap overflow-hidden text-ellipsis">
               We have built 50+ websites and partnered with 400+ brands—including over 70 in healthcare—to build digital flagships, enduring brand identities, and high-ROI performance campaigns.
             </p>
           </div>
@@ -266,18 +266,18 @@ export default function DigitalDesignServices() {
               {/* Card Top Row */}
               <div className="relative z-10 flex items-center justify-between gap-4 pb-2">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#141414] font-heading">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
                     {factCards[0].title}
                   </h3>
-                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#B88746]/40 text-[10px] font-mono font-bold tracking-widest uppercase text-[#9E7234]">
+                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#B88746]/40 text-[10px] font-raleway font-bold tracking-[0.1em] uppercase text-[#9E7234]">
                     {factCards[0].badge}
                   </span>
                 </div>
                 <a
                   href={factCards[0].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer"
+                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-tight font-heading uppercase text-xs">Explore</span>
+                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
@@ -287,7 +287,7 @@ export default function DigitalDesignServices() {
               {/* Card Middle: Watermark + Attractive Studio Gold Animated Number + Badges */}
               <div className="relative my-auto flex flex-col items-center justify-center">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black text-[#E8DED0]/60 tracking-tight font-heading whitespace-nowrap">
+                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-bold text-[#E8DED0]/60 tracking-normal font-raleway whitespace-nowrap">
                     {factCards[0].watermark}
                   </span>
                 </div>
@@ -306,7 +306,7 @@ export default function DigitalDesignServices() {
                       {factCards[0].row1.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -316,7 +316,7 @@ export default function DigitalDesignServices() {
                       {factCards[0].row2.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -328,7 +328,7 @@ export default function DigitalDesignServices() {
 
               {/* Card Bottom Row */}
               <div className="relative z-10 flex flex-col items-center text-center pt-2">
-                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal tracking-wide max-w-xl mx-auto mb-3">
+                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal font-raleway tracking-normal max-w-xl mx-auto mb-3">
                   {factCards[0].bottomLine}
                 </p>
                 <div className="w-28 sm:w-36 h-[3px] bg-gradient-to-r from-transparent via-[#B88746] to-transparent rounded-full shadow-[0_0_16px_3px_rgba(184,135,70,0.3)]" />
@@ -357,18 +357,18 @@ export default function DigitalDesignServices() {
               {/* Card Top Row */}
               <div className="relative z-10 flex items-center justify-between gap-4 pb-2">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#141414] font-heading">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
                     {factCards[1].title}
                   </h3>
-                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#C59A58]/40 text-[10px] font-mono font-bold tracking-widest uppercase text-[#9E7234]">
+                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#C59A58]/40 text-[10px] font-raleway font-bold tracking-[0.1em] uppercase text-[#9E7234]">
                     {factCards[1].badge}
                   </span>
                 </div>
                 <a
                   href={factCards[1].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer"
+                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-tight font-heading uppercase text-xs">Explore</span>
+                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
@@ -378,7 +378,7 @@ export default function DigitalDesignServices() {
               {/* Card Middle */}
               <div className="relative my-auto flex flex-col items-center justify-center">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black text-[#E8DED0]/60 tracking-tight font-heading whitespace-nowrap">
+                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-bold text-[#E8DED0]/60 tracking-normal font-raleway whitespace-nowrap">
                     {factCards[1].watermark}
                   </span>
                 </div>
@@ -397,7 +397,7 @@ export default function DigitalDesignServices() {
                       {factCards[1].row1.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -407,7 +407,7 @@ export default function DigitalDesignServices() {
                       {factCards[1].row2.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -419,7 +419,7 @@ export default function DigitalDesignServices() {
 
               {/* Card Bottom Row */}
               <div className="relative z-10 flex flex-col items-center text-center pt-2">
-                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal tracking-wide max-w-xl mx-auto mb-3">
+                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal font-raleway tracking-normal max-w-xl mx-auto mb-3">
                   {factCards[1].bottomLine}
                 </p>
                 <div className="w-28 sm:w-36 h-[3px] bg-gradient-to-r from-transparent via-[#C59A58] to-transparent rounded-full shadow-[0_0_16px_3px_rgba(197,154,88,0.3)]" />
@@ -448,18 +448,18 @@ export default function DigitalDesignServices() {
               {/* Card Top Row */}
               <div className="relative z-10 flex items-center justify-between gap-4 pb-2">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#141414] font-heading">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
                     {factCards[2].title}
                   </h3>
-                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#9E7234]/40 text-[10px] font-mono font-bold tracking-widest uppercase text-[#9E7234]">
+                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#9E7234]/40 text-[10px] font-raleway font-bold tracking-[0.1em] uppercase text-[#9E7234]">
                     {factCards[2].badge}
                   </span>
                 </div>
                 <a
                   href={factCards[2].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer"
+                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-tight font-heading uppercase text-xs">Explore</span>
+                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
@@ -469,7 +469,7 @@ export default function DigitalDesignServices() {
               {/* Card Middle */}
               <div className="relative my-auto flex flex-col items-center justify-center">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black text-[#E8DED0]/60 tracking-tight font-heading whitespace-nowrap">
+                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-bold text-[#E8DED0]/60 tracking-normal font-raleway whitespace-nowrap">
                     {factCards[2].watermark}
                   </span>
                 </div>
@@ -488,7 +488,7 @@ export default function DigitalDesignServices() {
                       {factCards[2].row1.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -498,7 +498,7 @@ export default function DigitalDesignServices() {
                       {factCards[2].row2.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -510,7 +510,7 @@ export default function DigitalDesignServices() {
 
               {/* Card Bottom Row */}
               <div className="relative z-10 flex flex-col items-center text-center pt-2">
-                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal tracking-wide max-w-xl mx-auto mb-3">
+                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal font-raleway tracking-normal max-w-xl mx-auto mb-3">
                   {factCards[2].bottomLine}
                 </p>
                 <div className="w-28 sm:w-36 h-[3px] bg-gradient-to-r from-transparent via-[#9E7234] to-transparent rounded-full shadow-[0_0_16px_3px_rgba(158,114,52,0.3)]" />
@@ -537,18 +537,18 @@ export default function DigitalDesignServices() {
               {/* Card Top Row */}
               <div className="relative z-10 flex items-center justify-between gap-4 pb-2">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#141414] font-heading">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
                     {factCards[3].title}
                   </h3>
-                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#B88746]/40 text-[10px] font-mono font-bold tracking-widest uppercase text-[#9E7234]">
+                  <span className="hidden sm:inline-block px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#B88746]/40 text-[10px] font-raleway font-bold tracking-[0.1em] uppercase text-[#9E7234]">
                     {factCards[3].badge}
                   </span>
                 </div>
                 <a
                   href={factCards[3].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer"
+                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-tight font-heading uppercase text-xs">Explore</span>
+                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
@@ -558,7 +558,7 @@ export default function DigitalDesignServices() {
               {/* Card Middle */}
               <div className="relative my-auto flex flex-col items-center justify-center">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black text-[#E8DED0]/60 tracking-tight font-heading whitespace-nowrap">
+                  <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-bold text-[#E8DED0]/60 tracking-normal font-raleway whitespace-nowrap">
                     {factCards[3].watermark}
                   </span>
                 </div>
@@ -577,7 +577,7 @@ export default function DigitalDesignServices() {
                       {factCards[3].row1.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -587,7 +587,7 @@ export default function DigitalDesignServices() {
                       {factCards[3].row2.map((item, pIdx) => (
                         <span
                           key={pIdx}
-                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
+                          className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold font-raleway text-[#141414] bg-white hover:bg-[#FAF8F5] border border-[#E8DED0] hover:border-[#B88746] transition-all shadow-sm cursor-default"
                         >
                           {item}
                         </span>
@@ -599,7 +599,7 @@ export default function DigitalDesignServices() {
 
               {/* Card Bottom Row */}
               <div className="relative z-10 flex flex-col items-center text-center pt-2">
-                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal tracking-wide max-w-xl mx-auto mb-3">
+                <p className="text-xs sm:text-sm md:text-base text-[#77716A] font-normal font-raleway tracking-normal max-w-xl mx-auto mb-3">
                   {factCards[3].bottomLine}
                 </p>
                 <div className="w-28 sm:w-36 h-[3px] bg-gradient-to-r from-transparent via-[#B88746] to-transparent rounded-full shadow-[0_0_16px_3px_rgba(184,135,70,0.3)]" />

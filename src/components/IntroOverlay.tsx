@@ -263,7 +263,7 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
                 className="mt-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#E8DED0] shadow-sm backdrop-blur-sm"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88746] animate-ping" />
-                <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.25em] text-[#141414] font-heading">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-[#141414] font-raleway">
                   Inking Your Brand
                 </span>
               </motion.div>
@@ -360,7 +360,7 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
               }}
               className="relative z-10 flex flex-col items-center text-center select-none"
             >
-              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-black tracking-tighter text-[#141414] uppercase font-heading leading-none">
+              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-bold tracking-normal text-[#141414] uppercase font-raleway leading-none">
                 WHITE{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                   INK

@@ -123,7 +123,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
             className="group flex items-center gap-2.5 py-2 px-3.5 rounded-full bg-white/90 hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 transition-all duration-300 shadow-sm hover:shadow focus:outline-none cursor-pointer"
             aria-label="Open Navigation Menu"
           >
-            <span className="text-xs font-black uppercase tracking-widest text-[#141414] group-hover:text-[#B88746] transition-colors font-heading">
+            <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#141414] group-hover:text-[#B88746] transition-colors font-raleway">
               Menu
             </span>
             <div className="flex flex-col justify-between w-5 h-3.5 space-y-1">
@@ -176,7 +176,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
               {/* Close Button */}
               <button
                 onClick={() => setMenuOpen(false)}
-                className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-widest text-[#141414] hover:text-[#B88746] transition-colors cursor-pointer py-1.5 px-3 rounded-full hover:bg-black/5"
+                className="group flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.05em] text-[#141414] hover:text-[#B88746] transition-colors cursor-pointer py-1.5 px-3 rounded-full hover:bg-black/5 font-raleway"
               >
                 <span>Close</span>
                 <span className="w-8 h-8 rounded-full bg-white border border-[#E8DED0] shadow-sm flex items-center justify-center group-hover:bg-[#B88746] group-hover:border-[#B88746] transition-all duration-300">
@@ -201,10 +201,10 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                       onClick={() => setMenuOpen(false)}
                       className="group block"
                     >
-                      <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#141414] group-hover:text-[#B88746] group-hover:translate-x-2 transition-all duration-300 font-heading leading-tight">
+                      <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-normal text-[#141414] group-hover:text-[#B88746] group-hover:translate-x-2 transition-all duration-300 font-raleway leading-tight">
                         {item.label}
                       </span>
-                      <span className="text-[11px] sm:text-xs uppercase tracking-widest text-[#B88746] group-hover:text-[#9E7234] transition-colors font-bold block mt-0.5">
+                      <span className="text-[11px] sm:text-xs uppercase tracking-[0.05em] text-[#B88746] group-hover:text-[#9E7234] transition-colors font-semibold block mt-0.5 font-raleway">
                         {item.desc}
                       </span>
                     </a>
@@ -226,10 +226,10 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                       onClick={() => setMenuOpen(false)}
                       className="group block"
                     >
-                      <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#141414] group-hover:text-[#B88746] group-hover:translate-x-2 transition-all duration-300 font-heading leading-tight">
+                      <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-normal text-[#141414] group-hover:text-[#B88746] group-hover:translate-x-2 transition-all duration-300 font-raleway leading-tight">
                         {item.label}
                       </span>
-                      <span className="text-[11px] sm:text-xs uppercase tracking-widest text-[#B88746] group-hover:text-[#9E7234] transition-colors font-bold block mt-0.5">
+                      <span className="text-[11px] sm:text-xs uppercase tracking-[0.05em] text-[#B88746] group-hover:text-[#9E7234] transition-colors font-semibold block mt-0.5 font-raleway">
                         {item.desc}
                       </span>
                     </a>
@@ -261,7 +261,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                   </svg>
                 </motion.div>
                 <div className="absolute text-center bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-[#E8DED0] shadow-sm">
-                  <p className="text-[10px] font-mono font-bold tracking-widest uppercase text-[#B88746]">
+                  <p className="text-[10px] font-raleway font-bold tracking-[0.2em] uppercase text-[#B88746]">
                     WHITE INK STUDIO
                   </p>
                 </div>
@@ -269,7 +269,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
             </div>
 
             {/* Bottom Bar: Quick Contact Info (Compact, Clean, Fits Inside 100% Height) */}
-            <div className="pt-3 md:pt-4 border-t border-[#E8DED0] w-full max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs tracking-wider uppercase text-[#77716A] font-bold shrink-0">
+            <div className="pt-3 md:pt-4 border-t border-[#E8DED0] w-full max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs tracking-wider uppercase text-[#77716A] font-raleway font-bold shrink-0">
               <a
                 href="#about"
                 onClick={() => setMenuOpen(false)}

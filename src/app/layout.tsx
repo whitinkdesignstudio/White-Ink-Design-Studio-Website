@@ -1,6 +1,43 @@
 import type { Metadata } from "next";
-import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
+import {
+  Montserrat,
+  Plus_Jakarta_Sans,
+  Raleway,
+  Oswald,
+  Bitter,
+  Poppins,
+} from "next/font/google";
 import "./globals.css";
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const bitter = Bitter({
+  variable: "--font-bitter",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -30,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
+      className={`${raleway.variable} ${oswald.variable} ${bitter.variable} ${poppins.variable} ${montserrat.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
     >
       <body className="min-h-screen bg-[#FAF8F5] text-[#141414] font-body selection:bg-[#B88746] selection:text-white">
         {children}

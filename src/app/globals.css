@@ -13,22 +13,81 @@
   --color-brand-border: #E8DED0;
   --color-brand-muted: #77716A;
 
-  --font-heading: var(--font-montserrat), sans-serif;
-  --font-body: var(--font-plus-jakarta), sans-serif;
+  --font-raleway: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-heading: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-body: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-serif: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-sans: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-mono: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-oswald: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-bitter: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  --font-poppins: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+}
+
+/* Fallback & compatibility @font-face aliases */
+@font-face {
+  font-family: 'raleway-semibold';
+  font-style: normal;
+  font-weight: 400 700;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), local('Raleway');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'oswald-medium';
+  font-style: normal;
+  font-weight: 400 700;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), local('Raleway');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'poppins-semibold';
+  font-style: normal;
+  font-weight: 400 700;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), local('Raleway');
+  font-display: swap;
+}
+
+.font-raleway,
+.font-heading,
+.font-body,
+.font-serif,
+.font-sans,
+.font-oswald,
+.font-bitter,
+.font-poppins,
+.font-mono {
+  font-family: var(--font-raleway), 'raleway-semibold', raleway, sans-serif !important;
+}
+
+/* Exact inspected reference website paragraph typography */
+.ref-paragraph {
+  font-family: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.202px;
+  line-height: 27.5232px;
 }
 
 @layer base {
+  *, *::before, *::after {
+    font-family: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  }
+
   body {
     background-color: #FAF8F5;
     color: #141414;
-    font-family: var(--font-plus-jakarta), sans-serif;
+    font-family: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-montserrat), sans-serif;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+    font-family: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
+  }
+
+  p, span, a, button, input, textarea, select, label {
+    font-family: var(--font-raleway), 'raleway-semibold', raleway, sans-serif;
   }
 }
 

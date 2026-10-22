@@ -497,12 +497,12 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
         <div className="lg:col-span-5 flex flex-col justify-between h-full py-4 lg:py-6 space-y-10 lg:space-y-16">
           {/* Top Display Headline (Dual-Tone Ochre & Obsidian Contrast) */}
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.3em] bg-[#FAF8F5] text-[#9E7234] border border-[#E8DED0] px-3.5 py-1.5 rounded-full mb-5 shadow-sm">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] bg-[#FAF8F5] text-[#9E7234] border border-[#E8DED0] px-3.5 py-1.5 rounded-full mb-5 shadow-sm font-raleway">
               <span className="w-2 h-2 rounded-full bg-[#B88746] animate-pulse" />
               <span>Why Choose White Ink</span>
             </div>
 
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] font-serif tracking-tight uppercase text-[#141414] leading-[0.95] drop-shadow-sm font-heading">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] font-bold tracking-normal uppercase text-[#141414] leading-[0.95] drop-shadow-sm font-raleway">
               SERVICES<br />
               THAT MOVE<br />
               <span className="text-[#B88746]">
@@ -529,8 +529,8 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                     }`}
                   >
                     <span
-                      className={`text-base sm:text-lg md:text-xl font-heading tracking-wide transition-colors ${
-                        isActive ? "font-black text-[#141414]" : "font-semibold text-[#77716A]"
+                      className={`text-base sm:text-lg md:text-xl font-raleway tracking-normal transition-colors ${
+                        isActive ? "font-bold text-[#141414]" : "font-normal text-[#77716A]"
                       }`}
                     >
                       {tab.label}
@@ -549,12 +549,12 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
-                  className="text-base sm:text-lg md:text-xl font-mono tracking-widest text-[#141414] font-black block"
+                  className="text-base sm:text-lg md:text-xl font-raleway tracking-widest text-[#141414] font-bold block"
                 >
                   {activeTab.number}
                 </motion.span>
               </AnimatePresence>
-              <span className="text-[10px] uppercase tracking-widest text-[#77716A] font-bold block mt-0.5">
+              <span className="text-[10px] uppercase tracking-[0.05em] text-[#77716A] font-semibold block mt-0.5 font-raleway">
                 Scroll To Explore
               </span>
             </div>
@@ -604,7 +604,7 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                     </div>
 
                     {/* Title Below Card Graphic */}
-                    <p className="text-xs sm:text-sm md:text-base font-bold text-[#141414] group-hover:text-[#B88746] text-center mt-3 tracking-wide font-heading transition-colors">
+                    <p className="text-xs sm:text-sm md:text-base font-semibold text-[#141414] group-hover:text-[#B88746] text-center mt-3 tracking-normal font-raleway transition-colors">
                       {card.title}
                     </p>
                   </motion.div>

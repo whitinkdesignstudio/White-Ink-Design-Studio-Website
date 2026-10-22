@@ -107,7 +107,7 @@ export default function Hero({ isReady = true }: HeroProps) {
               transition={{ duration: 0.2 }}
               className="flex flex-col items-center"
             >
-              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-black tracking-tighter text-[#141414] uppercase font-heading leading-none">
+              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-bold tracking-normal text-[#141414] uppercase font-raleway leading-none">
                 WHITE{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                   INK
@@ -120,7 +120,7 @@ export default function Hero({ isReady = true }: HeroProps) {
               initial={{ opacity: 0, y: 35 }}
               animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
               transition={{ duration: 0.75, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="text-xs sm:text-base md:text-lg font-black tracking-[0.4em] uppercase text-[#B88746] mt-3 font-heading"
+              className="text-xs sm:text-base md:text-lg font-bold tracking-[0.25em] uppercase text-[#B88746] mt-3 font-raleway"
             >
               DESIGN STUDIO
             </motion.p>
@@ -132,7 +132,7 @@ export default function Hero({ isReady = true }: HeroProps) {
               transition={{ duration: 0.85, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 md:mt-12 max-w-4xl px-4"
             >
-              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#141414] font-heading leading-tight">
+              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
                 WE CREATE{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                   SCROLL-STOPPING
@@ -153,7 +153,7 @@ export default function Hero({ isReady = true }: HeroProps) {
             >
               <a
                 href="mailto:connect@whiteinkdesignstudio.com"
-                className="inline-block px-10 py-3.5 md:px-12 md:py-4 rounded-md text-sm md:text-base font-bold uppercase tracking-wider text-white bg-[#141414] hover:bg-[#B88746] hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl font-heading"
+                className="inline-block px-10 py-3.5 md:px-12 md:py-4 rounded-md text-sm md:text-base font-bold uppercase tracking-wider text-white bg-[#141414] hover:bg-[#B88746] hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl font-raleway"
               >
                 Schedule A Call
               </a>
