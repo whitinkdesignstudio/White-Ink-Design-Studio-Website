@@ -82,7 +82,7 @@ export default function VisionMission() {
           <div
             onMouseEnter={() => setActiveSide("vision")}
             onMouseLeave={() => setActiveSide(null)}
-            className="lg:col-span-6 relative flex flex-col justify-between py-2 lg:py-4 lg:pr-12 transition-all duration-500 group"
+            className="lg:col-span-6 relative flex flex-col justify-between py-2 lg:py-4 lg:pr-12 transition-all duration-500 group text-center lg:text-left"
           >
             {/* Glowing Accent Aura on Hover */}
             <div
@@ -91,21 +91,21 @@ export default function VisionMission() {
               }`}
             />
 
-            <div className="relative z-10 space-y-3 sm:space-y-4">
+            <div className="relative z-10 space-y-3 sm:space-y-4 text-center lg:text-left">
               {/* Title matching exact Raleway specification */}
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway group-hover:text-[#9E7234] transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway group-hover:text-[#9E7234] transition-colors duration-300 text-center lg:text-left">
                 The Vision
               </h3>
 
               {/* Core Statement (Large Bold Editorial) */}
-              <p className="text-base sm:text-lg lg:text-xl font-serif text-[#141414] leading-snug font-normal">
+              <p className="text-base sm:text-lg lg:text-xl font-serif text-[#141414] leading-snug font-normal text-center lg:text-left">
                 To make the invisible visible. In a world saturated with generic templates, we
                 engineer the background where ambitious brands become{" "}
                 <span className="text-[#B88746] font-semibold italic">impossible to ignore</span>.
               </p>
 
               {/* Philosophy Narrative */}
-              <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed text-center lg:text-left">
                 White ink cannot be seen until it meets the right surface. We find that surface for
                 healthcare institutions and D2C pioneers—translating clinical depth and product craft
                 into cultural distinction and lasting enterprise value.
@@ -119,7 +119,7 @@ export default function VisionMission() {
           <div
             onMouseEnter={() => setActiveSide("mission")}
             onMouseLeave={() => setActiveSide(null)}
-            className="lg:col-span-6 relative flex flex-col justify-between py-2 lg:py-4 lg:pl-12 transition-all duration-500 group"
+            className="lg:col-span-6 relative flex flex-col justify-between py-2 lg:py-4 lg:pl-12 transition-all duration-500 group text-center lg:text-left"
           >
             {/* Glowing Accent Aura on Hover */}
             <div
@@ -128,21 +128,21 @@ export default function VisionMission() {
               }`}
             />
 
-            <div className="relative z-10 space-y-3 sm:space-y-4">
+            <div className="relative z-10 space-y-3 sm:space-y-4 text-center lg:text-left">
               {/* Title matching exact Raleway specification */}
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway group-hover:text-[#B88746] transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-normal text-[#141414] font-raleway group-hover:text-[#B88746] transition-colors duration-300 text-center lg:text-left">
                 The Mission
               </h3>
 
               {/* Core Statement (Large Bold Editorial) */}
-              <p className="text-base sm:text-lg lg:text-xl font-serif text-[#141414] leading-snug font-normal">
+              <p className="text-base sm:text-lg lg:text-xl font-serif text-[#141414] leading-snug font-normal text-center lg:text-left">
                 To unite disciplined aesthetic craft with{" "}
                 <span className="text-[#9E7234] font-semibold italic">conversion-engineered code</span>.
                 Zero handoff gap between strategic vision and live execution.
               </p>
 
               {/* Philosophy Narrative */}
-              <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#77716A] font-normal leading-relaxed text-center lg:text-left">
                 We eliminate the traditional friction between creative studios and performance marketers.
                 One senior founder-led team guiding your brand from identity tokens and custom Next.js/Shopify
                 builds to compliant Meta ad funnels and automated AI lead routing.

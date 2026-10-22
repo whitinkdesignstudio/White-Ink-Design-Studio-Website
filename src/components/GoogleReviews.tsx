@@ -263,23 +263,23 @@ export default function GoogleReviews() {
         {/* ========================================================================= */}
         {/* SECTION HEADER & GOOGLE RATING SUMMARY BADGE                             */}
         {/* ========================================================================= */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-6 border-b border-[#E8DED0] pb-8">
-          <div>
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
-              Loved by <br />
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 md:mb-20 gap-6 border-b border-[#E8DED0] pb-8 text-center md:text-left items-center md:items-end">
+          <div className="text-center md:text-left w-full md:w-auto">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight text-center md:text-left">
+              Loved by <br className="hidden md:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                 Our Customers
               </span>
             </h2>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <p className="text-sm md:text-base text-[#77716A] max-w-sm font-normal leading-relaxed">
+          <div className="flex flex-col sm:flex-row items-center md:items-center gap-4 text-center md:text-left">
+            <p className="text-sm md:text-base text-[#77716A] max-w-sm font-normal leading-relaxed text-center md:text-left">
               Real experiences. Genuine feedback. Trusted by ambitious brands, clinics, and founders globally.
             </p>
 
-            {/* Google Verified Rating Summary Badge */}
-            <div className="flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-white border border-[#E8DED0] shadow-sm shrink-0">
+            {/* Google Verified Rating Summary Badge (Hidden on Phone View, Visible on Desktop) */}
+            <div className="hidden md:flex items-center gap-3.5 px-5 py-3 rounded-2xl bg-white border border-[#E8DED0] shadow-sm shrink-0">
               <GoogleGIcon className="w-6 h-6 shrink-0" />
               <div>
                 <div className="flex items-center gap-1.5">

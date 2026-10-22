@@ -225,10 +225,10 @@ export default function BrandsThrived() {
           {/* ========================================================================= */}
           {/* MOBILE VIEW (< lg): 100% SCREEN COVERAGE WITH 3 HORIZONTAL MARQUEE ROWS   */}
           {/* ========================================================================= */}
-          <div className="flex lg:hidden flex-col justify-between h-full relative z-10 py-1">
-            {/* Top Info Block */}
-            <div className="space-y-2 select-none">
-              <div className="space-y-0.5">
+          <div className="flex lg:hidden flex-col justify-between h-full relative z-10 py-1 text-center items-center">
+            {/* Top Info Block (Centered) */}
+            <div className="space-y-2 select-none text-center flex flex-col items-center w-full">
+              <div className="space-y-0.5 text-center">
                 <h3 className="text-xl font-black uppercase tracking-tight text-[#141414] font-heading">
                   BRANDS <span className="text-[#B88746]">THAT</span>
                 </h3>
@@ -237,13 +237,14 @@ export default function BrandsThrived() {
                   THRIVED
                 </div>
 
-                <div className="flex flex-wrap items-baseline gap-1.5 pt-0.5">
-                  <span className="text-lg font-black uppercase tracking-tight text-[#141414] font-heading">
+                {/* Pehle with fir 2nd line me white ink */}
+                <div className="pt-0.5 text-center flex flex-col items-center">
+                  <div className="text-lg font-black uppercase tracking-tight text-[#141414] font-heading">
                     WITH
-                  </span>
-                  <span className="text-xl font-black uppercase tracking-tight text-[#B88746] font-heading">
+                  </div>
+                  <div className="text-xl font-black uppercase tracking-tight text-[#B88746] font-heading">
                     WHITE INK
-                  </span>
+                  </div>
                 </div>
 
                 <div className="text-xs font-black uppercase tracking-widest text-[#77716A] font-heading">
@@ -251,14 +252,14 @@ export default function BrandsThrived() {
                 </div>
               </div>
 
-              <p className="text-[11px] text-[#77716A] font-medium leading-relaxed max-w-md line-clamp-2">
+              <p className="text-[11px] text-[#77716A] font-medium leading-relaxed max-w-md line-clamp-2 text-center mx-auto">
                 For over 8 years now, we have infused India and the UK&apos;s top brands with
                 clarity, creativity, and confidence through effective branding, high-converting
                 websites, and performance growth solutions.
               </p>
 
               {/* Stats proof pill */}
-              <div className="pt-0.5 flex flex-wrap items-center gap-1.5 text-[9px] font-bold font-mono uppercase text-[#141414]">
+              <div className="pt-0.5 flex flex-wrap items-center justify-center gap-1.5 text-[9px] font-bold font-mono uppercase text-[#141414]">
                 <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
                   400+ Total Brands
                 </span>

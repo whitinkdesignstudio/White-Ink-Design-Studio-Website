@@ -46,14 +46,14 @@ export default function Hero({ isReady = true }: HeroProps) {
         {/* ========================================================================= */}
         <motion.div
           style={{ opacity: heroContentOpacity, scale: heroContentScale }}
-          className="relative w-full h-full flex flex-col justify-center items-center px-6 pt-24 md:pt-28"
+          className="relative w-full h-full flex flex-col justify-center items-center px-6 pt-10 sm:pt-16 md:pt-28"
         >
           {/* BOTTOM-RIGHT FLUID WAVY RIBBONS (Fixed In Place, Static) */}
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={isReady ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
             transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-0 right-0 w-[55vw] min-w-[380px] max-w-[850px] pointer-events-none z-0"
+            className="absolute -bottom-1 -right-2 sm:bottom-0 sm:right-0 w-[80vw] sm:w-[65vw] md:w-[55vw] min-w-[340px] md:min-w-[380px] max-w-[850px] pointer-events-none z-0"
           >
             <svg
               viewBox="0 0 850 360"
@@ -99,7 +99,7 @@ export default function Hero({ isReady = true }: HeroProps) {
           </div>
 
           {/* CENTER HERO CONTENT */}
-          <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center justify-center pt-4 md:pt-6">
+          <div className="relative z-10 max-w-5xl mx-auto w-full text-center flex flex-col items-center justify-center pt-0 md:pt-6 -translate-y-3 sm:translate-y-0">
             {/* 1. "WHITE INK" HEADLINE */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -130,14 +130,17 @@ export default function Hero({ isReady = true }: HeroProps) {
               initial={{ opacity: 0, y: 40 }}
               animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.85, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 md:mt-12 max-w-4xl px-4"
+              className="mt-6 sm:mt-8 md:mt-12 max-w-4xl px-4"
             >
-              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
-                WE CREATE{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
-                  SCROLL-STOPPING
-                </span>{" "}
-                <span className="relative inline-block text-[#141414]">
+              <h2 className="text-[1.12rem] sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight">
+                <span className="inline-block whitespace-nowrap">
+                  WE CREATE{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
+                    SCROLL-STOPPING
+                  </span>
+                </span>
+                <br className="sm:hidden" />{" "}
+                <span className="relative inline-block text-[#141414] mt-1 sm:mt-0">
                   MAGIC
                   <span className="absolute -bottom-1 left-0 w-full h-[3px] md:h-[4px] bg-[#B88746] rounded-full" />
                 </span>
@@ -149,7 +152,7 @@ export default function Hero({ isReady = true }: HeroProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.65, delay: 1.35, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-10 md:mt-12"
+              className="mt-8 sm:mt-10 md:mt-12"
             >
               <a
                 href="mailto:connect@whiteinkdesignstudio.com"

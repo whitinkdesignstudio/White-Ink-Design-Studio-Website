@@ -262,11 +262,14 @@ export default function ProcessSection() {
                         },
                       },
                     }}
-                    style={{
-                      left: `${dot.x}%`,
-                      top: `${dot.y}%`,
-                    }}
-                    className="absolute"
+                    style={
+                      {
+                        left: `${dot.x}%`,
+                        "--dot-top-mob": `${82 + (dot.y - 50) * 0.28}%`,
+                        "--dot-top-dt": `${dot.y}%`,
+                      } as React.CSSProperties
+                    }
+                    className="absolute top-[var(--dot-top-mob)] md:top-[var(--dot-top-dt)]"
                   >
                     {/* Highly Sensitive Mouse Interaction Container (x5.8 Multiplier) */}
                     <motion.div

@@ -483,171 +483,213 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-3 sm:py-6 lg:py-8 bg-[#F5EFE6] relative select-none overflow-hidden lg:overflow-visible">
+    <div className="w-full h-full flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 lg:px-16 py-[10dvh] lg:py-8 bg-[#F5EFE6] relative select-none overflow-hidden lg:overflow-visible">
       {/* Warm Ambient Radial Glows Matching the Swatch */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[520px] h-[520px] bg-[#C59A58]/10 rounded-full blur-[140px]" />
         <div className="absolute bottom-1/4 right-1/4 w-[460px] h-[460px] bg-[#B88746]/08 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl w-full mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-3 sm:gap-6 lg:gap-14 items-center justify-center relative z-10 my-auto">
+      <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center relative z-10 my-auto h-full">
         {/* ========================================================================= */}
-        {/* MOBILE ONLY: BIG EDITORIAL HEADLINE & HORIZONTAL PILL TABS (< lg)         */}
+        {/* MOBILE ONLY (< lg): 80% SCREEN COVERAGE WITH EQUAL SPACING BETWEEN 3 PARTS */}
+        {/* 10% TOP & 10% BOTTOM PADDING / EMPTY SPACE                                 */}
         {/* ========================================================================= */}
-        <div className="flex lg:hidden flex-col w-full space-y-2 sm:space-y-3">
-          {/* Top Display Headline: 3 lines, bold & prominent as in Image 2 */}
-          <div>
-            <h2 className="text-[1.85rem] sm:text-3xl font-extrabold uppercase tracking-tight text-[#141414] font-raleway leading-[1.06] drop-shadow-sm">
-              SERVICES<br />
-              THAT MOVE<br />
+        <div className="flex lg:hidden flex-col justify-between items-center w-full h-[80dvh] max-h-[80dvh] my-auto">
+          {/* PART 1: HEADING */}
+          <div className="w-full text-center shrink-0">
+            <h2 className="text-[1.65rem] sm:text-3xl font-extrabold uppercase tracking-tight text-[#141414] font-raleway leading-[1.08] text-center drop-shadow-sm">
+              SERVICES THAT MOVE<br />
               <span className="text-[#B88746]">
                 THE NEEDLE
               </span>
             </h2>
           </div>
 
-          {/* Thin separator line as in Image 2 */}
-          <div className="pt-2 border-t border-[#E8DED0]">
-            {/* Horizontal Rounded Pill Tabs (01/05 and Scroll to Explore removed) */}
-            <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 w-full">
-              {serviceTabs.map((tab, idx) => {
-                const isActive = activeTabIndex === idx;
+          {/* PART 2: TABS (Rounded pills spanning full width) */}
+          <div className="w-full flex items-center justify-between gap-1 py-0.5 shrink-0">
+            {serviceTabs.map((tab, idx) => {
+              const isActive = activeTabIndex === idx;
 
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => handleTabClick(idx)}
-                    className={`shrink-0 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-normal transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? "bg-white text-[#141414] border-2 border-[#141414] shadow-sm font-bold"
-                        : "bg-transparent text-[#77716A] border border-[#D5C7B5] hover:text-[#141414]"
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                );
-              })}
-            </div>
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => handleTabClick(idx)}
+                  className={`flex-1 text-center px-1.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-tight transition-all duration-200 cursor-pointer truncate ${
+                    isActive
+                      ? "bg-white text-[#141414] border-2 border-[#141414] shadow-sm font-bold"
+                      : "bg-transparent text-[#77716A] border border-[#D5C7B5] hover:text-[#141414]"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* PART 3: 4 CARDS (2x2 Grid) */}
+          <div className="w-full shrink-0">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab.id}
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                className="grid grid-cols-2 gap-2.5 sm:gap-4"
+              >
+                {activeTab.cards.map((card, idx) => {
+                  const IconComponent = card.icon;
+
+                  return (
+                    <motion.div
+                      key={card.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.08 }}
+                      className="group bg-white hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 rounded-xl sm:rounded-2xl p-2 sm:p-4 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_16px_rgba(184,135,70,0.06)] hover:shadow-[0_16px_40px_rgba(184,135,70,0.12)]"
+                    >
+                      {/* Visual Card Interior with 3D Graphic */}
+                      <div className="w-full aspect-[4/3] rounded-lg sm:rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center p-1.5 sm:p-2.5 group-hover:border-[#B88746]/40 transition-colors">
+                        {/* Ambient center honey gold glow */}
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <div className="w-16 h-16 sm:w-24 sm:h-24 bg-[#B88746]/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500" />
+                        </div>
+
+                        {/* 3D Graphic Illustration */}
+                        <div className="relative z-10 w-12 h-12 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                          <Card3DVisual graphic={card.graphic} />
+                        </div>
+
+                        {/* Subtle micro icon at bottom-center of visual box */}
+                        <div className="absolute bottom-1 sm:bottom-2 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
+                          <IconComponent className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                        </div>
+                      </div>
+
+                      {/* Title Below Card Graphic */}
+                      <p className="text-[11px] sm:text-xs font-semibold text-[#141414] group-hover:text-[#B88746] text-center mt-1.5 sm:mt-2 tracking-normal font-raleway transition-colors leading-tight line-clamp-2">
+                        {card.title}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 
         {/* ========================================================================= */}
-        {/* DESKTOP ONLY: EDITORIAL DISPLAY HEADLINE & VERTICAL TABS (lg:col-span-5)  */}
+        {/* DESKTOP ONLY (lg:): ORIGINAL 12-COL GRID LAYOUT                           */}
         {/* PC VERSION: 100% UNCHANGED AND PRESERVED EXACTLY AS BEFORE                */}
         {/* ========================================================================= */}
-        <div className="hidden lg:flex lg:col-span-5 flex-col justify-center py-2 lg:py-4 space-y-5 lg:space-y-6">
-          {/* Top Display Headline (Dual-Tone Ochre & Obsidian Contrast) */}
-          <div>
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight drop-shadow-sm">
-              SERVICES<br />
-              THAT MOVE<br />
-              <span className="text-[#B88746]">
-                THE NEEDLE
-              </span>
-            </h2>
-          </div>
+        <div className="hidden lg:grid lg:grid-cols-12 gap-8 lg:gap-14 items-center w-full">
+          {/* Left Side: Editorial Display Headline & Interactive Tabs */}
+          <div className="lg:col-span-5 flex flex-col justify-center py-2 lg:py-4 space-y-5 lg:space-y-6">
+            <div>
+              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-normal text-[#141414] font-raleway leading-tight drop-shadow-sm">
+                SERVICES<br />
+                THAT MOVE<br />
+                <span className="text-[#B88746]">
+                  THE NEEDLE
+                </span>
+              </h2>
+            </div>
 
-          {/* Bottom-Left Interactive Tabs List (With Reduced Gap to Headline) */}
-          <div className="pt-4 lg:pt-5 border-t border-[#E8DED0] flex items-end justify-between">
-            {/* Tab options stacked vertically */}
-            <div className="space-y-3.5">
-              {serviceTabs.map((tab, idx) => {
-                const isActive = activeTabIndex === idx;
+            {/* Bottom-Left Interactive Tabs List */}
+            <div className="pt-4 lg:pt-5 border-t border-[#E8DED0] flex items-end justify-between">
+              <div className="space-y-3.5">
+                {serviceTabs.map((tab, idx) => {
+                  const isActive = activeTabIndex === idx;
 
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => handleTabClick(idx)}
-                    className={`group flex items-center text-left transition-all duration-300 cursor-pointer ${
-                      isActive
-                        ? "pl-3.5 border-l-4 border-[#B88746] text-[#141414]"
-                        : "pl-3.5 border-l-4 border-transparent text-[#77716A] hover:text-[#141414]"
-                    }`}
-                  >
-                    <span
-                      className={`text-base sm:text-lg md:text-xl font-raleway tracking-normal transition-colors ${
-                        isActive ? "font-bold text-[#141414]" : "font-normal text-[#77716A]"
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => handleTabClick(idx)}
+                      className={`group flex items-center text-left transition-all duration-300 cursor-pointer ${
+                        isActive
+                          ? "pl-3.5 border-l-4 border-[#B88746] text-[#141414]"
+                          : "pl-3.5 border-l-4 border-transparent text-[#77716A] hover:text-[#141414]"
                       }`}
                     >
-                      {tab.label}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+                      <span
+                        className={`text-base sm:text-lg md:text-xl font-raleway tracking-normal transition-colors ${
+                          isActive ? "font-bold text-[#141414]" : "font-normal text-[#77716A]"
+                        }`}
+                      >
+                        {tab.label}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
 
-            {/* Active Tab Counter (01/04, 02/04, 03/04, 04/04) */}
-            <div className="text-right">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={activeTab.number}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.25 }}
-                  className="text-base sm:text-lg md:text-xl font-raleway tracking-widest text-[#141414] font-bold block"
-                >
-                  {activeTab.number}
-                </motion.span>
-              </AnimatePresence>
-              <span className="text-[10px] uppercase tracking-[0.05em] text-[#77716A] font-semibold block mt-0.5 font-raleway">
-                Scroll To Explore
-              </span>
+              {/* Active Tab Counter */}
+              <div className="text-right">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={activeTab.number}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.25 }}
+                    className="text-base sm:text-lg md:text-xl font-raleway tracking-widest text-[#141414] font-bold block"
+                  >
+                    {activeTab.number}
+                  </motion.span>
+                </AnimatePresence>
+                <span className="text-[10px] uppercase tracking-[0.05em] text-[#77716A] font-semibold block mt-0.5 font-raleway">
+                  Scroll To Explore
+                </span>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* ========================================================================= */}
-        {/* RIGHT SIDE: 2x2 GRID OF 4 3D ILLUMINATED CARDS (MATCHING SWATCH PALETTE)   */}
-        {/* ========================================================================= */}
-        <div className="w-full lg:col-span-7">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab.id}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-2 gap-2 sm:gap-4 lg:gap-6"
-            >
-              {activeTab.cards.map((card, idx) => {
-                const IconComponent = card.icon;
+          {/* Right Side: 2x2 Grid of 4 3D Illuminated Cards */}
+          <div className="w-full lg:col-span-7">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab.id}
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                className="grid grid-cols-2 gap-4 lg:gap-6"
+              >
+                {activeTab.cards.map((card, idx) => {
+                  const IconComponent = card.icon;
 
-                return (
-                  <motion.div
-                    key={card.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.08 }}
-                    className="group bg-white hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 rounded-xl sm:rounded-2xl p-2 sm:p-4 lg:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_16px_rgba(184,135,70,0.06)] lg:shadow-[0_10px_30px_rgba(184,135,70,0.06)] hover:shadow-[0_16px_40px_rgba(184,135,70,0.12)]"
-                  >
-                    {/* Visual Card Interior with 3D Graphic */}
-                    <div className="w-full aspect-[4/3] rounded-lg sm:rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center p-1.5 sm:p-2.5 lg:p-3 group-hover:border-[#B88746]/40 transition-colors">
-                      {/* Ambient center honey gold glow */}
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className="w-16 h-16 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#B88746]/10 rounded-full blur-xl lg:blur-2xl group-hover:scale-125 transition-transform duration-500" />
+                  return (
+                    <motion.div
+                      key={card.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.08 }}
+                      className="group bg-white hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 rounded-2xl p-4 lg:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_10px_30px_rgba(184,135,70,0.06)] hover:shadow-[0_16px_40px_rgba(184,135,70,0.12)]"
+                    >
+                      <div className="w-full aspect-[4/3] rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center p-3 group-hover:border-[#B88746]/40 transition-colors">
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <div className="w-28 h-28 bg-[#B88746]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500" />
+                        </div>
+
+                        <div className="relative z-10 w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                          <Card3DVisual graphic={card.graphic} />
+                        </div>
+
+                        <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
+                          <IconComponent className="w-4 h-4" />
+                        </div>
                       </div>
 
-                      {/* 3D Graphic Illustration */}
-                      <div className="relative z-10 w-12 h-12 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <Card3DVisual graphic={card.graphic} />
-                      </div>
-
-                      {/* Subtle micro icon at bottom-center of visual box */}
-                      <div className="absolute bottom-1 sm:bottom-2 lg:bottom-2.5 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
-                        <IconComponent className="w-3 h-3 sm:w-3.5 sm:h-3.5 lg:w-4 lg:h-4" />
-                      </div>
-                    </div>
-
-                    {/* Title Below Card Graphic */}
-                    <p className="text-[11px] sm:text-xs md:text-sm lg:text-base font-semibold text-[#141414] group-hover:text-[#B88746] text-center mt-1.5 sm:mt-2 lg:mt-3 tracking-normal font-raleway transition-colors leading-tight line-clamp-2">
-                      {card.title}
-                    </p>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </AnimatePresence>
+                      <p className="text-sm md:text-base font-semibold text-[#141414] group-hover:text-[#B88746] text-center mt-3 tracking-normal font-raleway transition-colors">
+                        {card.title}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>

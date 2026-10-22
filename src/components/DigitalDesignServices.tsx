@@ -158,7 +158,7 @@ function AnimatedCounter({
   return (
     <div className="flex flex-col items-center justify-center my-0.5 sm:my-1">
       <div
-        className={`text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-bold font-raleway tracking-normal tabular-nums select-none ${gradientClass}`}
+        className={`text-6xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-bold font-raleway tracking-tight leading-none tabular-nums select-none ${gradientClass}`}
       >
         {displayValue}
         {suffix}
@@ -213,7 +213,7 @@ export default function DigitalDesignServices() {
       className="relative w-full bg-[#FAF8F5] text-[#141414] min-h-[420vh] select-none border-b border-[#E8DED0]"
     >
       {/* Sticky Viewport Stage */}
-      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col justify-center items-center px-4 sm:px-8 md:px-12 py-3 sm:py-5 overflow-hidden bg-[#FAF8F5]">
+      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col justify-center items-center px-4 sm:px-8 md:px-12 py-[10dvh] md:py-5 overflow-hidden bg-[#FAF8F5]">
         {/* Subtle Warm Bronze Dot Matrix Grid Pattern (Matches Hero Aesthetic) */}
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
@@ -231,22 +231,26 @@ export default function DigitalDesignServices() {
         {/* Subtle warm ambient center glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#B88746]/10 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col justify-center items-center">
-          {/* Section Heading: Warm Light Theme matching Hero */}
-          <div className="mb-3 sm:mb-4 md:mb-5 text-center max-w-4xl mx-auto shrink-0">
-            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-[2.35rem] font-bold uppercase tracking-normal text-[#141414] font-raleway leading-[1.2] text-center">
+        <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col justify-between md:justify-center items-center h-[80dvh] md:h-auto my-auto">
+          {/* 1ST PART: HEADING */}
+          <div className="text-center max-w-4xl mx-auto shrink-0 px-2">
+            <h2 className="text-[1.12rem] sm:text-2xl md:text-3xl lg:text-[2.35rem] font-bold uppercase tracking-normal text-[#141414] font-raleway leading-[1.25] text-center">
               A design-led growth studio for <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                 Healthcare & D2C Brands
               </span>
             </h2>
-            <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#77716A] leading-relaxed font-normal font-raleway max-w-3xl mx-auto text-center line-clamp-2 sm:line-clamp-none">
+          </div>
+
+          {/* 2ND PART: NORMAL PARAGRAPH */}
+          <div className="text-center max-w-3xl mx-auto shrink-0 px-2 md:mt-2">
+            <p className="text-[11px] sm:text-xs md:text-sm text-[#77716A] leading-relaxed font-normal font-raleway max-w-3xl mx-auto text-center line-clamp-3 sm:line-clamp-none">
               We have built 50+ websites and partnered with 400+ brands—including over 70 in healthcare—to build digital flagships, enduring brand identities, and high-ROI performance campaigns.
             </p>
           </div>
 
-          {/* Unified Card Stage: Proportioned to comfortably fit 100% inside screen without scrolling */}
-          <div className="relative w-full h-[390px] sm:h-[420px] md:h-[450px] lg:h-[470px] max-h-[62vh] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-[#E8DED0] shadow-[0_20px_60px_rgba(184,135,70,0.08)] shrink-0">
+          {/* 3RD PART: UNIFIED CARD STAGE */}
+          <div className="relative w-full h-[360px] sm:h-[420px] md:h-[450px] lg:h-[470px] max-h-[50vh] md:max-h-[62vh] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-[#E8DED0] shadow-[0_20px_60px_rgba(184,135,70,0.08)] shrink-0 md:mt-5">
             {/* ========================================================= */}
             {/* CARD 0: Websites Built                                    */}
             {/* ========================================================= */}
@@ -264,19 +268,19 @@ export default function DigitalDesignServices() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#B88746]/10 rounded-full blur-[130px] pointer-events-none" />
 
               {/* Card Top Row */}
-              <div className="relative z-10 flex items-center justify-between gap-4 pb-1 sm:pb-1.5">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
+              <div className="relative z-10 flex items-center justify-between gap-2 sm:gap-4 pb-1 sm:pb-1.5">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <h3 className="text-base sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#141414] font-raleway whitespace-nowrap truncate">
                     {factCards[0].title}
                   </h3>
                 </div>
                 <a
                   href={factCards[0].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
+                  className="group p-1 sm:pl-5 sm:pr-1.5 sm:py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-1.5 sm:gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
+                  <span className="hidden sm:inline tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </a>
               </div>
@@ -297,8 +301,20 @@ export default function DigitalDesignServices() {
                     gradientClass={factCards[0].counterGradient}
                   />
 
-                  {/* Pills Under Counter */}
-                  <div className="w-full flex flex-col items-center gap-1.5 sm:gap-2 mt-2">
+                  {/* Mobile 2x2 Structured Grid (< sm) */}
+                  <div className="grid sm:hidden grid-cols-2 gap-1.5 w-full max-w-xs mx-auto mt-6">
+                    {[...factCards[0].row1, ...factCards[0].row2].map((item, pIdx) => (
+                      <span
+                        key={pIdx}
+                        className="px-2 py-1 rounded-full text-[10px] font-semibold font-raleway text-[#141414] bg-white border border-[#E8DED0] text-center truncate shadow-2xs"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Desktop Pills Under Counter (sm:) */}
+                  <div className="hidden sm:flex w-full flex-col items-center gap-1.5 sm:gap-2 mt-2">
                     <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
                       {factCards[0].row1.map((item, pIdx) => (
                         <span
@@ -352,19 +368,19 @@ export default function DigitalDesignServices() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#C59A58]/10 rounded-full blur-[130px] pointer-events-none" />
 
               {/* Card Top Row */}
-              <div className="relative z-10 flex items-center justify-between gap-4 pb-1 sm:pb-1.5">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
+              <div className="relative z-10 flex items-center justify-between gap-2 sm:gap-4 pb-1 sm:pb-1.5">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <h3 className="text-base sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#141414] font-raleway whitespace-nowrap truncate">
                     {factCards[1].title}
                   </h3>
                 </div>
                 <a
                   href={factCards[1].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
+                  className="group p-1 sm:pl-5 sm:pr-1.5 sm:py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-1.5 sm:gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
+                  <span className="hidden sm:inline tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </a>
               </div>
@@ -385,8 +401,20 @@ export default function DigitalDesignServices() {
                     gradientClass={factCards[1].counterGradient}
                   />
 
-                  {/* Pills Under Counter */}
-                  <div className="w-full flex flex-col items-center gap-1.5 sm:gap-2 mt-2">
+                  {/* Mobile 2x2 Structured Grid (< sm) */}
+                  <div className="grid sm:hidden grid-cols-2 gap-1.5 w-full max-w-xs mx-auto mt-6">
+                    {[...factCards[1].row1, ...factCards[1].row2].map((item, pIdx) => (
+                      <span
+                        key={pIdx}
+                        className="px-2 py-1 rounded-full text-[10px] font-semibold font-raleway text-[#141414] bg-white border border-[#E8DED0] text-center truncate shadow-2xs"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Desktop Pills Under Counter (sm:) */}
+                  <div className="hidden sm:flex w-full flex-col items-center gap-1.5 sm:gap-2 mt-2">
                     <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
                       {factCards[1].row1.map((item, pIdx) => (
                         <span
@@ -440,19 +468,19 @@ export default function DigitalDesignServices() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#9E7234]/10 rounded-full blur-[130px] pointer-events-none" />
 
               {/* Card Top Row */}
-              <div className="relative z-10 flex items-center justify-between gap-4 pb-1 sm:pb-1.5">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
+              <div className="relative z-10 flex items-center justify-between gap-2 sm:gap-4 pb-1 sm:pb-1.5">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <h3 className="text-base sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#141414] font-raleway whitespace-nowrap truncate">
                     {factCards[2].title}
                   </h3>
                 </div>
                 <a
                   href={factCards[2].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
+                  className="group p-1 sm:pl-5 sm:pr-1.5 sm:py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-1.5 sm:gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
+                  <span className="hidden sm:inline tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </a>
               </div>
@@ -473,8 +501,20 @@ export default function DigitalDesignServices() {
                     gradientClass={factCards[2].counterGradient}
                   />
 
-                  {/* Pills Under Counter */}
-                  <div className="w-full flex flex-col items-center gap-1.5 sm:gap-2 mt-2">
+                  {/* Mobile 2x2 Structured Grid (< sm) */}
+                  <div className="grid sm:hidden grid-cols-2 gap-1.5 w-full max-w-xs mx-auto mt-6">
+                    {[...factCards[2].row1, ...factCards[2].row2].map((item, pIdx) => (
+                      <span
+                        key={pIdx}
+                        className="px-2 py-1 rounded-full text-[10px] font-semibold font-raleway text-[#141414] bg-white border border-[#E8DED0] text-center truncate shadow-2xs"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Desktop Pills Under Counter (sm:) */}
+                  <div className="hidden sm:flex w-full flex-col items-center gap-1.5 sm:gap-2 mt-2">
                     <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
                       {factCards[2].row1.map((item, pIdx) => (
                         <span
@@ -526,19 +566,19 @@ export default function DigitalDesignServices() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#B88746]/10 rounded-full blur-[130px] pointer-events-none" />
 
               {/* Card Top Row */}
-              <div className="relative z-10 flex items-center justify-between gap-4 pb-1 sm:pb-1.5">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-normal text-[#141414] font-raleway">
+              <div className="relative z-10 flex items-center justify-between gap-2 sm:gap-4 pb-1 sm:pb-1.5">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <h3 className="text-base sm:text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#141414] font-raleway whitespace-nowrap truncate">
                     {factCards[3].title}
                   </h3>
                 </div>
                 <a
                   href={factCards[3].exploreHref}
-                  className="group pl-5 pr-1.5 py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
+                  className="group p-1 sm:pl-5 sm:pr-1.5 sm:py-1.5 rounded-full bg-white text-[#141414] hover:bg-[#FAF8F5] border border-[#E8DED0] transition-all duration-300 inline-flex items-center gap-1.5 sm:gap-3 font-bold text-xs sm:text-sm shadow-sm shrink-0 cursor-pointer font-raleway"
                 >
-                  <span className="tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
+                  <span className="hidden sm:inline tracking-[0.05em] font-raleway font-bold uppercase text-xs">Explore</span>
                   <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#B88746] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </a>
               </div>
@@ -559,8 +599,20 @@ export default function DigitalDesignServices() {
                     gradientClass={factCards[3].counterGradient}
                   />
 
-                  {/* Pills Under Counter */}
-                  <div className="w-full flex flex-col items-center gap-1.5 sm:gap-2 mt-2">
+                  {/* Mobile 2x2 Structured Grid (< sm) */}
+                  <div className="grid sm:hidden grid-cols-2 gap-1.5 w-full max-w-xs mx-auto mt-6">
+                    {[...factCards[3].row1, ...factCards[3].row2].map((item, pIdx) => (
+                      <span
+                        key={pIdx}
+                        className="px-2 py-1 rounded-full text-[10px] font-semibold font-raleway text-[#141414] bg-white border border-[#E8DED0] text-center truncate shadow-2xs"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Desktop Pills Under Counter (sm:) */}
+                  <div className="hidden sm:flex w-full flex-col items-center gap-1.5 sm:gap-2 mt-2">
                     <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
                       {factCards[3].row1.map((item, pIdx) => (
                         <span
