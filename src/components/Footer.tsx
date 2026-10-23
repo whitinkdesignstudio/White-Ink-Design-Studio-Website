@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-5 space-y-4">
             <a
-              href="#"
+              href="/"
               className="inline-block transition-transform duration-300 hover:scale-[1.02]"
               aria-label="White Ink Design Studio"
             >

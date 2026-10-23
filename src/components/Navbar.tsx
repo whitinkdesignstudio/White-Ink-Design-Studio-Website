@@ -6,26 +6,30 @@ import { ArrowUpRight, X } from "lucide-react";
 
 interface NavbarProps {
   showNav?: boolean;
+  isSubpage?: boolean;
 }
 
-export default function Navbar({ showNav = true }: NavbarProps) {
+export default function Navbar({ showNav = true, isSubpage = false }: NavbarProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const isInitialMount = useRef(true);
+  const isInitialMount = useRef(!isSubpage);
 
   useEffect(() => {
+    if (isSubpage) {
+      isInitialMount.current = false;
+      return;
+    }
     const timer = setTimeout(() => {
       isInitialMount.current = false;
     }, 1800);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isSubpage]);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const heroTrackHeight = window.innerHeight * 3.8;
 
       if (currentScrollY > 40) {
         setIsScrolled(true);
@@ -33,18 +37,27 @@ export default function Navbar({ showNav = true }: NavbarProps) {
         setIsScrolled(false);
       }
 
-      // Hide header completely before entering and while inside the services section
-      if (currentScrollY <= 25) {
-        setIsVisible(true);
-      } else if (currentScrollY < heroTrackHeight) {
-        // Completely vanish before & during services section
-        setIsVisible(false);
-      } else {
-        // Below hero & services track: zebra hide on down, show on up
+      if (isSubpage) {
         if (currentScrollY > lastScrollY && currentScrollY > 150) {
           setIsVisible(false);
         } else {
           setIsVisible(true);
+        }
+      } else {
+        const heroTrackHeight = window.innerHeight * 3.8;
+        // Hide header completely before entering and while inside the services section
+        if (currentScrollY <= 25) {
+          setIsVisible(true);
+        } else if (currentScrollY < heroTrackHeight) {
+          // Completely vanish before & during services section
+          setIsVisible(false);
+        } else {
+          // Below hero & services track: zebra hide on down, show on up
+          if (currentScrollY > lastScrollY && currentScrollY > 150) {
+            setIsVisible(false);
+          } else {
+            setIsVisible(true);
+          }
         }
       }
 
@@ -53,7 +66,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isSubpage]);
 
   // Lock body scroll when full-page menu is open
   useEffect(() => {
@@ -117,7 +130,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Official White Ink Logo */}
           <a
-            href="#"
+            href="/"
             className="group flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]"
             aria-label="White Ink Design Studio"
           >
@@ -173,7 +186,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
             {/* Top Bar inside Menu (Compact, No Overflow) */}
             <div className="flex items-center justify-between pb-3 md:pb-4 border-b border-[#E8DED0] w-full max-w-7xl mx-auto shrink-0">
               <a
-                href="#"
+                href="/"
                 onClick={() => setMenuOpen(false)}
                 className="group flex items-center gap-2 transition-transform duration-300 hover:scale-[1.02]"
               >

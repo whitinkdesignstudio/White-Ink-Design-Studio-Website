@@ -88,7 +88,7 @@ export default function Hero({ isReady = true }: HeroProps) {
               {/* Layer 5: Deep Amber Bronze Accent Base */}
               <path
                 d="M 380 370 C 440 370 500 355 580 315 C 670 275 740 235 830 268 C 850 275 860 272 870 270 L 870 370 Z"
-                fill="#9E7234"
+                fill="#B88746"
               />
             </svg>
           </motion.div>
