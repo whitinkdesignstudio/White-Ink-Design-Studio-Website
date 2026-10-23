@@ -64,18 +64,29 @@ export default function Navbar({ showNav = true }: NavbarProps) {
     }
   }, [menuOpen]);
 
+  // Close menu on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [menuOpen]);
+
   const menuItemsLeft = [
-    { label: "Selected Portfolio", href: "#work", desc: "Flagship Work & Outcomes" },
-    { label: "Our Process", href: "#process", desc: "Discover, Design, Build, Grow" },
-    { label: "Vision & Mission", href: "#vision-mission", desc: "Core Studio Philosophy" },
-    { label: "Google Reviews", href: "#reviews", desc: "5-Star Customer Feedback" },
+    { label: "WORK", href: "/work", desc: "Flagship work & outcomes" },
+    { label: "SERVICES", href: "/services", desc: "Brand, web, growth, content, AI" },
+    { label: "INDUSTRIES", href: "/industries", desc: "Healthcare, D2C, real estate, events" },
+    { label: "INTERNATIONAL", href: "/international", desc: "UK, US & white-label" },
   ];
 
   const menuItemsRight = [
-    { label: "Clientele Ecosystem", href: "#clients", desc: "Brands That Thrived" },
-    { label: "Book Consultation", href: "mailto:connect@whiteinkdesignstudio.com?subject=Strategic%20Consultation", desc: "20-Min Alignment Call" },
-    { label: "Start A Project", href: "#contact", desc: "Get In Touch Today" },
-    { label: "Contact Us", href: "#contact", desc: "Ahmedabad Headquarters" },
+    { label: "WINK'AI", href: "/wink-ai", desc: "AI that answers your leads" },
+    { label: "INSIGHTS", href: "/insights", desc: "Notes from the studio" },
+    { label: "PRICING", href: "/pricing", desc: "Clear starting prices" },
+    { label: "BOOK A CALL", href: "/contact", desc: "20-min alignment call", gold: true },
   ];
 
   return (
@@ -199,7 +210,7 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                     <a
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="group block"
+                      className="group block min-h-[44px] flex flex-col justify-center"
                     >
                       <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-normal text-[#141414] group-hover:text-[#B88746] group-hover:translate-x-2 transition-all duration-300 font-raleway leading-tight">
                         {item.label}
@@ -224,9 +235,15 @@ export default function Navbar({ showNav = true }: NavbarProps) {
                     <a
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="group block"
+                      className="group block min-h-[44px] flex flex-col justify-center"
                     >
-                      <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-normal text-[#141414] group-hover:text-[#B88746] group-hover:translate-x-2 transition-all duration-300 font-raleway leading-tight">
+                      <span
+                        className={`block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-normal group-hover:translate-x-2 transition-all duration-300 font-raleway leading-tight ${
+                          item.gold
+                            ? "text-[#B88746] group-hover:text-[#9E7234]"
+                            : "text-[#141414] group-hover:text-[#B88746]"
+                        }`}
+                      >
                         {item.label}
                       </span>
                       <span className="text-[11px] sm:text-xs uppercase tracking-[0.05em] text-[#B88746] group-hover:text-[#9E7234] transition-colors font-semibold block mt-0.5 font-raleway">
