@@ -174,12 +174,12 @@ function BrandCardItem({ brand }: { brand: BrandCard }) {
   );
 }
 
-// Compact horizontal item for mobile marquee rows
+// Square item for mobile marquee rows
 function MobileBrandCardItem({ brand }: { brand: BrandCard }) {
   return (
-    <div className="shrink-0 flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 border border-[#E8DED0] shadow-sm select-none min-w-[165px] max-w-[200px]">
+    <div className="shrink-0 w-[92px] h-[92px] bg-white rounded-2xl p-2 border border-[#E8DED0] shadow-sm select-none flex flex-col items-center justify-center text-center">
       <div
-        className="w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-black text-xs font-heading shadow-xs"
+        className="w-7 h-7 rounded-lg flex items-center justify-center font-black text-xs font-heading mb-1 shadow-xs"
         style={{
           backgroundColor: `${brand.accent}15`,
           color: brand.accent,
@@ -188,24 +188,22 @@ function MobileBrandCardItem({ brand }: { brand: BrandCard }) {
       >
         {brand.initials}
       </div>
-      <div className="flex flex-col min-w-0 text-left">
-        <h4 className="text-xs font-black text-[#141414] font-heading uppercase tracking-tight leading-tight truncate">
-          {brand.name}
-        </h4>
-        <p className="text-[10px] font-medium text-[#77716A] truncate">
-          {brand.tagline}
-        </p>
-        <span className="text-[8px] font-mono uppercase tracking-wider text-[#B88746] font-semibold truncate">
-          {brand.category}
-        </span>
-      </div>
+      <h4 className="text-[10px] font-black text-[#141414] font-heading uppercase tracking-tight leading-tight truncate w-full">
+        {brand.name}
+      </h4>
+      <p className="text-[8.5px] font-medium text-[#77716A] truncate w-full mt-0.5">
+        {brand.tagline}
+      </p>
+      <span className="mt-1 text-[7px] font-mono uppercase tracking-wider text-[#B88746] font-semibold truncate w-full">
+        {brand.category}
+      </span>
     </div>
   );
 }
 
 export default function BrandsThrived() {
   return (
-    <section id="clients" className="relative w-full h-screen h-[100dvh] lg:h-screen lg:max-h-screen flex flex-col justify-center items-center py-3 sm:py-6 lg:py-0 px-3 sm:px-6 md:px-12 bg-[#FAF8F5] overflow-hidden">
+    <section id="clients" className="relative w-full h-screen h-[100dvh] lg:h-screen lg:max-h-screen flex flex-col justify-center items-center py-[10dvh] lg:py-0 px-3 sm:px-6 md:px-12 bg-[#FAF8F5] overflow-hidden">
       <div className="max-w-7xl w-full mx-auto my-auto h-full flex flex-col justify-center">
         {/* Outer Frame with Light Beige/Cream Panel Matching Reference Image */}
         <div className="relative w-full h-full max-h-[100dvh] lg:h-auto rounded-[24px] sm:rounded-[32px] bg-[#F5EFE6] text-[#141414] border border-[#E8DED0] shadow-xl overflow-hidden p-4 sm:p-7 md:p-8 lg:p-10 flex flex-col justify-between lg:block">
@@ -223,57 +221,44 @@ export default function BrandsThrived() {
           />
 
           {/* ========================================================================= */}
-          {/* MOBILE VIEW (< lg): 100% SCREEN COVERAGE WITH 3 HORIZONTAL MARQUEE ROWS   */}
+          {/* MOBILE ONLY (< lg): 80% SCREEN COVERAGE WITH EQUAL SPACING BETWEEN 3 PARTS */}
+          {/* 10% TOP & 10% BOTTOM PADDING / EMPTY SPACE                                 */}
           {/* ========================================================================= */}
-          <div className="flex lg:hidden flex-col justify-between h-full relative z-10 py-1 text-center items-center">
-            {/* Top Info Block (Centered) */}
-            <div className="space-y-2 select-none text-center flex flex-col items-center w-full">
-              <div className="space-y-0.5 text-center">
-                <h3 className="text-xl font-black uppercase tracking-tight text-[#141414] font-heading">
-                  BRANDS <span className="text-[#B88746]">THAT</span>
-                </h3>
-
-                <div className="text-3xl sm:text-4xl font-black uppercase tracking-tighter font-heading text-[#141414] leading-none">
-                  THRIVED
-                </div>
-
-                {/* Pehle with fir 2nd line me white ink */}
-                <div className="pt-0.5 text-center flex flex-col items-center">
-                  <div className="text-lg font-black uppercase tracking-tight text-[#141414] font-heading">
-                    WITH
-                  </div>
-                  <div className="text-xl font-black uppercase tracking-tight text-[#B88746] font-heading">
-                    WHITE INK
-                  </div>
-                </div>
-
-                <div className="text-xs font-black uppercase tracking-widest text-[#77716A] font-heading">
-                  DESIGN STUDIO
-                </div>
+          <div className="flex lg:hidden flex-col justify-between items-center w-full h-[80dvh] max-h-[80dvh] my-auto relative z-10 text-center">
+            {/* PART 1: HEADING */}
+            <div className="w-full text-center shrink-0">
+              <h3 className="text-[1.15rem] sm:text-2xl font-black uppercase tracking-tight text-[#141414] font-heading leading-tight">
+                BRANDS <span className="text-[#B88746]">THAT</span> THRIVED WITH
+              </h3>
+              <div className="text-[1.15rem] sm:text-2xl font-black uppercase tracking-tight text-[#B88746] font-heading leading-tight mt-0.5">
+                WHITE INK <span className="text-[#141414]">DESIGN STUDIO</span>
               </div>
+            </div>
 
-              <p className="text-[11px] text-[#77716A] font-medium leading-relaxed max-w-md line-clamp-2 text-center mx-auto">
+            {/* PART 2: PARAGRAPH & 3 ROUND BORDER BADGES */}
+            <div className="space-y-2.5 text-center flex flex-col items-center w-full shrink-0 max-w-md mx-auto px-2">
+              <p className="text-[11px] sm:text-xs text-[#77716A] font-medium leading-relaxed max-w-md line-clamp-3 text-center mx-auto">
                 For over 8 years now, we have infused India and the UK&apos;s top brands with
                 clarity, creativity, and confidence through effective branding, high-converting
                 websites, and performance growth solutions.
               </p>
 
-              {/* Stats proof pill */}
-              <div className="pt-0.5 flex flex-wrap items-center justify-center gap-1.5 text-[9px] font-bold font-mono uppercase text-[#141414]">
-                <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
+              {/* 3 Texts in round border */}
+              <div className="flex flex-wrap items-center justify-center gap-1.5 text-[9px] sm:text-[10px] font-bold font-mono uppercase text-[#141414]">
+                <span className="px-2.5 py-1 rounded-full bg-white border border-[#E8DED0] shadow-xs">
                   400+ Total Brands
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
+                <span className="px-2.5 py-1 rounded-full bg-white border border-[#E8DED0] shadow-xs">
                   70+ Healthcare
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-white border border-[#E8DED0] shadow-xs">
+                <span className="px-2.5 py-1 rounded-full bg-white border border-[#E8DED0] shadow-xs">
                   50+ Websites
                 </span>
               </div>
             </div>
 
-            {/* Bottom: 3 Horizontal Rows of Moving Logos (Left to Right & Right to Left) */}
-            <div className="flex flex-col gap-2 relative overflow-hidden py-1 w-full my-auto">
+            {/* PART 3: LOGOS KE BOXES (3 Horizontal Marquee Rows of Square Boxes) */}
+            <div className="flex flex-col gap-2 relative overflow-hidden py-1 w-full shrink-0">
               {/* Left & Right Vignette Gradient Fades */}
               <div className="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-[#F5EFE6] to-transparent z-10 pointer-events-none" />
               <div className="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-[#F5EFE6] to-transparent z-10 pointer-events-none" />
@@ -295,7 +280,7 @@ export default function BrandsThrived() {
                 </motion.div>
               </div>
 
-              {/* ROW 2: RIGHT TO LEFT (OPPOSITE DIRECTION) */}
+              {/* ROW 2: RIGHT TO LEFT */}
               <div className="overflow-hidden w-full">
                 <motion.div
                   animate={{ x: ["0%", "-50%"] }}
@@ -312,7 +297,7 @@ export default function BrandsThrived() {
                 </motion.div>
               </div>
 
-              {/* ROW 3: LEFT TO RIGHT (OPPOSITE TO ROW 2) */}
+              {/* ROW 3: LEFT TO RIGHT */}
               <div className="overflow-hidden w-full">
                 <motion.div
                   animate={{ x: ["-50%", "0%"] }}

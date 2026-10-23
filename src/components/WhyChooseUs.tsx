@@ -53,157 +53,157 @@ interface ServiceTab {
 
 const serviceTabs: ServiceTab[] = [
   {
-    id: "websites",
-    label: "Websites",
+    id: "branding",
+    label: "Branding",
     number: "01/05",
     cards: [
       {
-        id: "nextjs-custom",
-        title: "Next.js & Custom Web",
-        icon: Code2,
-        graphic: "codeCube",
+        id: "brand-creation",
+        title: "Brand Creation",
+        icon: Sparkles,
+        graphic: "crownPodium",
       },
       {
+        id: "brand-designing",
+        title: "Brand Designing",
+        icon: Layers,
+        graphic: "cards",
+      },
+      {
+        id: "brand-strategy",
+        title: "Brand Strategy",
+        icon: Target,
+        graphic: "bullseye",
+      },
+      {
+        id: "logo-design",
+        title: "Logo Design",
+        icon: PenTool,
+        graphic: "penFlow",
+      },
+    ],
+  },
+  {
+    id: "website-design",
+    label: "Website & UI/UX Design",
+    number: "02/05",
+    cards: [
+      {
         id: "ui-ux",
-        title: "UI/UX Design Systems",
+        title: "UI/UX",
         icon: Layers,
         graphic: "layersGlass",
       },
       {
-        id: "shopify-d2c",
-        title: "Shopify & D2C Stores",
-        icon: ShoppingBag,
-        graphic: "ecomBag",
-      },
-      {
-        id: "conversion-engine",
-        title: "Conversion Engine",
-        icon: Filter,
-        graphic: "funnelMag",
-      },
-    ],
-  },
-  {
-    id: "branding",
-    label: "Branding",
-    number: "02/05",
-    cards: [
-      {
-        id: "brand-strategy",
-        title: "Brand Strategy & Voice",
-        icon: Target,
-        graphic: "bullseye",
-      },
-      {
-        id: "logo-systems",
-        title: "Logo & Visual Systems",
-        icon: PenTool,
-        graphic: "penFlow",
-      },
-      {
-        id: "packaging-design",
-        title: "Packaging & Print Systems",
+        id: "portfolio-design",
+        title: "Portfolio Design",
         icon: Trophy,
-        graphic: "crownPodium",
-      },
-      {
-        id: "brand-guidelines",
-        title: "Brand Books & Guidelines",
-        icon: Heart,
         graphic: "cards",
       },
-    ],
-  },
-  {
-    id: "growth",
-    label: "Growth",
-    number: "03/05",
-    cards: [
       {
-        id: "performance-ads",
-        title: "Meta & Google PMax Ads",
-        icon: TrendingUp,
-        graphic: "rocket",
-      },
-      {
-        id: "chatgpt-ads",
-        title: "ChatGPT Ads & AI Search",
-        icon: Sparkles,
-        graphic: "orbitSphere",
-      },
-      {
-        id: "seo-audits",
-        title: "Technical SEO & Schema",
-        icon: Search,
-        graphic: "auditSearch",
-      },
-      {
-        id: "healthcare-compliance",
-        title: "Healthcare Ad Policy",
-        icon: Target,
-        graphic: "bullseye",
-      },
-    ],
-  },
-  {
-    id: "content",
-    label: "Content",
-    number: "04/05",
-    cards: [
-      {
-        id: "video-reels",
-        title: "High-Impact Video Reels",
-        icon: Video,
-        graphic: "lens",
-      },
-      {
-        id: "shoots-production",
-        title: "Studio & Product Shoots",
-        icon: Play,
-        graphic: "phoneFilm",
-      },
-      {
-        id: "decks-stalls",
-        title: "Brochures & Expo Stalls",
-        icon: Clapperboard,
-        graphic: "clapper",
-      },
-      {
-        id: "social-calendars",
-        title: "Social Media Calendars",
-        icon: Megaphone,
-        graphic: "megaphone",
-      },
-    ],
-  },
-  {
-    id: "automation",
-    label: "wink'AI",
-    number: "05/05",
-    cards: [
-      {
-        id: "whatsapp-ai",
-        title: "24/7 WhatsApp AI Agents",
-        icon: Globe2,
-        graphic: "globeNetwork",
-      },
-      {
-        id: "autonomous-intake",
-        title: "Autonomous Lead Intake",
-        icon: Filter,
-        graphic: "funnelMag",
-      },
-      {
-        id: "claude-n8n",
-        title: "Claude + n8n Automations",
+        id: "website-design-card",
+        title: "Website Design",
         icon: Code2,
         graphic: "codeCube",
       },
       {
-        id: "ai-search",
-        title: "AI Search Optimization",
-        icon: Search,
-        graphic: "auditSearch",
+        id: "website-development",
+        title: "Website Development",
+        icon: Globe2,
+        graphic: "globeNetwork",
+      },
+    ],
+  },
+  {
+    id: "ecommerce-d2c",
+    label: "E-Commerce & D2C",
+    number: "03/05",
+    cards: [
+      {
+        id: "ecommerce",
+        title: "E-Commerce",
+        icon: ShoppingBag,
+        graphic: "ecomBag",
+      },
+      {
+        id: "quick-commerce",
+        title: "Quick Commerce",
+        icon: TrendingUp,
+        graphic: "rocket",
+      },
+      {
+        id: "d2c-creation",
+        title: "D2C Creation",
+        icon: Target,
+        graphic: "bullseye",
+      },
+      {
+        id: "ecommerce-ads",
+        title: "E-Commerce Ads",
+        icon: Filter,
+        graphic: "funnelMag",
+      },
+    ],
+  },
+  {
+    id: "product-shoots",
+    label: "Product & Ads Shoots",
+    number: "04/05",
+    cards: [
+      {
+        id: "product-shoot",
+        title: "Product Shoot",
+        icon: Video,
+        graphic: "lens",
+      },
+      {
+        id: "catalogue-shoot",
+        title: "Catalogue Shoot",
+        icon: Layers,
+        graphic: "cards",
+      },
+      {
+        id: "influencer-shoot",
+        title: "Influencer Shoot",
+        icon: Play,
+        graphic: "phoneFilm",
+      },
+      {
+        id: "ads-shoot",
+        title: "Ads Shoot",
+        icon: Clapperboard,
+        graphic: "clapper",
+      },
+    ],
+  },
+  {
+    id: "ads-social",
+    label: "Ads & Social Media",
+    number: "05/05",
+    cards: [
+      {
+        id: "advertisement",
+        title: "Advertisement",
+        icon: Megaphone,
+        graphic: "megaphone",
+      },
+      {
+        id: "meta-google-ads",
+        title: "Meta Google Ads",
+        icon: TrendingUp,
+        graphic: "rocket",
+      },
+      {
+        id: "social-media",
+        title: "Social Media",
+        icon: Heart,
+        graphic: "orbitSphere",
+      },
+      {
+        id: "whatsapp-api",
+        title: "WhatsApp API",
+        icon: Globe2,
+        graphic: "globeNetwork",
       },
     ],
   },
@@ -506,8 +506,8 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
             </h2>
           </div>
 
-          {/* PART 2: TABS (Rounded pills spanning full width) */}
-          <div className="w-full flex items-center justify-between gap-1 py-0.5 shrink-0">
+          {/* PART 2: TABS (Rounded pills with smooth horizontal swipe) */}
+          <div className="w-full flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 shrink-0 px-1">
             {serviceTabs.map((tab, idx) => {
               const isActive = activeTabIndex === idx;
 
@@ -515,7 +515,7 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                 <button
                   key={tab.id}
                   onClick={() => handleTabClick(idx)}
-                  className={`flex-1 text-center px-1.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-tight transition-all duration-200 cursor-pointer truncate ${
+                  className={`shrink-0 text-center px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 cursor-pointer whitespace-nowrap ${
                     isActive
                       ? "bg-white text-[#141414] border-2 border-[#141414] shadow-sm font-bold"
                       : "bg-transparent text-[#77716A] border border-[#D5C7B5] hover:text-[#141414]"
