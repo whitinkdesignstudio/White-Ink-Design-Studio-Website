@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { getAssetPath } from "@/utils/basePath";
 
 interface PortfolioItem {
   id: string;
@@ -24,7 +25,7 @@ export default function FeaturedWork() {
       artwork: (
         <div className="relative w-full h-full overflow-hidden bg-[#FAF8F5]">
           <img
-            src="/images/portfolio/dr-reckeweg-wide.png"
+            src={getAssetPath("/images/portfolio/dr-reckeweg-wide.png")}
             alt="Dr. Reckeweg & Co. Germany"
             className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"
@@ -41,7 +42,7 @@ export default function FeaturedWork() {
       artwork: (
         <div className="relative w-full h-full overflow-hidden bg-[#FAF8F5]">
           <img
-            src="/images/portfolio/speciality-homeopathy-wide.png"
+            src={getAssetPath("/images/portfolio/speciality-homeopathy-wide.png")}
             alt="Speciality Homeopathy - Dr. Ketan Patel"
             className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"
@@ -58,7 +59,7 @@ export default function FeaturedWork() {
       artwork: (
         <div className="relative w-full h-full overflow-hidden bg-[#0A0A0A]">
           <img
-            src="/images/portfolio/wand-fragrance-wide.png"
+            src={getAssetPath("/images/portfolio/wand-fragrance-wide.png")}
             alt="Wand Fragrance - The Chronicles of the Ancients"
             className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"
@@ -75,7 +76,7 @@ export default function FeaturedWork() {
       artwork: (
         <div className="relative w-full h-full overflow-hidden bg-[#FAF8F5]">
           <img
-            src="/images/portfolio/dishant-ayurvedic-wide.png"
+            src={getAssetPath("/images/portfolio/dishant-ayurvedic-wide.png")}
             alt="Dishant Ayurvedic Suppliers - Acika & Gaska"
             className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"
@@ -92,7 +93,7 @@ export default function FeaturedWork() {
       artwork: (
         <div className="relative w-full h-full overflow-hidden bg-[#FAF8F5]">
           <img
-            src="/images/portfolio/zydus-hospitals-wide.png"
+            src={getAssetPath("/images/portfolio/zydus-hospitals-wide.png")}
             alt="Zydus Hospitals - Centre of Excellence in Transplant Surgeries"
             className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"

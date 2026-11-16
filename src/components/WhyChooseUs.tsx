@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, type MotionValue } from "framer-motion";
+import { getAssetPath } from "@/utils/basePath";
 import {
   Target,
   Heart,
@@ -575,7 +576,7 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                         {card.image ? (
                           <div className="relative w-full h-full overflow-hidden">
                             <img
-                              src={card.image}
+                              src={getAssetPath(card.image)}
                               alt={card.title}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                               loading="lazy"
@@ -706,7 +707,7 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                         {card.image ? (
                           <div className="relative w-full h-full overflow-hidden">
                             <img
-                              src={card.image}
+                              src={getAssetPath(card.image)}
                               alt={card.title}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                               loading="lazy"

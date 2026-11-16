@@ -1,6 +1,8 @@
 "use client";
 
 import { ArrowUp, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
+import { getAssetPath } from "@/utils/basePath";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -41,17 +43,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-[#E8DED0]">
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
-            <a
+            <Link
               href="/"
               className="inline-block transition-transform duration-300 hover:scale-[1.02]"
               aria-label="White Ink Design Studio"
             >
               <img
-                src="/logo.png"
+                src={getAssetPath("/logo.png")}
                 alt="White Ink Design Studio Logo"
                 className="h-14 w-auto object-contain bg-white p-1.5 rounded-xl border border-[#E8DED0] shadow-sm"
               />
-            </a>
+            </Link>
             <p className="text-xs uppercase tracking-widest text-[#B88746] font-bold">
               Design &amp; Digital Marketing Studio
             </p>
@@ -97,34 +99,34 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs tracking-wide text-[#77716A]">
               <li>
-                <a href="/services/website-design" className="hover:text-[#B88746] transition-colors font-medium">
+                <Link href="/services/website-design" className="hover:text-[#B88746] transition-colors font-medium">
                   Website Design &amp; Dev (50+ Built)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services/branding" className="hover:text-[#B88746] transition-colors font-medium">
+                <Link href="/services/branding" className="hover:text-[#B88746] transition-colors font-medium">
                   Brand Identity &amp; Packaging
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services/performance-marketing" className="hover:text-[#B88746] transition-colors font-medium">
+                <Link href="/services/performance-marketing" className="hover:text-[#B88746] transition-colors font-medium">
                   Growth Marketing &amp; Ads
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services/social-media" className="hover:text-[#B88746] transition-colors font-medium">
+                <Link href="/services/social-media" className="hover:text-[#B88746] transition-colors font-medium">
                   Social Media &amp; Content
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services/ai-automation" className="hover:text-[#B88746] transition-colors font-medium">
+                <Link href="/services/ai-automation" className="hover:text-[#B88746] transition-colors font-medium">
                   AI &amp; Automation (wink&apos;AI)
-                </a>
+                </Link>
               </li>
               <li className="pt-1">
-                <a href="/services" className="text-[#B88746] font-bold hover:underline inline-flex items-center gap-1">
+                <Link href="/services" className="text-[#B88746] font-bold hover:underline inline-flex items-center gap-1">
                   All 5 Services Overview →
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -136,29 +138,29 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs uppercase tracking-wider font-semibold text-[#141414]">
               <li>
-                <a href="/work" className="hover:text-[#B88746] transition-colors">
+                <Link href="/work" className="hover:text-[#B88746] transition-colors">
                   Work (50+ Cases)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-[#B88746] transition-colors">
+                <Link href="/services" className="hover:text-[#B88746] transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#process" className="hover:text-[#B88746] transition-colors">
+                <Link href="/#process" className="hover:text-[#B88746] transition-colors">
                   Process
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#vision-mission" className="hover:text-[#B88746] transition-colors">
+                <Link href="/#vision-mission" className="hover:text-[#B88746] transition-colors">
                   Vision &amp; Values
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#contact" className="hover:text-[#B88746] transition-colors">
+                <Link href="/#contact" className="hover:text-[#B88746] transition-colors">
                   Book A Call
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/utils/basePath";
 
 interface BrandCard {
   name: string;
@@ -69,7 +70,7 @@ function BrandCardItem({ brand }: { brand: BrandCard }) {
     <div className="w-full bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-sm border border-[#E8DED0] hover:border-[#B88746] hover:shadow-md transition-all duration-300 flex items-center justify-center aspect-[4/3] group select-none overflow-hidden">
       <div className="w-full h-full flex items-center justify-center">
         <img
-          src={brand.logo}
+          src={getAssetPath(brand.logo)}
           alt={brand.name}
           className="w-full h-full max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
@@ -84,7 +85,7 @@ function MobileBrandCardItem({ brand }: { brand: BrandCard }) {
   return (
     <div className="shrink-0 w-[110px] h-[75px] sm:w-[130px] sm:h-[85px] bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-[#E8DED0] shadow-sm select-none flex items-center justify-center overflow-hidden">
       <img
-        src={brand.logo}
+        src={getAssetPath(brand.logo)}
         alt={brand.name}
         className="w-full h-full max-w-full max-h-full object-contain"
         loading="lazy"

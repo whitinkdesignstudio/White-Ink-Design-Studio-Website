@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, X } from "lucide-react";
+import Link from "next/link";
+import { getAssetPath } from "@/utils/basePath";
 
 interface NavbarProps {
   showNav?: boolean;
@@ -129,17 +131,17 @@ export default function Navbar({ showNav = true, isSubpage = false }: NavbarProp
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Official White Ink Logo */}
-          <a
+          <Link
             href="/"
             className="group flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]"
             aria-label="White Ink Design Studio"
           >
             <img
-              src="/logo.png"
+              src={getAssetPath("/logo.png")}
               alt="White Ink Design Studio Logo"
               className="h-12 sm:h-14 md:h-16 w-auto object-contain drop-shadow-sm"
             />
-          </a>
+          </Link>
 
           {/* Right Controls: ONLY the 3-Lines Hamburger Menu Button */}
           <button
@@ -185,17 +187,17 @@ export default function Navbar({ showNav = true, isSubpage = false }: NavbarProp
           >
             {/* Top Bar inside Menu (Compact, No Overflow) */}
             <div className="flex items-center justify-between pb-3 md:pb-4 border-b border-[#E8DED0] w-full max-w-7xl mx-auto shrink-0">
-              <a
+              <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
                 className="group flex items-center gap-2 transition-transform duration-300 hover:scale-[1.02]"
               >
                 <img
-                  src="/logo.png"
+                  src={getAssetPath("/logo.png")}
                   alt="White Ink Design Studio Logo"
                   className="h-10 sm:h-12 md:h-14 w-auto object-contain"
                 />
-              </a>
+              </Link>
 
               {/* Close Button */}
               <button
@@ -220,7 +222,7 @@ export default function Navbar({ showNav = true, isSubpage = false }: NavbarProp
                     animate={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ delay: 0.12 + idx * 0.06, duration: 0.45, ease: "easeOut" }}
                   >
-                    <a
+                    <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
                       className="group block min-h-[44px] flex flex-col justify-center"
@@ -231,7 +233,7 @@ export default function Navbar({ showNav = true, isSubpage = false }: NavbarProp
                       <span className="text-[11px] sm:text-xs uppercase tracking-[0.05em] text-[#B88746] group-hover:text-[#9E7234] transition-colors font-semibold block mt-0.5 font-raleway">
                         {item.desc}
                       </span>
-                    </a>
+                    </Link>
                   </motion.div>
                 ))}
               </div>
@@ -245,7 +247,7 @@ export default function Navbar({ showNav = true, isSubpage = false }: NavbarProp
                     animate={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ delay: 0.2 + idx * 0.06, duration: 0.45, ease: "easeOut" }}
                   >
-                    <a
+                    <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
                       className="group block min-h-[44px] flex flex-col justify-center"
@@ -262,7 +264,7 @@ export default function Navbar({ showNav = true, isSubpage = false }: NavbarProp
                       <span className="text-[11px] sm:text-xs uppercase tracking-[0.05em] text-[#B88746] group-hover:text-[#9E7234] transition-colors font-semibold block mt-0.5 font-raleway">
                         {item.desc}
                       </span>
-                    </a>
+                    </Link>
                   </motion.div>
                 ))}
               </div>
