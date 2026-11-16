@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="50%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EFE9" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4C085" />
+      <stop offset="50%" stop-color="#B88746" />
+      <stop offset="100%" stop-color="#9E7234" />
+    </linearGradient>
+
+    <linearGradient id="spotlightBeam" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#C59A58" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FAF8F5" stop-opacity="0.0" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#8C7355" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)" />
+
+  <!-- Studio Spotlight Cone from Top Left -->
+  <polygon points="120,0 260,0 680,600 0,600" fill="url(#spotlightBeam)" />
+
+  <!-- Studio Grid Backdrop line -->
+  <line x1="80" y1="460" x2="720" y2="460" stroke="#D5C7B5" stroke-width="2" />
+
+  <!-- Cinematic Film Reel (Top Right) -->
+  <g filter="url(#shadow)" transform="translate(560, 90)">
+    <circle cx="70" cy="70" r="65" fill="#FFFFFF" stroke="#B88746" stroke-width="3" />
+    <circle cx="70" cy="70" r="45" fill="#FAF8F5" stroke="#C59A58" stroke-width="1.5" />
+    <circle cx="70" cy="70" r="16" fill="url(#goldGrad)" />
+    <!-- Film Holes -->
+    <circle cx="70" cy="25" r="9" fill="#141414" opacity="0.8" />
+    <circle cx="70" cy="115" r="9" fill="#141414" opacity="0.8" />
+    <circle cx="25" cy="70" r="9" fill="#141414" opacity="0.8" />
+    <circle cx="115" cy="70" r="9" fill="#141414" opacity="0.8" />
+  </g>
+
+  <!-- Cinema Camera on Tripod (Center Left) -->
+  <g filter="url(#shadow)" transform="translate(140, 160)">
+    <!-- Tripod Legs -->
+    <line x1="140" y1="210" x2="70" y2="340" stroke="#141414" stroke-width="4" stroke-linecap="round" />
+    <line x1="140" y1="210" x2="140" y2="340" stroke="#B88746" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="140" y1="210" x2="210" y2="340" stroke="#141414" stroke-width="4" stroke-linecap="round" />
+    <!-- Tripod Mount Collar -->
+    <rect x="125" y="195" width="30" height="15" rx="3" fill="#141414" />
+
+    <!-- Cinema Camera Body -->
+    <rect x="90" y="100" width="115" height="95" rx="10" fill="#18181D" stroke="#2D2B33" stroke-width="2" />
+    <!-- Top Handle -->
+    <path d="M 105 100 L 105 75 L 180 75 L 180 100" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Monitor Screen on Top -->
+    <rect x="80" y="45" width="55" height="35" rx="4" fill="#FFFFFF" stroke="#B88746" stroke-width="2" />
+    <polygon points="102,57 114,63 102,69" fill="#B88746" />
+
+    <!-- Matte Box / Cinema Lens on Right -->
+    <polygon points="205,115 255,95 255,180 205,160" fill="#141414" stroke="url(#goldGrad)" stroke-width="2" />
+    <circle cx="205" cy="138" r="20" fill="none" stroke="#C59A58" stroke-width="2" />
+    <circle cx="205" cy="138" r="12" fill="#B88746" opacity="0.6" />
+
+    <!-- Red Recording Tally Light -->
+    <circle cx="106" cy="118" r="4.5" fill="#E54D42" />
+    <circle cx="106" cy="118" r="8" fill="#E54D42" opacity="0.3" />
+  </g>
+
+  <!-- Director's Clapperboard (Center Right, Angled) -->
+  <g filter="url(#shadow)" transform="translate(420, 210) rotate(-6)">
+    <!-- Main Slate Board -->
+    <rect x="0" y="50" width="240" height="180" rx="12" fill="#18181D" stroke="#2D2B33" stroke-width="2" />
+    
+    <!-- Chalk Lines & Metadata -->
+    <g font-family="system-ui, sans-serif" fill="#FAF8F5" font-size="11" font-weight="700">
+      <text x="20" y="85" fill="#B88746" letter-spacing="1">SCENE</text>
+      <text x="20" y="115" font-size="22" font-weight="900" fill="#FFFFFF">01</text>
+      
+      <text x="100" y="85" fill="#B88746" letter-spacing="1">TAKE</text>
+      <text x="100" y="115" font-size="22" font-weight="900" fill="#FFFFFF">04</text>
+      
+      <text x="175" y="85" fill="#B88746" letter-spacing="1">ROLL</text>
+      <text x="175" y="115" font-size="22" font-weight="900" fill="#FFFFFF">A1</text>
+
+      <line x1="20" y1="135" x2="220" y2="135" stroke="#333" stroke-width="1.5" />
+
+      <text x="20" y="160" fill="#77716A" font-size="10">PRODUCTION</text>
+      <text x="20" y="180" fill="url(#goldGrad)" font-size="13" font-weight="800">WHITE INK ADS</text>
+
+      <text x="140" y="160" fill="#77716A" font-size="10">DIRECTOR</text>
+      <text x="140" y="180" fill="#FFFFFF" font-size="13" font-weight="800">4K CAMPAIGN</text>
+    </g>
+
+    <!-- Clapper Sticks (Black & Gold Stripes) -->
+    <!-- Lower Stick -->
+    <rect x="0" y="24" width="240" height="26" fill="#18181D" />
+    <polygon points="30,24 60,24 40,50 10,50" fill="url(#goldGrad)" />
+    <polygon points="90,24 120,24 100,50 70,50" fill="url(#goldGrad)" />
+    <polygon points="150,24 180,24 160,50 130,50" fill="url(#goldGrad)" />
+    <polygon points="210,24 240,24 220,50 190,50" fill="url(#goldGrad)" />
+
+    <!-- Upper Stick (Open at 24-degree angle) -->
+    <g transform="translate(0, 24) rotate(-24)">
+      <rect x="0" y="-26" width="240" height="26" fill="#18181D" rx="4" />
+      <polygon points="30,-26 60,-26 40,0 10,0" fill="url(#goldGrad)" />
+      <polygon points="90,-26 120,-26 100,0 70,0" fill="url(#goldGrad)" />
+      <polygon points="150,-26 180,-26 160,0 130,0" fill="url(#goldGrad)" />
+      <polygon points="210,-26 240,-26 220,0 190,0" fill="url(#goldGrad)" />
+      <!-- Hinge Nut -->
+      <circle cx="12" cy="-13" r="6" fill="#E4C085" />
+    </g>
+  </g>
+</svg>
+

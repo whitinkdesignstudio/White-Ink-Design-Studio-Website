@@ -25,6 +25,7 @@ interface ServiceCard {
   id: string;
   title: string;
   icon: React.ComponentType<{ className?: string }>;
+  image?: string;
   graphic:
     | "bullseye"
     | "cards"
@@ -62,24 +63,28 @@ const serviceTabs: ServiceTab[] = [
         title: "Brand Creation",
         icon: Sparkles,
         graphic: "crownPodium",
+        image: "/images/services/branding/brand-creation.jpg",
       },
       {
         id: "brand-designing",
         title: "Brand Designing",
         icon: Layers,
         graphic: "cards",
+        image: "/images/services/branding/brand-designing.jpg",
       },
       {
         id: "brand-strategy",
         title: "Brand Strategy",
         icon: Target,
         graphic: "bullseye",
+        image: "/images/services/branding/brand-strategy.jpg",
       },
       {
         id: "logo-design",
         title: "Logo Design",
         icon: PenTool,
         graphic: "penFlow",
+        image: "/images/services/branding/logo-design.jpg",
       },
     ],
   },
@@ -93,24 +98,28 @@ const serviceTabs: ServiceTab[] = [
         title: "UI/UX",
         icon: Layers,
         graphic: "layersGlass",
+        image: "/images/services/website-design/ui-ux.jpg",
       },
       {
         id: "portfolio-design",
         title: "Portfolio Design",
         icon: Trophy,
         graphic: "cards",
+        image: "/images/services/website-design/portfolio-design.jpg",
       },
       {
         id: "website-design-card",
         title: "Website Design",
         icon: Code2,
         graphic: "codeCube",
+        image: "/images/services/website-design/website-design.jpg",
       },
       {
         id: "website-development",
         title: "Website Development",
         icon: Globe2,
         graphic: "globeNetwork",
+        image: "/images/services/website-design/website-development.svg",
       },
     ],
   },
@@ -124,24 +133,28 @@ const serviceTabs: ServiceTab[] = [
         title: "E-Commerce",
         icon: ShoppingBag,
         graphic: "ecomBag",
+        image: "/images/services/ecommerce-d2c/ecommerce.jpg",
       },
       {
         id: "quick-commerce",
         title: "Quick Commerce",
         icon: TrendingUp,
         graphic: "rocket",
+        image: "/images/services/ecommerce-d2c/quick-commerce.jpg",
       },
       {
         id: "d2c-creation",
         title: "D2C Creation",
         icon: Target,
         graphic: "bullseye",
+        image: "/images/services/ecommerce-d2c/d2c-creation.jpg",
       },
       {
         id: "ecommerce-ads",
         title: "E-Commerce Ads",
         icon: Filter,
         graphic: "funnelMag",
+        image: "/images/services/ecommerce-d2c/ecommerce-ads.svg",
       },
     ],
   },
@@ -155,24 +168,28 @@ const serviceTabs: ServiceTab[] = [
         title: "Product Shoot",
         icon: Video,
         graphic: "lens",
+        image: "/images/services/product-shoots/product-shoot.jpg",
       },
       {
         id: "catalogue-shoot",
         title: "Catalogue Shoot",
         icon: Layers,
         graphic: "cards",
+        image: "/images/services/product-shoots/catalogue-shoot.jpg",
       },
       {
         id: "influencer-shoot",
         title: "Influencer Shoot",
         icon: Play,
         graphic: "phoneFilm",
+        image: "/images/services/product-shoots/influencer-shoot.jpg",
       },
       {
         id: "ads-shoot",
         title: "Ads Shoot",
         icon: Clapperboard,
         graphic: "clapper",
+        image: "/images/services/product-shoots/ads-shoot.svg",
       },
     ],
   },
@@ -186,24 +203,28 @@ const serviceTabs: ServiceTab[] = [
         title: "Advertisement",
         icon: Megaphone,
         graphic: "megaphone",
+        image: "/images/services/ads-social/advertisement.svg",
       },
       {
         id: "meta-google-ads",
         title: "Meta Google Ads",
         icon: TrendingUp,
         graphic: "rocket",
+        image: "/images/services/ads-social/meta-google-ads.svg",
       },
       {
         id: "social-media",
         title: "Social Media",
         icon: Heart,
         graphic: "orbitSphere",
+        image: "/images/services/ads-social/social-media.svg",
       },
       {
         id: "whatsapp-api",
         title: "WhatsApp API",
         icon: Globe2,
         graphic: "globeNetwork",
+        image: "/images/services/ads-social/whatsapp-api.svg",
       },
     ],
   },
@@ -549,22 +570,36 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                       transition={{ duration: 0.4, delay: idx * 0.08 }}
                       className="group bg-white hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 rounded-xl sm:rounded-2xl p-2 sm:p-4 flex flex-col justify-between transition-all duration-300 shadow-[0_4px_16px_rgba(184,135,70,0.06)] hover:shadow-[0_16px_40px_rgba(184,135,70,0.12)]"
                     >
-                      {/* Visual Card Interior with 3D Graphic */}
-                      <div className="w-full aspect-[4/3] rounded-lg sm:rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center p-1.5 sm:p-2.5 group-hover:border-[#B88746]/40 transition-colors">
-                        {/* Ambient center honey gold glow */}
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                          <div className="w-16 h-16 sm:w-24 sm:h-24 bg-[#B88746]/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500" />
-                        </div>
+                      {/* Visual Card Interior with Image or 3D Graphic */}
+                      <div className={`w-full aspect-[4/3] rounded-lg sm:rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center ${card.image ? "p-0" : "p-1.5 sm:p-2.5"} group-hover:border-[#B88746]/40 transition-colors`}>
+                        {card.image ? (
+                          <div className="relative w-full h-full overflow-hidden">
+                            <img
+                              src={card.image}
+                              alt={card.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                          </div>
+                        ) : (
+                          <>
+                            {/* Ambient center honey gold glow */}
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                              <div className="w-16 h-16 sm:w-24 sm:h-24 bg-[#B88746]/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500" />
+                            </div>
 
-                        {/* 3D Graphic Illustration */}
-                        <div className="relative z-10 w-12 h-12 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                          <Card3DVisual graphic={card.graphic} />
-                        </div>
+                            {/* 3D Graphic Illustration */}
+                            <div className="relative z-10 w-12 h-12 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                              <Card3DVisual graphic={card.graphic} />
+                            </div>
 
-                        {/* Subtle micro icon at bottom-center of visual box */}
-                        <div className="absolute bottom-1 sm:bottom-2 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
-                          <IconComponent className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                        </div>
+                            {/* Subtle micro icon at bottom-center of visual box */}
+                            <div className="absolute bottom-1 sm:bottom-2 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
+                              <IconComponent className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                            </div>
+                          </>
+                        )}
                       </div>
 
                       {/* Title Below Card Graphic */}
@@ -667,18 +702,32 @@ export default function WhyChooseUs({ scrollYProgress, trackRef }: WhyChooseUsPr
                       transition={{ duration: 0.4, delay: idx * 0.08 }}
                       className="group bg-white hover:bg-white border border-[#E8DED0] hover:border-[#B88746]/50 rounded-2xl p-4 lg:p-5 flex flex-col justify-between transition-all duration-300 shadow-[0_10px_30px_rgba(184,135,70,0.06)] hover:shadow-[0_16px_40px_rgba(184,135,70,0.12)]"
                     >
-                      <div className="w-full aspect-[4/3] rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center p-3 group-hover:border-[#B88746]/40 transition-colors">
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                          <div className="w-28 h-28 bg-[#B88746]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500" />
-                        </div>
+                      <div className={`w-full aspect-[4/3] rounded-xl bg-[#FAF8F5] border border-[#E8DED0]/70 relative overflow-hidden flex items-center justify-center ${card.image ? "p-0" : "p-3"} group-hover:border-[#B88746]/40 transition-colors`}>
+                        {card.image ? (
+                          <div className="relative w-full h-full overflow-hidden">
+                            <img
+                              src={card.image}
+                              alt={card.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                          </div>
+                        ) : (
+                          <>
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                              <div className="w-28 h-28 bg-[#B88746]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500" />
+                            </div>
 
-                        <div className="relative z-10 w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                          <Card3DVisual graphic={card.graphic} />
-                        </div>
+                            <div className="relative z-10 w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                              <Card3DVisual graphic={card.graphic} />
+                            </div>
 
-                        <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
-                          <IconComponent className="w-4 h-4" />
-                        </div>
+                            <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 text-[#B88746] group-hover:text-[#9E7234] transition-colors">
+                              <IconComponent className="w-4 h-4" />
+                            </div>
+                          </>
+                        )}
                       </div>
 
                       <p className="text-sm md:text-base font-semibold text-[#141414] group-hover:text-[#B88746] text-center mt-3 tracking-normal font-raleway transition-colors">

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="50%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EFE9" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4C085" />
+      <stop offset="50%" stop-color="#B88746" />
+      <stop offset="100%" stop-color="#9E7234" />
+    </linearGradient>
+
+    <linearGradient id="waGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25D366" />
+      <stop offset="100%" stop-color="#128C7E" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#8C7355" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)" />
+  <circle cx="400" cy="300" r="230" fill="#B88746" opacity="0.08" />
+
+  <!-- Smartphone Mockup (Center Left) -->
+  <g filter="url(#shadow)" transform="translate(180, 80)">
+    <!-- Phone Bezel -->
+    <rect width="250" height="440" rx="36" fill="#18181D" stroke="#2D2B33" stroke-width="3" />
+    <!-- Phone Screen -->
+    <rect x="8" y="8" width="234" height="424" rx="28" fill="#FFFFFF" />
+    
+    <!-- Dynamic Island / Speaker -->
+    <rect x="85" y="14" width="80" height="18" rx="9" fill="#18181D" />
+
+    <!-- Chat Header Bar -->
+    <path d="M 8 36 L 242 36 L 242 85 L 8 85 Z" fill="#075E54" />
+    <!-- Avatar -->
+    <circle cx="36" cy="60" r="16" fill="url(#goldGrad)" />
+    <!-- Verified Badge -->
+    <circle cx="48" cy="70" r="5" fill="#25D366" />
+    <path d="M 46 70 L 47 71 L 50 68" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" />
+
+    <text x="60" y="58" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">White Ink Official</text>
+    <text x="60" y="72" fill="#E4C085" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Verified Business API</text>
+
+    <!-- Chat Wallpaper Background -->
+    <rect x="8" y="85" width="234" height="347" fill="#EFEAE2" />
+
+    <!-- Message 1: Incoming User Message (Left) -->
+    <g transform="translate(18, 105)">
+      <rect width="170" height="42" rx="10" fill="#FFFFFF" filter="url(#shadow)" />
+      <text x="12" y="20" fill="#141414" font-family="system-ui, sans-serif" font-size="10">Hi, I'd like to scale my</text>
+      <text x="12" y="33" fill="#141414" font-family="system-ui, sans-serif" font-size="10">brand with White Ink.</text>
+      <text x="162" y="36" fill="#888" font-family="system-ui, sans-serif" font-size="8" text-anchor="end">10:42 AM</text>
+    </g>
+
+    <!-- Message 2: Automated Bot Response (Right) -->
+    <g transform="translate(48, 160)">
+      <rect width="184" height="68" rx="10" fill="#D9FDD3" filter="url(#shadow)" />
+      <text x="12" y="20" fill="#141414" font-family="system-ui, sans-serif" font-size="10" font-weight="700">⚡ Instant Automation</text>
+      <text x="12" y="34" fill="#141414" font-family="system-ui, sans-serif" font-size="9.5">Welcome! Your strategy</text>
+      <text x="12" y="47" fill="#141414" font-family="system-ui, sans-serif" font-size="9.5">deck is ready to review:</text>
+      <text x="156" y="60" fill="#888" font-family="system-ui, sans-serif" font-size="8">10:42 AM</text>
+      <!-- Double checkmark in blue -->
+      <path d="M 170 56 L 172 58 L 176 54 M 174 56 L 176 58 L 180 54" fill="none" stroke="#53BDEB" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+
+    <!-- Quick Action CTA Buttons (Inside WhatsApp) -->
+    <g transform="translate(48, 240)">
+      <rect width="184" height="30" rx="8" fill="#FFFFFF" stroke="#D5C7B5" />
+      <text x="92" y="20" fill="#00A884" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">📥 View Deck (PDF)</text>
+    </g>
+    <g transform="translate(48, 276)">
+      <rect width="184" height="30" rx="8" fill="#FFFFFF" stroke="#D5C7B5" />
+      <text x="92" y="20" fill="#00A884" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">📅 Book Discovery Call</text>
+    </g>
+  </g>
+
+  <!-- Floating API Feature Card 1 (Top Right) -->
+  <g filter="url(#shadow)" transform="translate(470, 130)">
+    <rect width="220" height="90" rx="16" fill="#FFFFFF" stroke="#E8DED0" stroke-width="2" />
+    <!-- WhatsApp Green Icon -->
+    <circle cx="36" cy="36" r="16" fill="url(#waGreen)" />
+    <!-- Speech bubble icon -->
+    <path d="M 30 36 C 30 32, 42 32, 42 36 C 42 39, 39 40, 36 43 L 33 43 L 33 41 C 31 40, 30 38, 30 36 Z" fill="#FFFFFF" />
+
+    <text x="62" y="32" fill="#141414" font-family="system-ui, sans-serif" font-size="12" font-weight="800">META GREEN TICK</text>
+    <text x="62" y="47" fill="#77716A" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Official Verification</text>
+
+    <rect x="20" y="62" width="180" height="16" rx="8" fill="#FAF8F5" />
+    <text x="110" y="74" fill="url(#goldGrad)" font-family="system-ui, sans-serif" font-size="9" font-weight="800" text-anchor="middle">100% DELIVERY RATE</text>
+  </g>
+
+  <!-- Floating Automation Metrics Card 2 (Bottom Right) -->
+  <g filter="url(#shadow)" transform="translate(470, 250)">
+    <rect width="220" height="150" rx="16" fill="#FFFFFF" stroke="#B88746" stroke-width="2" />
+    <text x="20" y="32" fill="#77716A" font-family="system-ui, sans-serif" font-size="10" font-weight="800" letter-spacing="1">AUTOMATION SPEED</text>
+    
+    <text x="20" y="70" fill="url(#goldGrad)" font-family="system-ui, sans-serif" font-size="34" font-weight="900">&lt; 1 sec</text>
+    <text x="20" y="92" fill="#141414" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Instant Lead Response</text>
+
+    <!-- Bot Icon Pill -->
+    <rect x="20" y="108" width="180" height="26" rx="13" fill="#FAF8F5" stroke="#E8DED0" />
+    <circle cx="34" cy="121" r="5" fill="#25D366" />
+    <text x="46" y="125" fill="#141414" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700">24/7 AI Sales Concierge</text>
+  </g>
+</svg>
+

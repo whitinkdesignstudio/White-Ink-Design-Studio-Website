@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+  <defs>
+    <!-- Organic Cream Background -->
+    <linearGradient id="daBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="60%" stop-color="#F5EFE6" />
+      <stop offset="100%" stop-color="#EDE6DA" />
+    </linearGradient>
+
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4D2E" />
+      <stop offset="100%" stop-color="#10331D" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D8A4E" />
+      <stop offset="100%" stop-color="#1E6536" />
+    </linearGradient>
+    <linearGradient id="jarCapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7A4C25" />
+      <stop offset="100%" stop-color="#543114" />
+    </linearGradient>
+    <linearGradient id="jarBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FAF7F0" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#EFE8D8" />
+    </linearGradient>
+
+    <filter id="daShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1E4D2B" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#daBg)" />
+
+  <!-- Ambient Botanical Glows -->
+  <circle cx="600" cy="260" r="250" fill="#2D8A4E" opacity="0.07" />
+  <circle cx="200" cy="200" r="180" fill="#7A4C25" opacity="0.05" />
+  <circle cx="1000" cy="200" r="180" fill="#1B4D2E" opacity="0.06" />
+
+  <!-- Subtle organic waves -->
+  <g stroke="#D8CEBD" stroke-width="1.2" opacity="0.35" fill="none">
+    <path d="M 0 160 Q 300 120, 600 170 T 1200 130" />
+    <path d="M 0 280 Q 300 240, 600 290 T 1200 250" />
+    <path d="M 0 400 Q 300 360, 600 410 T 1200 370" />
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CENTER STAGE (x: 410..790): THE ACIKA & GASKA HERBAL JARS                 -->
+  <!-- ========================================================================= -->
+  <g filter="url(#daShadow)" transform="translate(425, 45)">
+    <!-- White Botanical Card Container -->
+    <rect width="350" height="430" rx="24" fill="#FFFFFF" stroke="#D8CEBD" stroke-width="1.5" />
+
+    <!-- Dishant Logo & Leaf Emblem -->
+    <g transform="translate(175, 42)">
+      <circle cx="0" cy="0" r="24" fill="url(#emeraldGrad)" />
+      <!-- Botanical Leaf inside Emblem -->
+      <path d="M 0 -12 C 10 -4, 10 10, 0 14 C -10 10, -10 -4, 0 -12 Z" fill="#FFFFFF" />
+      <line x1="0" y1="-8" x2="0" y2="12" stroke="url(#emeraldGrad)" stroke-width="1.5" />
+    </g>
+
+    <text x="175" y="90" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="15" font-weight="900" text-anchor="middle" letter-spacing="1.5">DISHANT AYURVEDIC</text>
+    <text x="175" y="108" fill="#7A4C25" font-family="system-ui, sans-serif" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1">HOLISTIC HERBAL WELLNESS</text>
+
+    <!-- Botanical Palm Fronds (Behind Jars) -->
+    <g stroke="#2D8A4E" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round">
+      <path d="M 60 250 C 40 210, 50 170, 90 150" />
+      <path d="M 55 230 C 35 220, 20 200, 30 180" />
+      <path d="M 290 250 C 310 210, 300 170, 260 150" />
+      <path d="M 295 230 C 315 220, 330 200, 320 180" />
+    </g>
+
+    <!-- Twin Jars (Acika & Gaska) -->
+    <!-- JAR 1: ACIKA POWDER (Left) -->
+    <g transform="translate(60, 135)">
+      <!-- Brown Ribbed Cap -->
+      <rect x="0" y="0" width="105" height="28" rx="6" fill="url(#jarCapGrad)" stroke="#3E2009" stroke-width="1" />
+      <line x1="20" y1="4" x2="20" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+      <line x1="40" y1="4" x2="40" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+      <line x1="60" y1="4" x2="60" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+      <line x1="80" y1="4" x2="80" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+
+      <!-- Jar Body -->
+      <rect x="5" y="26" width="95" height="150" rx="8" fill="url(#jarBodyGrad)" stroke="#D8CEBD" stroke-width="1.5" />
+      
+      <!-- Label -->
+      <rect x="10" y="40" width="85" height="120" rx="4" fill="#F4EDE0" />
+      <text x="52" y="58" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle">DISHANT</text>
+      <rect x="18" y="66" width="68" height="22" rx="4" fill="#1B4D2E" />
+      <text x="52" y="81" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="900" text-anchor="middle">ACIKA</text>
+      <text x="52" y="100" fill="#7A4C25" font-family="system-ui, sans-serif" font-size="7.5" font-weight="800" text-anchor="middle">POWDER</text>
+      <text x="52" y="120" fill="#5C5549" font-family="system-ui, sans-serif" font-size="7" font-weight="600" text-anchor="middle">Calm Down</text>
+      <text x="52" y="132" fill="#5C5549" font-family="system-ui, sans-serif" font-size="7" font-weight="600" text-anchor="middle">Acidity Balance</text>
+    </g>
+
+    <!-- JAR 2: GASKA POWDER (Right) -->
+    <g transform="translate(185, 135)">
+      <!-- Brown Ribbed Cap -->
+      <rect x="0" y="0" width="105" height="28" rx="6" fill="url(#jarCapGrad)" stroke="#3E2009" stroke-width="1" />
+      <line x1="20" y1="4" x2="20" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+      <line x1="40" y1="4" x2="40" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+      <line x1="60" y1="4" x2="60" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+      <line x1="80" y1="4" x2="80" y2="24" stroke="#8C5D38" stroke-width="1.5" />
+
+      <!-- Jar Body -->
+      <rect x="5" y="26" width="95" height="150" rx="8" fill="url(#jarBodyGrad)" stroke="#D8CEBD" stroke-width="1.5" />
+      
+      <!-- Label -->
+      <rect x="10" y="40" width="85" height="120" rx="4" fill="#E8F2EC" />
+      <text x="52" y="58" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle">DISHANT</text>
+      <rect x="18" y="66" width="68" height="22" rx="4" fill="#2D8A4E" />
+      <text x="52" y="81" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="900" text-anchor="middle">GASKA</text>
+      <text x="52" y="100" fill="#7A4C25" font-family="system-ui, sans-serif" font-size="7.5" font-weight="800" text-anchor="middle">POWDER</text>
+      <text x="52" y="120" fill="#5C5549" font-family="system-ui, sans-serif" font-size="7" font-weight="600" text-anchor="middle">Ayurvedic Blend</text>
+      <text x="52" y="132" fill="#5C5549" font-family="system-ui, sans-serif" font-size="7" font-weight="600" text-anchor="middle">Gastric Comfort</text>
+    </g>
+
+    <!-- Headline -->
+    <text x="175" y="358" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Because your body deserves the best!</text>
+    <text x="175" y="376" fill="#7A4C25" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">100% Traditional Ayurvedic Formulation • Pure Vedic Herbs</text>
+
+    <!-- Bottom Outcome Pill -->
+    <rect x="40" y="390" width="270" height="30" rx="15" fill="url(#forestGrad)" />
+    <text x="175" y="410" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle" letter-spacing="1">AYURVEDIC PACKAGING &amp; D2C</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LEFT WING: PACKAGING SYSTEM (Revealed on hover)                           -->
+  <!-- ========================================================================= -->
+  <g filter="url(#daShadow)" transform="translate(60, 65)">
+    <rect width="320" height="390" rx="20" fill="#FFFFFF" stroke="#D8CEBD" stroke-width="1.5" />
+
+    <!-- Packaging Badge -->
+    <rect x="25" y="25" width="105" height="26" rx="13" fill="url(#emeraldGrad)" />
+    <text x="77" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="0.5">PACKAGING</text>
+
+    <text x="25" y="85" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="24" font-weight="900">BESPOKE RETAIL</text>
+    <text x="25" y="112" fill="#2D8A4E" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Moisture-Lock Jars &amp; Labels</text>
+
+    <text x="25" y="145" fill="#5C5549" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Engineered custom rigid containers with</text>
+    <text x="25" y="165" fill="#5C5549" font-family="system-ui, sans-serif" font-size="11" font-weight="500">herbal color hierarchy, dual Hindi-English</text>
+    <text x="25" y="185" fill="#5C5549" font-family="system-ui, sans-serif" font-size="11" font-weight="500">statutory typography, and tamper seals.</text>
+
+    <!-- Metric Card Box -->
+    <rect x="25" y="215" width="270" height="80" rx="14" fill="#FAF6EE" stroke="#E6DDCF" stroke-width="1.5" />
+    <text x="45" y="258" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="34" font-weight="900">100%</text>
+    <text x="145" y="246" fill="#2D8A4E" font-family="system-ui, sans-serif" font-size="11" font-weight="800">ORGANIC PURITY</text>
+    <text x="145" y="264" fill="#5C5549" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Nil Artificial Preservatives</text>
+
+    <!-- Credential Checklist -->
+    <g transform="translate(25, 320)" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+      <text x="0" y="0" fill="#2D8A4E">✔ AYUSH MANUFACTURING COMPLIANCE</text>
+      <text x="0" y="22" fill="#1B4D2E">✔ DUAL-LANGUAGE RETAIL STATUTORY</text>
+      <text x="0" y="44" fill="#7A4C25">✔ STANDARDIZED VEDIC POTENCY</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RIGHT WING: HIGH-RETENTION D2C SHOPIFY (Revealed on hover)                -->
+  <!-- ========================================================================= -->
+  <g filter="url(#daShadow)" transform="translate(820, 65)">
+    <rect width="320" height="390" rx="20" fill="#FFFFFF" stroke="#D8CEBD" stroke-width="1.5" />
+
+    <!-- Ecom Badge -->
+    <rect x="25" y="25" width="125" height="26" rx="13" fill="url(#forestGrad)" />
+    <text x="87" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="0.5">SHOPIFY FLAGSHIP</text>
+
+    <text x="25" y="85" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="24" font-weight="900">D2C RETENTION</text>
+    <text x="25" y="112" fill="#7A4C25" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Repeat Re-Order Architecture</text>
+
+    <text x="25" y="145" fill="#5C5549" font-family="system-ui, sans-serif" font-size="11" font-weight="500">High-retention Shopify e-commerce build with</text>
+    <text x="25" y="165" fill="#5C5549" font-family="system-ui, sans-serif" font-size="11" font-weight="500">symptom-based search, bundle offers, and</text>
+    <text x="25" y="185" fill="#5C5549" font-family="system-ui, sans-serif" font-size="11" font-weight="500">automated WhatsApp refill subscriptions.</text>
+
+    <!-- Metric Card Box -->
+    <rect x="25" y="215" width="270" height="80" rx="14" fill="#FAF6EE" stroke="#E6DDCF" stroke-width="1.5" />
+    <text x="45" y="258" fill="#2D8A4E" font-family="system-ui, sans-serif" font-size="34" font-weight="900">+240%</text>
+    <text x="165" y="246" fill="#1B4D2E" font-family="system-ui, sans-serif" font-size="11" font-weight="800">REPEAT GMV</text>
+    <text x="165" y="264" fill="#5C5549" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Direct consumer retention</text>
+
+    <!-- Credential Checklist -->
+    <g transform="translate(25, 320)" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+      <text x="0" y="0" fill="#2D8A4E">✔ 1-CLICK QUICK CHECKOUT ENGINE</text>
+      <text x="0" y="22" fill="#1B4D2E">✔ PAN-INDIA LOGISTICS DISPATCH</text>
+      <text x="0" y="44" fill="#7A4C25">✔ VERIFIED WHITE INK D2C RECORD</text>
+    </g>
+  </g>
+</svg>
+

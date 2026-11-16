@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="50%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EFE9" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4C085" />
+      <stop offset="50%" stop-color="#B88746" />
+      <stop offset="100%" stop-color="#9E7234" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#8C7355" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)" />
+  <circle cx="400" cy="300" r="230" fill="#B88746" opacity="0.08" />
+
+  <!-- Soaring ROI Trendline -->
+  <path d="M 120 480 Q 300 450, 440 280 T 700 90" fill="none" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" filter="url(#shadow)" />
+  <polygon points="695,90 720,85 710,110" fill="#B88746" />
+
+  <!-- Concentric Target Bullseye (Bottom Left) -->
+  <g filter="url(#shadow)" transform="translate(180, 360)">
+    <circle cx="70" cy="70" r="65" fill="#FFFFFF" stroke="#B88746" stroke-width="3" stroke-dasharray="4 6" opacity="0.8" />
+    <circle cx="70" cy="70" r="45" fill="#FAF8F5" stroke="#C59A58" stroke-width="3" />
+    <circle cx="70" cy="70" r="25" fill="#FFFFFF" stroke="#9E7234" stroke-width="3" />
+    <circle cx="70" cy="70" r="10" fill="url(#goldGrad)" />
+    <!-- Golden Arrow Hit -->
+    <line x1="120" y1="20" x2="72" y2="68" stroke="#141414" stroke-width="3.5" stroke-linecap="round" />
+    <polygon points="120,20 135,12 128,27" fill="#B88746" />
+  </g>
+
+  <!-- Google Search Sponsored Ad Card (Top Center) -->
+  <g filter="url(#shadow)" transform="translate(180, 100)">
+    <rect width="320" height="130" rx="16" fill="#FFFFFF" stroke="#E8DED0" stroke-width="2" />
+    
+    <!-- Sponsored Tag & URL -->
+    <text x="20" y="32" fill="#141414" font-family="system-ui, sans-serif" font-size="11" font-weight="800">Sponsored</text>
+    <text x="90" y="32" fill="#77716A" font-family="system-ui, sans-serif" font-size="11">whiteink.design</text>
+    
+    <!-- Ad Headline -->
+    <text x="20" y="62" fill="#1A0DAB" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Premier Design Agency — Scale Revenue 3X</text>
+    <text x="20" y="86" fill="#545454" font-family="system-ui, sans-serif" font-size="11">High-converting Meta &amp; Google ad campaigns with targeted ROAS.</text>
+    
+    <!-- Gold Rating Stars -->
+    <g transform="translate(20, 100)" fill="url(#goldGrad)">
+      <polygon points="6,0 8,4 12,4 9,7 10,11 6,9 2,11 3,7 0,4 4,4" />
+      <polygon points="20,0 22,4 26,4 23,7 24,11 20,9 16,11 17,7 14,4 18,4" />
+      <polygon points="34,0 36,4 40,4 37,7 38,11 34,9 30,11 31,7 28,4 32,4" />
+      <polygon points="48,0 50,4 54,4 51,7 52,11 48,9 44,11 45,7 42,4 46,4" />
+      <polygon points="62,0 64,4 68,4 65,7 66,11 62,9 58,11 59,7 56,4 60,4" />
+      <text x="75" y="10" fill="#77716A" font-family="system-ui, sans-serif" font-size="10" font-weight="700">5.0 (250+ Reviews)</text>
+    </g>
+  </g>
+
+  <!-- Meta Feed Sponsored Card (Right) -->
+  <g filter="url(#shadow)" transform="translate(450, 240)">
+    <rect width="250" height="230" rx="16" fill="#FFFFFF" stroke="#B88746" stroke-width="2" />
+    
+    <!-- Meta Header -->
+    <circle cx="36" cy="36" r="14" fill="url(#goldGrad)" />
+    <rect x="58" y="26" width="90" height="10" rx="2" fill="#141414" />
+    <text x="58" y="47" fill="#77716A" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Sponsored • Paid Partner</text>
+
+    <!-- Ad Image Box -->
+    <rect x="20" y="60" width="210" height="90" rx="8" fill="#FAF8F5" stroke="#E8DED0" />
+    <!-- Visual metrics inside ad -->
+    <text x="125" y="105" fill="url(#goldGrad)" font-family="system-ui, sans-serif" font-size="28" font-weight="900" text-anchor="middle">+380%</text>
+    <text x="125" y="125" fill="#77716A" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">CONVERSION RATE</text>
+
+    <!-- Meta Engagement Bar -->
+    <g transform="translate(20, 165)">
+      <rect width="210" height="34" rx="17" fill="url(#goldGrad)" />
+      <text x="105" y="22" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">LEARN MORE →</text>
+    </g>
+  </g>
+</svg>
+

@@ -107,7 +107,7 @@ export default function Hero({ isReady = true }: HeroProps) {
               transition={{ duration: 0.2 }}
               className="flex flex-col items-center"
             >
-              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-bold tracking-normal text-[#141414] uppercase font-raleway leading-none">
+              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10.5rem] font-normal tracking-normal text-[#141414] uppercase font-raleway leading-none">
                 WHITE{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#141414] via-[#9E7234] to-[#B88746]">
                   INK

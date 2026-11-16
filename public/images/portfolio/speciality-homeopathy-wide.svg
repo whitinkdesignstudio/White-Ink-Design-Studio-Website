@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+  <defs>
+    <!-- Background Gradient (Pediatric Calming Sky Blue) -->
+    <linearGradient id="shBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C6E2F2" />
+      <stop offset="60%" stop-color="#D9EDF8" />
+      <stop offset="100%" stop-color="#EDF6FB" />
+    </linearGradient>
+
+    <!-- Royal Navy & Mint Gradients -->
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142850" />
+      <stop offset="100%" stop-color="#0C1A36" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D8CB4" />
+      <stop offset="100%" stop-color="#1E6585" />
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38B2AC" />
+      <stop offset="100%" stop-color="#2C7A7B" />
+    </linearGradient>
+
+    <filter id="shShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#142850" flood-opacity="0.10" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="520" fill="url(#shBg)" />
+
+  <!-- Ambient Pediatric Glows -->
+  <circle cx="600" cy="260" r="240" fill="#2D8CB4" opacity="0.08" />
+  <circle cx="200" cy="200" r="180" fill="#38B2AC" opacity="0.06" />
+  <circle cx="1000" cy="200" r="180" fill="#142850" opacity="0.05" />
+
+  <!-- Subtle grid lines -->
+  <g stroke="#B8D7EB" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="130" x2="1200" y2="130" stroke-dasharray="4 6" />
+    <line x1="0" y1="260" x2="1200" y2="260" stroke-dasharray="4 6" />
+    <line x1="0" y1="390" x2="1200" y2="390" stroke-dasharray="4 6" />
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CENTER STAGE (x: 410..790): DEAD CENTER FOR NON-HOVER CROP               -->
+  <!-- ========================================================================= -->
+  <g filter="url(#shShadow)" transform="translate(425, 45)">
+    <!-- White Clinical Card Container -->
+    <rect width="350" height="430" rx="24" fill="#FFFFFF" stroke="#A8D0E6" stroke-width="1.5" />
+
+    <!-- Speciality Homeopathy Monogram Emblem -->
+    <g transform="translate(175, 42)">
+      <!-- Outer Multi-color Ring (Pediatric Spectrum) -->
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#2D8CB4" stroke-width="4" stroke-dasharray="25 6" />
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#38B2AC" stroke-width="4" stroke-dasharray="16 12" stroke-dashoffset="12" />
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#E65100" stroke-width="4" stroke-dasharray="10 18" stroke-dashoffset="24" />
+      <circle cx="0" cy="0" r="20" fill="#142850" />
+      <text x="0" y="7" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="900" text-anchor="middle">SH</text>
+    </g>
+
+    <text x="175" y="92" fill="#142850" font-family="system-ui, sans-serif" font-size="14" font-weight="900" text-anchor="middle" letter-spacing="1.5">SPECIALITY HOMEOPATHY</text>
+    <text x="175" y="110" fill="#2D8CB4" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="1">DR. KETAN PATEL • PEDIATRIC CARE</text>
+
+    <!-- 3 Gentle Steps Staircase (Hero Diagram from Official Site) -->
+    <g transform="translate(40, 130)">
+      <!-- Step 01: Diet -->
+      <rect x="0" y="105" width="85" height="95" rx="8" fill="#D5EBF7" stroke="#A8D0E6" stroke-width="1.5" />
+      <text x="15" y="130" fill="#2D8CB4" font-family="system-ui, sans-serif" font-size="11" font-weight="900">01</text>
+      <text x="15" y="148" fill="#142850" font-family="system-ui, sans-serif" font-size="12" font-weight="800">Diet</text>
+      <text x="15" y="165" fill="#6B889B" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600">Nutritional</text>
+      <text x="15" y="177" fill="#6B889B" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600">Foundation</text>
+
+      <!-- Step 02: Exercise -->
+      <rect x="90" y="55" width="85" height="145" rx="8" fill="#B2DBF0" stroke="#88BFDF" stroke-width="1.5" />
+      <text x="105" y="80" fill="#2D8CB4" font-family="system-ui, sans-serif" font-size="11" font-weight="900">02</text>
+      <text x="105" y="98" fill="#142850" font-family="system-ui, sans-serif" font-size="12" font-weight="800">Exercise</text>
+      <text x="105" y="115" fill="#4B6B7F" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600">Physical &amp;</text>
+      <text x="105" y="127" fill="#4B6B7F" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600">Motor Skills</text>
+
+      <!-- Step 03: Homeopathy -->
+      <rect x="180" y="0" width="90" height="200" rx="8" fill="url(#navyGrad)" stroke="#142850" stroke-width="1.5" />
+      <text x="195" y="25" fill="#38B2AC" font-family="system-ui, sans-serif" font-size="11" font-weight="900">03</text>
+      <text x="195" y="43" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="800">Homeopathy</text>
+      <text x="195" y="60" fill="#A8D0E6" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600">Gentle</text>
+      <text x="195" y="72" fill="#A8D0E6" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600">Restoration</text>
+
+      <!-- Doctor Bag Symbol on Step 3 -->
+      <g transform="translate(205, 115)">
+        <rect x="0" y="10" width="40" height="30" rx="6" fill="#38B2AC" />
+        <path d="M 12 10 L 12 4 A 8 8 0 0 1 28 4 L 28 10" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+        <!-- White Cross on Bag -->
+        <rect x="18" y="17" width="4" height="16" fill="#FFFFFF" />
+        <rect x="12" y="23" width="16" height="4" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- Tagline Text -->
+    <text x="175" y="358" fill="#142850" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Three gentle steps toward a calmer, brighter everyday.</text>
+    <text x="175" y="376" fill="#6B889B" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">Diet • Exercise • Homeopathy — backed by clinical care.</text>
+
+    <!-- Bottom Outcome Pill -->
+    <rect x="35" y="390" width="280" height="30" rx="15" fill="url(#navyGrad)" />
+    <text x="175" y="410" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle" letter-spacing="1">SUB-SECOND APPOINTMENT UX</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LEFT WING: CORE WEB VITALS 99/100 & CLINICAL REACH (Revealed on hover)    -->
+  <!-- ========================================================================= -->
+  <g filter="url(#shShadow)" transform="translate(60, 65)">
+    <rect width="320" height="390" rx="20" fill="#FFFFFF" stroke="#A8D0E6" stroke-width="1.5" />
+
+    <!-- Speed Index Badge -->
+    <rect x="25" y="25" width="115" height="26" rx="13" fill="url(#tealGrad)" />
+    <text x="82" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="0.5">CORE WEB VITALS</text>
+
+    <text x="25" y="85" fill="#142850" font-family="system-ui, sans-serif" font-size="24" font-weight="900">PERFORMANCE</text>
+    <text x="25" y="112" fill="#2D8CB4" font-family="system-ui, sans-serif" font-size="13" font-weight="800">99/100 PageSpeed UX</text>
+
+    <text x="25" y="145" fill="#5A7385" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Engineered a 14-page custom Next.js portal</text>
+    <text x="25" y="165" fill="#5A7385" font-family="system-ui, sans-serif" font-size="11" font-weight="500">eliminating patient booking friction for anxious</text>
+    <text x="25" y="185" fill="#5A7385" font-family="system-ui, sans-serif" font-size="11" font-weight="500">parents seeking pediatric healthcare guidance.</text>
+
+    <!-- Metric Card Box -->
+    <rect x="25" y="215" width="270" height="80" rx="14" fill="#F0F7FB" stroke="#C6E2F2" stroke-width="1.5" />
+    <text x="45" y="258" fill="#142850" font-family="system-ui, sans-serif" font-size="34" font-weight="900">34+</text>
+    <text x="120" y="246" fill="#2D8CB4" font-family="system-ui, sans-serif" font-size="11" font-weight="800">YEARS CLINICAL PRACTICE</text>
+    <text x="120" y="264" fill="#5A7385" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Dr. Ketan Patel Leadership</text>
+
+    <!-- Credential Checklist -->
+    <g transform="translate(25, 320)" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+      <text x="0" y="0" fill="#2D8CB4">✔ 0-16 PEDIATRIC &amp; NEUROLOGICAL FOCUS</text>
+      <text x="0" y="22" fill="#142850">✔ 5 EXPERIENCED HOMEOPATHIC PHYSICIANS</text>
+      <text x="0" y="44" fill="#38B2AC">✔ 14 CUSTOM PAGES ARCHITECTURE</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RIGHT WING: DIRECT CONSULTATION ROUTING (Revealed on hover)               -->
+  <!-- ========================================================================= -->
+  <g filter="url(#shShadow)" transform="translate(820, 65)">
+    <rect width="320" height="390" rx="20" fill="#FFFFFF" stroke="#A8D0E6" stroke-width="1.5" />
+
+    <!-- Intake Flow Badge -->
+    <rect x="25" y="25" width="115" height="26" rx="13" fill="url(#navyGrad)" />
+    <text x="82" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="0.5">DIRECT ROUTING</text>
+
+    <text x="25" y="85" fill="#142850" font-family="system-ui, sans-serif" font-size="24" font-weight="900">INSTANT INTAKE</text>
+    <text x="25" y="112" fill="#38B2AC" font-family="system-ui, sans-serif" font-size="13" font-weight="800">WhatsApp Automated Flow</text>
+
+    <text x="25" y="145" fill="#5A7385" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Automated doctor slot booking with</text>
+    <text x="25" y="165" fill="#5A7385" font-family="system-ui, sans-serif" font-size="11" font-weight="500">interactive intake questionnaires for child</text>
+    <text x="25" y="185" fill="#5A7385" font-family="system-ui, sans-serif" font-size="11" font-weight="500">development and milestone assessments.</text>
+
+    <!-- Metric Card Box -->
+    <rect x="25" y="215" width="270" height="80" rx="14" fill="#F0F7FB" stroke="#C6E2F2" stroke-width="1.5" />
+    <text x="45" y="258" fill="#38B2AC" font-family="system-ui, sans-serif" font-size="34" font-weight="900">&lt;1s</text>
+    <text x="110" y="246" fill="#142850" font-family="system-ui, sans-serif" font-size="11" font-weight="800">PAGE SPEED LATENCY</text>
+    <text x="110" y="264" fill="#5A7385" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Sub-second appointment scheduling</text>
+
+    <!-- Credential Checklist -->
+    <g transform="translate(25, 320)" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+      <text x="0" y="0" fill="#38B2AC">✔ 100% SECURE PATIENT PRIVACY</text>
+      <text x="0" y="22" fill="#142850">✔ ZERO AD ACCOUNT BANS / COMPLIANT</text>
+      <text x="0" y="44" fill="#2D8CB4">✔ VERIFIED WHITE INK HEALTH PLATFORM</text>
+    </g>
+  </g>
+</svg>
+

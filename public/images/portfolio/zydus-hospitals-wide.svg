@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="zhBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5FAFC" />
+      <stop offset="60%" stop-color="#E8F4F8" />
+      <stop offset="100%" stop-color="#DBEEF4" />
+    </linearGradient>
+
+    <!-- Zydus Purple & Teal Gradients -->
+    <linearGradient id="zydusTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3A6" />
+      <stop offset="100%" stop-color="#007A87" />
+    </linearGradient>
+    <linearGradient id="zydusPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A2B82" />
+      <stop offset="100%" stop-color="#6A1B6B" />
+    </linearGradient>
+
+    <filter id="zhShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#007A87" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#zhBg)" />
+
+  <!-- Diagonal Purple & Teal Surgical Brand Ribbons (Exact from Zydus Website) -->
+  <polygon points="0,80 1200,160 1200,390 0,310" fill="url(#zydusPurpleGrad)" opacity="0.88" />
+  <polygon points="0,310 1200,390 1200,430 0,350" fill="url(#zydusTealGrad)" opacity="0.6" />
+
+  <!-- Ambient Glows -->
+  <circle cx="600" cy="260" r="240" fill="#00A3A6" opacity="0.08" />
+  <circle cx="200" cy="200" r="180" fill="#8A2B82" opacity="0.06" />
+  <circle cx="1000" cy="200" r="180" fill="#00A3A6" opacity="0.06" />
+
+  <!-- ========================================================================= -->
+  <!-- CENTER STAGE (x: 410..790): CENTRE OF EXCELLENCE IN TRANSPLANT SURGERIES  -->
+  <!-- ========================================================================= -->
+  <g filter="url(#zhShadow)" transform="translate(425, 45)">
+    <!-- White Clinical Card Container -->
+    <rect width="350" height="430" rx="24" fill="#FFFFFF" stroke="#00A3A6" stroke-width="2" />
+
+    <!-- Zydus Logo Emblem (Butterfly & Flower Petals) -->
+    <g transform="translate(175, 38)">
+      <!-- Butterfly Petals in Cyan, Magenta, Lime, Orange -->
+      <circle cx="-12" cy="-6" r="10" fill="#00A3A6" />
+      <circle cx="12" cy="-6" r="10" fill="#8A2B82" />
+      <circle cx="-8" cy="10" r="8" fill="#5DC488" />
+      <circle cx="8" cy="10" r="8" fill="#F4BF50" />
+      <circle cx="0" cy="2" r="5" fill="#FFFFFF" />
+    </g>
+
+    <text x="175" y="78" fill="#8A2B82" font-family="system-ui, sans-serif" font-size="16" font-weight="900" text-anchor="middle" letter-spacing="1">ZYDUS HOSPITALS</text>
+    <text x="175" y="96" fill="#00A3A6" font-family="system-ui, sans-serif" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1">HEALTHCARE GROUP • WESTERN INDIA</text>
+
+    <!-- Centre of Excellence Card Container -->
+    <g transform="translate(25, 112)">
+      <rect width="300" height="135" rx="14" fill="#F4FAFC" stroke="#BCE3EA" stroke-width="1.5" />
+      <text x="150" y="32" fill="#00A3A6" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">Centre of Excellence in</text>
+      <text x="150" y="58" fill="#8A2B82" font-family="system-ui, sans-serif" font-size="18" font-weight="900" text-anchor="middle">Transplant Surgeries</text>
+      <line x1="30" y1="72" x2="270" y2="72" stroke="#00A3A6" stroke-width="1.5" stroke-linecap="round" />
+      <text x="150" y="94" fill="#142850" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Liver | Kidney | Bone Marrow</text>
+      <text x="150" y="114" fill="#6A1B6B" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Hand | Heart Transplants</text>
+    </g>
+
+    <!-- Organ Badges (Liver, Kidney, Heart) -->
+    <g transform="translate(50, 265)">
+      <!-- Badge 1: Liver -->
+      <g transform="translate(30, 30)">
+        <circle cx="0" cy="0" r="28" fill="#F4FAFC" stroke="#00A3A6" stroke-width="2" />
+        <circle cx="0" cy="0" r="20" fill="url(#zydusTealGrad)" />
+        <text x="0" y="4" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="8" font-weight="900" text-anchor="middle">LIVER</text>
+      </g>
+      <!-- Badge 2: Kidney -->
+      <g transform="translate(125, 30)">
+        <circle cx="0" cy="0" r="28" fill="#FBF4FB" stroke="#8A2B82" stroke-width="2" />
+        <circle cx="0" cy="0" r="20" fill="url(#zydusPurpleGrad)" />
+        <text x="0" y="4" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="8" font-weight="900" text-anchor="middle">KIDNEY</text>
+      </g>
+      <!-- Badge 3: Heart -->
+      <g transform="translate(220, 30)">
+        <circle cx="0" cy="0" r="28" fill="#F4FAFC" stroke="#00A3A6" stroke-width="2" />
+        <circle cx="0" cy="0" r="20" fill="url(#zydusTealGrad)" />
+        <text x="0" y="4" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="8" font-weight="900" text-anchor="middle">HEART</text>
+      </g>
+    </g>
+
+    <!-- Hospital Network -->
+    <text x="175" y="365" fill="#6B7280" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Ahmedabad • Vadodara • Anand • Cancer Center</text>
+
+    <!-- Bottom Outcome Pill -->
+    <rect x="35" y="390" width="280" height="30" rx="15" fill="url(#zydusTealGrad)" />
+    <text x="175" y="410" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle" letter-spacing="1">IVF &amp; PATIENT INTAKE UX</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LEFT WING: WAIT FRICTION REDUCTION -65% (Revealed on hover)               -->
+  <!-- ========================================================================= -->
+  <g filter="url(#zhShadow)" transform="translate(60, 65)">
+    <rect width="320" height="390" rx="20" fill="#FFFFFF" stroke="#BCE3EA" stroke-width="1.5" />
+
+    <!-- Intake Speed Badge -->
+    <rect x="25" y="25" width="115" height="26" rx="13" fill="url(#zydusTealGrad)" />
+    <text x="82" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="0.5">INTAKE SPEED</text>
+
+    <text x="25" y="85" fill="#142850" font-family="system-ui, sans-serif" font-size="24" font-weight="900">WAIT FRICTION</text>
+    <text x="25" y="112" fill="#00A3A6" font-family="system-ui, sans-serif" font-size="13" font-weight="800">-65% Reduced Delay</text>
+
+    <text x="25" y="145" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Streamlined patient intake flows and</text>
+    <text x="25" y="165" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="11" font-weight="500">multi-speciality doctor appointment routing</text>
+    <text x="25" y="185" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="11" font-weight="500">across Western India hospital network.</text>
+
+    <!-- Metric Card Box -->
+    <rect x="25" y="215" width="270" height="80" rx="14" fill="#F4FAFC" stroke="#BCE3EA" stroke-width="1.5" />
+    <text x="45" y="258" fill="#00A3A6" font-family="system-ui, sans-serif" font-size="34" font-weight="900">-65%</text>
+    <text x="155" y="246" fill="#142850" font-family="system-ui, sans-serif" font-size="11" font-weight="800">WAIT TIME</text>
+    <text x="155" y="264" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Online token dispatch</text>
+
+    <!-- Credential Checklist -->
+    <g transform="translate(25, 320)" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+      <text x="0" y="0" fill="#00A3A6">✔ IVF &amp; CLINICAL PRIVACY WORKFLOWS</text>
+      <text x="0" y="22" fill="#8A2B82">✔ NABH MULTI-SPECIALITY NETWORK</text>
+      <text x="0" y="44" fill="#142850">✔ SUB-SECOND TOKEN DISPATCH</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- RIGHT WING: DIGITAL INTAKE ENGINE 1000+ BEDS (Revealed on hover)          -->
+  <!-- ========================================================================= -->
+  <g filter="url(#zhShadow)" transform="translate(820, 65)">
+    <rect width="320" height="390" rx="20" fill="#FFFFFF" stroke="#BCE3EA" stroke-width="1.5" />
+
+    <!-- Hospital Scale Badge -->
+    <rect x="25" y="25" width="125" height="26" rx="13" fill="url(#zydusPurpleGrad)" />
+    <text x="87" y="42" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" text-anchor="middle" letter-spacing="0.5">HOSPITAL SCALE</text>
+
+    <text x="25" y="85" fill="#142850" font-family="system-ui, sans-serif" font-size="24" font-weight="900">DIGITAL INTAKE</text>
+    <text x="25" y="112" fill="#8A2B82" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Unified Doctor Booking</text>
+
+    <text x="25" y="145" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Next-generation hospital portal connecting</text>
+    <text x="25" y="165" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="11" font-weight="500">transplant units, oncology departments, and</text>
+    <text x="25" y="185" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="11" font-weight="500">pediatric IVF specialists with zero latency.</text>
+
+    <!-- Metric Card Box -->
+    <rect x="25" y="215" width="270" height="80" rx="14" fill="#FBF5FB" stroke="#ECD2EC" stroke-width="1.5" />
+    <text x="45" y="258" fill="#8A2B82" font-family="system-ui, sans-serif" font-size="34" font-weight="900">1000+</text>
+    <text x="175" y="246" fill="#142850" font-family="system-ui, sans-serif" font-size="11" font-weight="800">BEDS SCALE</text>
+    <text x="175" y="264" fill="#5A6B7A" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Western India Network</text>
+
+    <!-- Credential Checklist -->
+    <g transform="translate(25, 320)" font-family="system-ui, sans-serif" font-size="10" font-weight="800">
+      <text x="0" y="0" fill="#00A3A6">✔ REAL-TIME OPD TOKEN SCHEDULER</text>
+      <text x="0" y="22" fill="#8A2B82">✔ SEAMLESS ADMISSION &amp; DISCHARGE</text>
+      <text x="0" y="44" fill="#142850">✔ VERIFIED WHITE INK HEALTH PLATFORM</text>
+    </g>
+  </g>
+</svg>
+

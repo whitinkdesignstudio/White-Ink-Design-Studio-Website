@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="50%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EFE9" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4C085" />
+      <stop offset="50%" stop-color="#B88746" />
+      <stop offset="100%" stop-color="#9E7234" />
+    </linearGradient>
+
+    <linearGradient id="goldCone" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#E8DED0" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#8C7355" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="300" r="230" fill="#B88746" opacity="0.08" />
+
+  <!-- Radiating Sound Waves / Audience Reach Waves -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-linecap="round" opacity="0.85">
+    <path d="M 430 250 A 90 90 0 0 1 430 350" stroke-width="3" stroke-dasharray="4 6" />
+    <path d="M 480 210 A 150 150 0 0 1 480 390" stroke-width="4" />
+    <path d="M 530 170 A 210 210 0 0 1 530 430" stroke-width="3.5" stroke-dasharray="8 8" />
+    <path d="M 580 130 A 270 270 0 0 1 580 470" stroke-width="4.5" />
+  </g>
+
+  <!-- Designer Megaphone Loudspeaker (Center-Left) -->
+  <g filter="url(#shadow)" transform="translate(150, 180) rotate(-12)">
+    <!-- Megaphone Cone -->
+    <polygon points="120,80 250,20 250,180 120,120" fill="url(#goldCone)" stroke="#B88746" stroke-width="3" />
+    
+    <!-- Gold Rim on Bell Flare -->
+    <ellipse cx="250" cy="100" rx="16" ry="80" fill="url(#goldGrad)" stroke="#9E7234" stroke-width="2" />
+    <ellipse cx="250" cy="100" rx="10" ry="70" fill="#141414" />
+
+    <!-- Megaphone Body Cylinder -->
+    <rect x="60" y="80" width="60" height="40" rx="6" fill="#18181D" stroke="#B88746" stroke-width="2" />
+    
+    <!-- End Cap -->
+    <ellipse cx="60" cy="100" rx="10" ry="20" fill="url(#goldGrad)" />
+
+    <!-- Pistol Handle -->
+    <path d="M 90 120 L 75 190 A 10 10 0 0 0 85 202 L 105 202 A 8 8 0 0 0 113 194 L 115 120 Z" fill="#18181D" stroke="#2D2B33" stroke-width="2" />
+    <!-- Gold Trigger -->
+    <path d="M 115 136 C 122 136, 124 148, 115 152" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- Floating Campaign Ad Cards (Right Side) -->
+  <g filter="url(#shadow)" transform="translate(520, 140)">
+    <!-- Top Ad Card -->
+    <rect width="180" height="110" rx="14" fill="#FFFFFF" stroke="#E8DED0" stroke-width="2" />
+    <circle cx="28" cy="28" r="10" fill="url(#goldGrad)" />
+    <rect x="46" y="22" width="70" height="8" rx="2" fill="#141414" />
+    <rect x="46" y="34" width="40" height="6" rx="2" fill="#D5C7B5" />
+    <rect x="18" y="52" width="144" height="42" rx="6" fill="#FAF8F5" stroke="#E8DED0" />
+    <text x="90" y="77" fill="#B88746" font-family="system-ui, sans-serif" font-size="11" font-weight="900" text-anchor="middle">NEW CAMPAIGN</text>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(480, 310)">
+    <!-- Bottom Ad Card -->
+    <rect width="210" height="120" rx="14" fill="#FFFFFF" stroke="#B88746" stroke-width="2" />
+    <rect x="18" y="20" width="174" height="12" rx="3" fill="#141414" />
+    <rect x="18" y="40" width="120" height="8" rx="2" fill="#77716A" />
+    
+    <!-- Golden Reach Counter -->
+    <text x="18" y="80" fill="url(#goldGrad)" font-family="system-ui, sans-serif" font-size="24" font-weight="900">+2.5M</text>
+    <text x="18" y="100" fill="#77716A" font-family="system-ui, sans-serif" font-size="10" font-weight="700">AUDIENCE REACH</text>
+
+    <!-- Starburst Badge -->
+    <g transform="translate(170, 75)">
+      <polygon points="0,-16 5,-5 16,-5 7,3 10,14 0,7 -10,14 -7,3 -16,-5 -5,-5" fill="url(#goldGrad)" />
+    </g>
+  </g>
+</svg>
+

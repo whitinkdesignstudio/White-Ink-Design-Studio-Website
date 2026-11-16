@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="50%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EFE9" />
+    </linearGradient>
+
+    <!-- Gold Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4C085" />
+      <stop offset="50%" stop-color="#B88746" />
+      <stop offset="100%" stop-color="#9E7234" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1E24" />
+      <stop offset="100%" stop-color="#141418" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#8C7355" flood-opacity="0.14" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="600" fill="url(#bg)" />
+
+  <!-- Ambient Golden Center Glow -->
+  <circle cx="400" cy="300" r="220" fill="#B88746" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Interconnected Tech Circuit Nodes (Background) -->
+  <g opacity="0.4" stroke="#D5C7B5" stroke-width="1.5" stroke-dasharray="4 6">
+    <line x1="160" y1="160" x2="300" y2="160" />
+    <line x1="300" y1="160" x2="400" y2="240" />
+    <line x1="640" y1="440" x2="520" y2="440" />
+    <line x1="520" y1="440" x2="440" y2="360" />
+  </g>
+  <circle cx="160" cy="160" r="4" fill="#B88746" />
+  <circle cx="640" cy="440" r="4" fill="#B88746" />
+
+  <!-- Code Editor Window (Main Card) -->
+  <g filter="url(#shadow)">
+    <!-- Window Frame -->
+    <rect x="180" y="110" width="440" height="330" rx="16" fill="url(#cardGrad)" stroke="#2D2B33" stroke-width="1.5" />
+    
+    <!-- Title Bar -->
+    <path d="M 180 126 A 16 16 0 0 1 196 110 L 604 110 A 16 16 0 0 1 620 126 L 620 152 L 180 152 Z" fill="#18181D" />
+    <!-- Traffic lights -->
+    <circle cx="206" cy="131" r="5" fill="#E56868" opacity="0.8" />
+    <circle cx="222" cy="131" r="5" fill="#F4BF50" opacity="0.8" />
+    <circle cx="238" cy="131" r="5" fill="#5DC488" opacity="0.8" />
+    
+    <text x="400" y="135" fill="#7C788A" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0.5">App.tsx — Next.js 15</text>
+
+    <!-- Syntax Code Lines -->
+    <g font-family="'Fira Code', monospace, Courier" font-size="12" xml:space="preserve">
+      <!-- Line 1 -->
+      <text x="210" y="182" fill="#E4C085">import</text>
+      <text x="260" y="182" fill="#FAF8F5">{ createNextApp }</text>
+      <text x="400" y="182" fill="#E4C085">from</text>
+      <text x="440" y="182" fill="#98C379">"next/fullstack"</text>
+      
+      <!-- Line 2 -->
+      <text x="210" y="210" fill="#E4C085">export async function</text>
+      <text x="365" y="210" fill="#61AFEF">Website</text>
+      <text x="420" y="210" fill="#D5C7B5">() {</text>
+
+      <!-- Line 3 -->
+      <text x="235" y="238" fill="#B88746">const</text>
+      <text x="278" y="238" fill="#FAF8F5">engine =</text>
+      <text x="345" y="238" fill="#C59A58">optimizeSpeed</text>
+      <text x="445" y="238" fill="#D5C7B5">({</text>
+
+      <!-- Line 4 -->
+      <text x="260" y="266" fill="#D5C7B5">performance:</text>
+      <text x="360" y="266" fill="#98C379">"100/100"</text>
+      <text x="425" y="266" fill="#D5C7B5">,</text>
+
+      <!-- Line 5 -->
+      <text x="260" y="294" fill="#D5C7B5">responsive:</text>
+      <text x="350" y="294" fill="#E5C07B">true</text>
+      <text x="385" y="294" fill="#D5C7B5">,</text>
+
+      <!-- Line 6 -->
+      <text x="235" y="322" fill="#D5C7B5">});</text>
+
+      <!-- Line 7 -->
+      <text x="235" y="350" fill="#E4C085">return</text>
+      <text x="285" y="350" fill="#E56868">&lt;</text>
+      <text x="294" y="350" fill="#61AFEF">HighPerformanceUI</text>
+      <text x="430" y="350" fill="#E56868">/&gt;</text>
+      
+      <!-- Line 8 -->
+      <text x="210" y="378" fill="#D5C7B5">}</text>
+    </g>
+
+    <!-- Terminal Status Bar -->
+    <rect x="180" y="405" width="440" height="35" rx="0" fill="#141418" />
+    <circle cx="204" cy="422" r="4" fill="#5DC488" />
+    <text x="216" y="426" fill="#98C379" font-family="'Fira Code', monospace" font-size="10" font-weight="600">Compiled ready in 142ms</text>
+    <text x="590" y="426" fill="#B88746" font-family="'Fira Code', monospace" font-size="10" font-weight="700" text-anchor="end">READY 100%</text>
+  </g>
+
+  <!-- Floating Browser Preview Tag (Top Right) -->
+  <g filter="url(#shadow)" transform="translate(490, 80)">
+    <rect width="190" height="120" rx="12" fill="#FFFFFF" stroke="#E8DED0" stroke-width="1.5" />
+    <rect x="0" y="0" width="190" height="24" rx="12" fill="#FAF8F5" />
+    <circle cx="16" cy="12" r="3" fill="#B88746" />
+    <circle cx="28" cy="12" r="3" fill="#D5C7B5" />
+    <!-- Web layout preview blocks -->
+    <rect x="14" y="36" width="90" height="10" rx="3" fill="url(#goldGrad)" />
+    <rect x="14" y="52" width="162" height="6" rx="2" fill="#E8DED0" />
+    <rect x="14" y="64" width="130" height="6" rx="2" fill="#E8DED0" />
+    <!-- Interactive Button -->
+    <rect x="14" y="82" width="60" height="20" rx="10" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Floating Code Tech Badge (Bottom Left) -->
+  <g filter="url(#shadow)" transform="translate(110, 360)">
+    <rect width="120" height="85" rx="14" fill="#FFFFFF" stroke="#E8DED0" stroke-width="1.5" />
+    <text x="60" y="40" fill="url(#goldGrad)" font-family="'Fira Code', monospace" font-size="24" font-weight="900" text-anchor="middle">&lt;/&gt;</text>
+    <text x="60" y="62" fill="#141414" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">FULL STACK</text>
+  </g>
+</svg>
+

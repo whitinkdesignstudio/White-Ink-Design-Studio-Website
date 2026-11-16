@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7" />
+      <stop offset="50%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EFE9" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4C085" />
+      <stop offset="50%" stop-color="#B88746" />
+      <stop offset="100%" stop-color="#9E7234" />
+    </linearGradient>
+
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6584" />
+      <stop offset="100%" stop-color="#E03E5F" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#8C7355" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)" />
+  <circle cx="400" cy="300" r="230" fill="#B88746" opacity="0.08" />
+
+  <!-- 3D Floating Instagram-style Feed Grid (Center Left) -->
+  <g filter="url(#shadow)" transform="translate(140, 110)">
+    <!-- Main Profile Card Container -->
+    <rect width="320" height="380" rx="20" fill="#FFFFFF" stroke="#E8DED0" stroke-width="2" />
+    
+    <!-- Profile Header -->
+    <circle cx="45" cy="45" r="22" fill="url(#goldGrad)" />
+    <!-- Inner avatar icon -->
+    <circle cx="45" cy="40" r="8" fill="#FFFFFF" />
+    <path d="M 32 55 C 32 48, 58 48, 58 55 Z" fill="#FFFFFF" />
+
+    <!-- Verified Badge -->
+    <circle cx="60" cy="58" r="6" fill="#B88746" />
+    <path d="M 57 58 L 59 60 L 63 56" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+
+    <text x="80" y="42" fill="#141414" font-family="system-ui, sans-serif" font-size="14" font-weight="800">whiteinkstudio</text>
+    <text x="80" y="58" fill="#77716A" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Design &amp; Growth Studio</text>
+
+    <!-- Stats Bar -->
+    <g transform="translate(20, 80)" font-family="system-ui, sans-serif">
+      <text x="30" y="16" fill="#141414" font-size="13" font-weight="800" text-anchor="middle">120K</text>
+      <text x="30" y="30" fill="#77716A" font-size="9" text-anchor="middle">Followers</text>
+      
+      <text x="140" y="16" fill="#141414" font-size="13" font-weight="800" text-anchor="middle">4.2M</text>
+      <text x="140" y="30" fill="#77716A" font-size="9" text-anchor="middle">Impressions</text>
+
+      <text x="250" y="16" fill="url(#goldGrad)" font-size="13" font-weight="800" text-anchor="middle">8.4%</text>
+      <text x="250" y="30" fill="#77716A" font-size="9" text-anchor="middle">Engagement</text>
+    </g>
+
+    <!-- 3x2 Grid Posts -->
+    <g transform="translate(18, 130)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="88" height="105" rx="8" fill="#FAF8F5" stroke="#E8DED0" />
+      <rect x="14" y="25" width="60" height="40" rx="4" fill="url(#goldGrad)" opacity="0.8" />
+      
+      <rect x="98" y="0" width="88" height="105" rx="8" fill="#FAF8F5" stroke="#E8DED0" />
+      <circle cx="142" cy="45" r="22" fill="#141414" />
+      
+      <rect x="196" y="0" width="88" height="105" rx="8" fill="#FAF8F5" stroke="#E8DED0" />
+      <rect x="210" y="25" width="60" height="40" rx="4" fill="url(#goldGrad)" />
+
+      <!-- Row 2 -->
+      <rect x="0" y="115" width="88" height="105" rx="8" fill="#FAF8F5" stroke="#E8DED0" />
+      <circle cx="44" cy="160" r="20" fill="url(#goldGrad)" opacity="0.6" />
+      
+      <rect x="98" y="115" width="88" height="105" rx="8" fill="#FAF8F5" stroke="#B88746" stroke-width="1.5" />
+      <polygon points="135,155 155,167 135,180" fill="#B88746" />
+      
+      <rect x="196" y="115" width="88" height="105" rx="8" fill="#FAF8F5" stroke="#E8DED0" />
+      <rect x="210" y="140" width="60" height="40" rx="4" fill="#141414" />
+    </g>
+  </g>
+
+  <!-- Floating Like Heart Bubble (Right) -->
+  <g filter="url(#shadow)" transform="translate(500, 140)">
+    <rect width="170" height="70" rx="35" fill="#FFFFFF" stroke="#E8DED0" stroke-width="2" />
+    <!-- Heart Icon inside Circle -->
+    <circle cx="40" cy="35" r="20" fill="url(#heartGrad)" />
+    <path d="M 40 43 L 34 37 C 30 33, 30 27, 35 25 C 38 23, 40 26, 40 26 C 40 26, 42 23, 45 25 C 50 27, 50 33, 46 37 Z" fill="#FFFFFF" />
+    
+    <text x="75" y="42" fill="#141414" font-family="system-ui, sans-serif" font-size="20" font-weight="900">48.6K</text>
+  </g>
+
+  <!-- Floating Comment Bubble -->
+  <g filter="url(#shadow)" transform="translate(540, 240)">
+    <rect width="150" height="60" rx="30" fill="#FFFFFF" stroke="#B88746" stroke-width="2" />
+    <circle cx="34" cy="30" r="16" fill="url(#goldGrad)" />
+    <!-- Speech bubble icon -->
+    <circle cx="30" cy="30" r="2" fill="#FFFFFF" />
+    <circle cx="35" cy="30" r="2" fill="#FFFFFF" />
+    <circle cx="40" cy="30" r="2" fill="#FFFFFF" />
+    
+    <text x="62" y="36" fill="#141414" font-family="system-ui, sans-serif" font-size="16" font-weight="800">2.4K</text>
+  </g>
+
+  <!-- Floating Viral Share Pill -->
+  <g filter="url(#shadow)" transform="translate(480, 340)">
+    <rect width="200" height="66" rx="33" fill="url(#goldGrad)" />
+    <text x="100" y="38" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="900" text-anchor="middle" letter-spacing="1">VIRAL REACH ↗</text>
+  </g>
+</svg>
+

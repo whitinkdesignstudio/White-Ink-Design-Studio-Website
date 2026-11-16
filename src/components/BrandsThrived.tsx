@@ -4,199 +4,91 @@ import { motion } from "framer-motion";
 
 interface BrandCard {
   name: string;
-  tagline: string;
-  category: string;
-  accent: string;
-  initials: string;
+  logo: string;
 }
 
 const col1Brands: BrandCard[] = [
   {
     name: "Dr. Reckeweg",
-    tagline: "Germany & India",
-    category: "Pharma Flagship",
-    accent: "#EA4335",
-    initials: "DR",
+    logo: "/images/clients/dr-reckeweg.png",
   },
   {
     name: "Zydus Hospitals",
-    tagline: "Healthcare Group",
-    category: "IVF & Patient UX",
-    accent: "#0284C7",
-    initials: "ZH",
+    logo: "/images/clients/zydus-hospitals.jpg",
   },
   {
     name: "Wand Fragrance",
-    tagline: "D2C Perfumery",
-    category: "Shopify Flagship",
-    accent: "#B88746",
-    initials: "WF",
+    logo: "/images/clients/wand-fragrance.avif",
   },
   {
     name: "SNG Eco India",
-    tagline: "Manufacturing",
-    category: "B2B Export Web",
-    accent: "#16A34A",
-    initials: "SNG",
-  },
-  {
-    name: "GENZATRI",
-    tagline: "Cultural Festival",
-    category: "Ticketing Engine",
-    accent: "#9333EA",
-    initials: "GZ",
-  },
-  {
-    name: "Speciality Homeopathy",
-    tagline: "Clinical Care",
-    category: "14-Page Portal",
-    accent: "#0D9488",
-    initials: "SH",
+    logo: "/images/clients/sng-eco-india.webp",
   },
 ];
 
 const col2Brands: BrandCard[] = [
   {
+    name: "GENZATRI",
+    logo: "/images/clients/GENZATRI.webp",
+  },
+  {
+    name: "Speciality Homeopathy",
+    logo: "/images/clients/speciality-homeopathy.avif",
+  },
+  {
     name: "Hevert Germany",
-    tagline: "European Medicines",
-    category: "Brand Campaign",
-    accent: "#2563EB",
-    initials: "HG",
-  },
-  {
-    name: "UPFOLD",
-    tagline: "Coravix Global",
-    category: "24-SKU Shopify",
-    accent: "#D97706",
-    initials: "UF",
-  },
-  {
-    name: "The Alpha CPA's",
-    tagline: "US Accounting",
-    category: "Brand Identity",
-    accent: "#1E3A8A",
-    initials: "AC",
-  },
-  {
-    name: "Pushpam Jewellers",
-    tagline: "Heritage Luxury",
-    category: "Identity & Print",
-    accent: "#B88746",
-    initials: "PJ",
+    logo: "/images/clients/hevert-germany.svg",
   },
   {
     name: "Dr. Harshil Shah",
-    tagline: "Surgical Practice",
-    category: "Personal Brand",
-    accent: "#0284C7",
-    initials: "DH",
-  },
-  {
-    name: "MDP Coffee",
-    tagline: "Artisan Roasters",
-    category: "Pitch & Packaging",
-    accent: "#78350F",
-    initials: "MDP",
+    logo: "/images/clients/dr-harshil-shah.webp",
   },
 ];
 
 const col3Brands: BrandCard[] = [
   {
     name: "WellScience UK",
-    tagline: "International Health",
-    category: "Overseas Identity",
-    accent: "#4F46E5",
-    initials: "WS",
+    logo: "/images/clients/wellscience-uk.avif",
   },
   {
     name: "Jainam Tours",
-    tagline: "Premier Travel",
-    category: "SEO & WhatsApp",
-    accent: "#EA580C",
-    initials: "JT",
-  },
-  {
-    name: "Igloo",
-    tagline: "Commercial Systems",
-    category: "Product Catalog",
-    accent: "#0891B2",
-    initials: "IG",
+    logo: "/images/clients/jainam-tours.avif",
   },
   {
     name: "Dishant Ayurvedic",
-    tagline: "Holistic Wellness",
-    category: "Packaging Design",
-    accent: "#15803D",
-    initials: "DA",
-  },
-  {
-    name: "Setu Child Dev",
-    tagline: "Pediatric Clinic",
-    category: "Digital UX",
-    accent: "#CA8A04",
-    initials: "SC",
+    logo: "/images/clients/dishant-ayurvedic.avif",
   },
   {
     name: "Adinath Ghee",
-    tagline: "Organic FMCG",
-    category: "Packaging System",
-    accent: "#C59A58",
-    initials: "AG",
+    logo: "/images/clients/adinath-ghee.png",
   },
 ];
 
 function BrandCardItem({ brand }: { brand: BrandCard }) {
   return (
-    <div className="w-full bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-sm border border-[#E8DED0] hover:border-[#B88746] transition-all duration-300 flex flex-col items-center justify-center text-center aspect-square sm:aspect-[4/3] group select-none">
-      <div
-        className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm font-heading mb-2 sm:mb-2.5 shadow-sm transition-transform duration-300 group-hover:scale-110"
-        style={{
-          backgroundColor: `${brand.accent}15`,
-          color: brand.accent,
-          border: `1.5px solid ${brand.accent}30`,
-        }}
-      >
-        {brand.initials}
+    <div className="w-full bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-sm border border-[#E8DED0] hover:border-[#B88746] hover:shadow-md transition-all duration-300 flex items-center justify-center aspect-[4/3] group select-none overflow-hidden">
+      <div className="w-full h-full flex items-center justify-center">
+        <img
+          src={brand.logo}
+          alt={brand.name}
+          className="w-full h-full max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
       </div>
-
-      <h4 className="text-xs sm:text-sm md:text-base font-black text-[#141414] font-heading uppercase tracking-tight group-hover:text-[#B88746] transition-colors leading-tight line-clamp-1">
-        {brand.name}
-      </h4>
-
-      <p className="text-[10px] sm:text-[11px] font-semibold text-[#77716A] mt-0.5 line-clamp-1">
-        {brand.tagline}
-      </p>
-
-      <span className="mt-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#FAF8F5] border border-[#E8DED0] text-[#77716A]">
-        {brand.category}
-      </span>
     </div>
   );
 }
 
-// Square item for mobile marquee rows
+// Item for mobile marquee rows
 function MobileBrandCardItem({ brand }: { brand: BrandCard }) {
   return (
-    <div className="shrink-0 w-[92px] h-[92px] bg-white rounded-2xl p-2 border border-[#E8DED0] shadow-sm select-none flex flex-col items-center justify-center text-center">
-      <div
-        className="w-7 h-7 rounded-lg flex items-center justify-center font-black text-xs font-heading mb-1 shadow-xs"
-        style={{
-          backgroundColor: `${brand.accent}15`,
-          color: brand.accent,
-          border: `1.5px solid ${brand.accent}30`,
-        }}
-      >
-        {brand.initials}
-      </div>
-      <h4 className="text-[10px] font-black text-[#141414] font-heading uppercase tracking-tight leading-tight truncate w-full">
-        {brand.name}
-      </h4>
-      <p className="text-[8.5px] font-medium text-[#77716A] truncate w-full mt-0.5">
-        {brand.tagline}
-      </p>
-      <span className="mt-1 text-[7px] font-mono uppercase tracking-wider text-[#B88746] font-semibold truncate w-full">
-        {brand.category}
-      </span>
+    <div className="shrink-0 w-[110px] h-[75px] sm:w-[130px] sm:h-[85px] bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-[#E8DED0] shadow-sm select-none flex items-center justify-center overflow-hidden">
+      <img
+        src={brand.logo}
+        alt={brand.name}
+        className="w-full h-full max-w-full max-h-full object-contain"
+        loading="lazy"
+      />
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-[#E8DED0]">
           {/* Brand Col */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-4 space-y-4">
             <a
               href="/"
               className="inline-block transition-transform duration-300 hover:scale-[1.02]"
@@ -53,11 +53,10 @@ export default function Footer() {
               />
             </a>
             <p className="text-xs uppercase tracking-widest text-[#B88746] font-bold">
-              Design & Digital Marketing Studio
+              Design &amp; Digital Marketing Studio
             </p>
             <p className="text-sm text-[#77716A] max-w-sm leading-relaxed">
-              Crafting distinct brand identities, websites & growth systems for ambitious brands
-              globally.
+              Branding, websites, and growth marketing for healthcare and D2C brands. 400+ brands since 2018. Studios in Ahmedabad and London.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -91,29 +90,73 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Nav */}
+          {/* Services Col (Master Plan Band 2) */}
           <div className="lg:col-span-3 space-y-4">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#141414]">
+              SERVICES &amp; PILLARS
+            </h4>
+            <ul className="space-y-2.5 text-xs tracking-wide text-[#77716A]">
+              <li>
+                <a href="/services/website-design" className="hover:text-[#B88746] transition-colors font-medium">
+                  Website Design &amp; Dev (50+ Built)
+                </a>
+              </li>
+              <li>
+                <a href="/services/branding" className="hover:text-[#B88746] transition-colors font-medium">
+                  Brand Identity &amp; Packaging
+                </a>
+              </li>
+              <li>
+                <a href="/services/performance-marketing" className="hover:text-[#B88746] transition-colors font-medium">
+                  Growth Marketing &amp; Ads
+                </a>
+              </li>
+              <li>
+                <a href="/services/social-media" className="hover:text-[#B88746] transition-colors font-medium">
+                  Social Media &amp; Content
+                </a>
+              </li>
+              <li>
+                <a href="/services/ai-automation" className="hover:text-[#B88746] transition-colors font-medium">
+                  AI &amp; Automation (wink&apos;AI)
+                </a>
+              </li>
+              <li className="pt-1">
+                <a href="/services" className="text-[#B88746] font-bold hover:underline inline-flex items-center gap-1">
+                  All 5 Services Overview →
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Nav */}
+          <div className="lg:col-span-2 space-y-4">
             <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#141414]">
               NAVIGATION
             </h4>
             <ul className="space-y-2.5 text-xs uppercase tracking-wider font-semibold text-[#141414]">
               <li>
-                <a href="#work" className="hover:text-[#B88746] transition-colors">
-                  Selected Portfolio
+                <a href="/work" className="hover:text-[#B88746] transition-colors">
+                  Work (50+ Cases)
                 </a>
               </li>
               <li>
-                <a href="#process" className="hover:text-[#B88746] transition-colors">
-                  How We Work
+                <a href="/services" className="hover:text-[#B88746] transition-colors">
+                  Services
                 </a>
               </li>
               <li>
-                <a href="#vision-mission" className="hover:text-[#B88746] transition-colors">
-                  Vision & Mission
+                <a href="/#process" className="hover:text-[#B88746] transition-colors">
+                  Process
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#B88746] transition-colors">
+                <a href="/#vision-mission" className="hover:text-[#B88746] transition-colors">
+                  Vision &amp; Values
+                </a>
+              </li>
+              <li>
+                <a href="/#contact" className="hover:text-[#B88746] transition-colors">
                   Book A Call
                 </a>
               </li>
@@ -121,7 +164,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Col */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#141414]">
               STUDIO LOCATION & CONTACT
             </h4>
